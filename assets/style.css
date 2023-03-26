@@ -1,1 +1,20 @@
 /* css here */
+body {
+    position: relative;
+}
+
+.nav {
+    list-style-type: none;
+    display: inline-block;
+}
+.nav > li {
+    display: inline;
+    padding: 7em;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    padding-left: 35%;
+}
