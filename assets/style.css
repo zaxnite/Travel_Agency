@@ -1,20 +1,133 @@
-/* css here */
-body {
-    position: relative;
+/* common css here */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
 }
 
-.nav {
-    list-style-type: none;
+nav{
+    background-color: #0485A2;
+    height: 5rem;
+    width: 100%;
+}
+
+label.logo{
+    color: aliceblue;
+    font-size: 2.188rem;
+    line-height: 5rem;
+    padding: 0rem 5rem;
+    font-weight: bold;
+}
+
+nav ul{
+    float: right;
+    margin: 1.25rem;
+    list-style: none;
+}
+
+nav ul li{
     display: inline-block;
-}
-.nav > li {
-    display: inline;
-    padding: 7em;
+    line-height: 2.5rem;
+    margin: 0rem 0.75rem;
 }
 
+nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1.063rem;
+    padding: 0.438rem 0.625rem;
+    text-transform: uppercase;
+    border-radius: 0.25rem;
+    font-weight: 550;
+}
+
+nav a.active, a:hover{
+    background-color: #29c3e5;
+    transition: 0.6s;
+}
+
+.checkbtn{
+    font-size: 1.875rem;
+    color: white;
+    float: right;
+    line-height: 5rem;
+    margin-right: 2.5rem;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+}
+
+
+
+@media (max-width: 75rem){
+    label.logo{
+        font-size: 1.875rem;
+        padding-left: 3.125rem;
+    }
+
+    nav ul li a{
+        font-size: 0.938rem;
+    }
+}
+
+@media (max-width: 60.938rem) {
+    .checkbtn{
+        display: block;
+      }
+    #hambg{
+        display: inline;
+    }
+    #cross{
+        display: none;
+    }
+      nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 5rem;
+        left: -100%;
+        text-align: center;
+        transition: all .8s;
+        margin: 0rem;
+      }
+      nav ul li{
+        display: block;
+        margin: 3.125rem 0rem;
+        line-height: 1.875rem;
+      }
+      nav ul li a{
+        font-size: 1.25rem;
+      }
+      nav a.active, a:hover{
+        background-color: #0485A2;
+        transition: 0.6s;
+    }
+      #check:checked ~ ul{
+        left: 0;
+      }
+      #check:checked ~ label #hambg{
+        display: none;
+      }
+      #check:checked ~ label #cross{
+        display: inline;
+      }
+
+    }
+  
 footer {
     position: fixed;
-    bottom: 0px;
+    bottom: 0rem;
     text-align: center;
     padding-left: 35%;
 }
+
+/* Homepage CSS */
+/* Flgihts CSS */
+/* Hotel CSS */
+/* Support CSS */
+/* About_Us CSS */
