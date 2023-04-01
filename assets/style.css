@@ -128,6 +128,22 @@ footer {
 
 /* Homepage CSS */
 /* Flgihts CSS */
-/* Hotel CSS */
 /* Support CSS */
 /* About_Us CSS */
+
+/* Hotel CSS */
+
+.header-container {
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+}
+
+.hotel_bg {
+	width: 100%;
+}
+
+
+
+
+
