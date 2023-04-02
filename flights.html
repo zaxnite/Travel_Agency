@@ -7,8 +7,41 @@
     <link rel="stylesheet" type="text/css" href="assets/css/flights.css" />
     <script src="https://kit.fontawesome.com/38a3b43a16.js" crossorigin="anonymous"></script>
     <title>Flights</title>
+    <style>
+      .top {
+        background-image: url("./assets/media/flights_bg.jpg");
+        min-height: 550px;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .plan {
+        position: relative;
+        left: 10%;
+        top: 60px;
+        color: white;
+        font-size: 2.188rem;
+      }
+
+      .search {
+        background-color: white;
+        border: solid black 3px;
+        padding: 40px;
+        border-radius: 0.5em;
+        position: absolute;
+        top: 500px;
+        left: 10%;
+      }
+
+      .country {
+        border: solid white 10px;
+        background-color: #0485A2;
+        padding: 10px;
+      }
+    </style>
 </head>
 <body>
+  <div class="top">
   <nav>
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
@@ -23,7 +56,35 @@
       <li><a href="about_us.html">About Us</a></li>
       <li><a href="support.html">Support</a></li>
     </ul>
-  </nav>  
+  </nav>
+  <label class="plan">Plan your trip here...</label>
+
+  <form class="search" action="">
+    <label class="country" for="country">Country you are visiting:
+    <select id="country" name="country">
+      <option value="Japan">Japan</option>
+      <option value="France">France</option>
+      <option value="Thailand">Thailand</option>
+      <option value="Korea">Korea</option>
+      <option value="Spain">Spain</option>
+      <option value="Germany">Germany</option>
+    </select>
+  </label>
+
+  <label class="country" for="ch_in">Check In
+    <input type="date" min="2023-04-07" id="ch_in" name="ch_in">
+  </label>
+  <label class="country" for="ch_out">Check Out
+    <input type="date" min="2023-04-07" id="ch_out" name="ch_out">
+  </label>
+  <label class="country" for="rooms">Rooms
+    <input type="number" id="rooms" name="rooms">
+  </label>
+
+    <input type="submit" value="Search">
+  </form>
+
+  </div>
 
     <footer>
         <a href="https://www.facebook.com/">
