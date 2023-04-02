@@ -1,0 +1,47 @@
+.about_us_header {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+.about_us_bg_image {
+    position: absolute;
+    width: 100%;
+    height: 54.625;
+    left: 0px;
+    top: 0px;
+}
+
+  /* Centered text */
+  .about_us_header_text {
+    position: absolute;
+    width: 90%;
+    top: 440px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 96px;
+    line-height: 116px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .about_us_header_slogan {
+    position: absolute;
+    width: 90%;
+    top: 560px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 77px;
+    text-align: center;
+    color: #FFFFFF;
+
+  }
