@@ -11,43 +11,70 @@
 </head>
 
 <body>
-  <nav>
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-      <i class="fas fa-bars" id="hambg"></i>
-      <i class="fas fa-times" id="cross" ></i>
-    </label>
-    <label class="logo">Escape Artists</label>
-    <ul class="nav">
+  <nav class="navbar">
+    <h1 class="logo">EA</h1>
+    <ul class="nav-links">
       <li><a href="index.html" class="active">Homepage</a></li>
       <li><a href="flights.html">Flights</a></li>
       <li><a href="hotels.html">Hotels</a></li>
       <li><a href="about_us.html">About Us</a></li>
       <li><a href="support.html">Support</a></li>
     </ul>
-  </nav>  
+    <img src="assets\media\menu_btn.jpg" alt="" class="menu-btn">
+    <img src="assets\media\cross_btn.png" alt="" class="cross-btn">
+    
+  </nav>
+  <header>
+    <div class="header-content">
+      <h1>ESCAPE ARTISTS</h1>
+      <div class="line"></div>
+      <h2>Your escape journey starts here</h2>
+    </div>
+  </header>  
 
-  <footer>
-    <a href="https://www.facebook.com/">
-      <img src="" alt="Facebook icon">
-    </a>
+  <div class="title">
+    <h1>What we offer</h1>
+    <h1>What we offer</h1>
 
-    <a href="https://twitter.com/">
-      <img src="" alt="Twitter icon">
-    </a>
 
-    <a href="https://www.instagram.com/">
-      <img src="" alt="Instagram icon">
-    </a>
 
-    <a href="https://gmail.com">
-      <img src="" alt="Email icon">
-    </a>
-    <p>
-      © Copyright 2023. All Rights Reserved.
-    </p>
-  </footer>
+    <h1>What we offer</h1>
+    <h1>What we offer</h1>
+    <h1>What we offer</h1>
+    <h1>What we offer</h1>
+    
+    
+  </div>
 
+
+  <!-- <div class="navbar">
+    <label class="logo"><a href="#">Escape Artists</a></label>
+    <ul class="links">
+      <li><a href="index.html" class="active">Homepage</a></li>
+      <li><a href="flights.html">Flights</a></li>
+      <li><a href="hotels.html">Hotels</a></li>
+      <li><a href="about_us.html">About Us</a></li>
+      <li><a href="support.html">Support</a></li>
+    </ul>
+    <div class="toggle_btn">
+      <i class="fa-regular fa-bars"></i>
+    </div>
+  </div> -->
+
+
+  <script>
+    const menuBtn = document.querySelector('.menu-btn')
+    const navlinks = document.querySelector('.nav-links')
+    const cross = document.querySelector('.cross-btn')
+    const menu = document.querySelector('.menu-btn')
+   
+    menuBtn.addEventListener("click", function() {
+    navlinks.classList.toggle("mobile-menu");
+
+    // cross.style.display = 'block'
+    // menu.style.display = 'none'
+    });
+  </script>
 </body>
 
 </html>
