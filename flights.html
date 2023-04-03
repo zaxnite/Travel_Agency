@@ -8,21 +8,27 @@
     <script src="https://kit.fontawesome.com/38a3b43a16.js" crossorigin="anonymous"></script>
     <title>Flights</title>
     <style>
-      .top {
-        background-image: url("./assets/media/flights_bg.jpg");
-        min-height: 550px;
+      header{
+        width: 100%;
+        height: 70vh;
+        background-image: url('./assets/media/flights_bg.jpg');
         background-position: center;
         background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
-
       .plan {
-        position: relative;
+        padding-bottom: 0rem;
+        font-size: 8vmin;
+        font-weight: bolder;
+      }
+        /* position: relative;
         left: 10%;
         top: 60px;
         font-size: 2.188rem;
         font-family: serif;
       }
-
       .search {
         background-color: aliceblue;
         border: solid black 2px;
@@ -45,27 +51,28 @@
       }
       #rooms {
         width: 30px;
-      }
+      } */
     </style>
 </head>
 <body>
-  <div class="top">
-  <nav>
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-      <i class="fas fa-bars" id="hambg"></i>
-      <i class="fas fa-times" id="cross" ></i>
-    </label>
-    <label class="logo">Escape Artists</label>
-    <ul class="nav">
+  <nav class="navbar">
+    <h1 class="logo">EA</h1>
+    <ul class="nav-links">
       <li><a href="index.html">Homepage</a></li>
       <li><a href="flights.html" class="active">Flights</a></li>
       <li><a href="hotels.html">Hotels</a></li>
       <li><a href="about_us.html">About Us</a></li>
       <li><a href="support.html">Support</a></li>
     </ul>
+    <img src="assets\media\menu_btn.jpg" alt="" class="menu-btn">
+    <img src="assets\media\cross_btn.png" alt="" class="cross-btn">
   </nav>
-  <label class="plan">Plan Your Trip Here...</label>
+
+  <header>
+    <div class="header-content">
+      <div class="line"></div>
+      <h2>Plan Your Trip Here...</h2>
+    </div>
 
   <form class="search" action="">
     <label class="country" for="country">Country:
@@ -93,6 +100,8 @@
     <input type="submit" value="Search" id="search">
   </form>
   </div>
+  
+</header>
 
   <p>Visit famous tourist countries</p>
 
