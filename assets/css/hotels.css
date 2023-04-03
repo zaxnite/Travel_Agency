@@ -1,25 +1,2 @@
 /* Hotel CSS */
 
-.header-container {
-    display: flex; 
-    flex-wrap: wrap;
-  }
-  
-  .hotel_bg {
-      width: 100%;
-  }
-  
-  .slogan {
-    margin-bottom: 0;
-    position: static;
-    color: white;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 52px;
-    text-shadow: none;
-    /* overflow: hidden;
-    text-overflow: ellipsis; */
-    text-align: center;
-    transform: translate(0%, -750%);
-  }
-  
