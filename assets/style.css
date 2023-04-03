@@ -1,159 +1,152 @@
 /* common css here */
-*{
-    margin: 0;
-    padding: 0;
-}
-body{
-    font-family: 'Montserrat', sans-serif;
-}
-
-nav{
-    /* background-color: #0485A2; */
-    height: 5rem;
-    width: 100%;
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-label.logo{
-    color: aliceblue;
-    font-size: 2.188rem;
-    line-height: 5rem;
-    padding: 0rem 5rem;
-    font-weight: bold;
+.navbar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: whitesmoke;
+}
+
+.navbar .logo{
+  padding-left: 15px;
+}
+
+nav a{
+  text-decoration: none;
+  color: whitesmoke;
 }
 
 nav ul{
-    float: right;
-    margin: 1.25rem;
-    list-style: none;
+  list-style: none;
 }
 
-nav ul li{
-    display: inline-block;
-    line-height: 2.5rem;
-    margin: 0rem 0.75rem;
+.nav-links{
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li{
+  margin: 0 25px;
 }
 
 nav ul li a{
-    text-decoration: none;
-    color: aliceblue;
-    font-size: 1.063rem;
-    padding: 0.438rem 0.625rem;
-    text-transform: uppercase;
-    border-radius: 0.25rem;
-    font-weight: 550;
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 1.063rem;
+  padding: 0.438rem 0.625rem;
+  text-transform: uppercase;
+  border-radius: 40px;
+  font-weight: 550;
 }
 
+header{
+  width: 100%;
+  height: 100vh;
+  background-image: url('./media/index_bg.png');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content{
+  margin-bottom: 200px;
+  color: whitesmoke;
+  text-align: center;
+  font-family: inter;
+  padding-top: 150px;
+}
+
+.header-content h1{
+  padding-bottom: 0rem;
+  font-size: 8vmin;
+  font-weight: bolder;
+}
+
+.header-content h2{
+  padding-top: 0rem;
+  font-size: 4vmin;
+}
+  
 nav a.active, a:hover{
-    background-color: #29c3e5;
-    transition: 0.6s;
+  background-color: #29c3e5;
+  transition: 0.6s;
 }
 
-.checkbtn{
-    font-size: 1.875rem;
-    color: white;
-    float: right;
-    line-height: 5rem;
-    margin-right: 2.5rem;
+.menu-btn{
+  display: none;
+}
+
+.cross-btn{
+  display: none;
+}
+
+
+
+/* Media */
+
+@media only screen and  (max-width: 850px){
+
+  .navbar{
+    padding: 0px;
+    background-color: #484872;
+  }
+
+  .logo{
+    position: absolute;
+    top:10px;
+    left: 30px;
+  }
+
+  .nav-links{
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background-color: #484872;
+    margin-top: -900px;
+    transition: all .9s ease;
+  }
+
+  .mobile-menu{
+    margin-top: 0;
+  }
+
+  .nav-links li{
+    margin: 30px auto;
+  }
+
+  .menu-btn{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    height: 80px;
+    cursor: pointer;
+    display: block;
+  }
+
+  .cross-btn{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 25px;
     cursor: pointer;
     display: none;
   }
-  #check{
-    display: none;
+
 }
 
-
-
-@media (max-width: 75rem){
-    label.logo{
-        font-size: 1.875rem;
-        padding-left: 3.125rem;
-    }
-
-    nav ul li a{
-        font-size: 0.938rem;
-    }
-
-    .slogan {
-      margin-bottom: 0;
-      position: static;
-      color: white;
-      font-size: 36px;
-      font-weight: 700;
-      line-height: 52px;
-      text-shadow: none;
-      /* overflow: hidden;
-      text-overflow: ellipsis; */
-      text-align: center;
-      transform: translate(0%, -750%);
-    }
-}
-
-@media (max-width: 60.938rem) {
-    .checkbtn{
-        display: block;
-      }
-    #hambg{
-        display: inline;
-    }
-    #cross{
-        display: none;
-    }
-      nav ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #2c3e50;
-        top: 5rem;
-        left: -100%;
-        text-align: center;
-        transition: all .8s;
-        margin: 0rem;
-      }
-      nav ul li{
-        display: block;
-        margin: 3.125rem 0rem;
-        line-height: 1.875rem;
-      }
-      nav ul li a{
-        font-size: 1.25rem;
-      }
-      nav a.active, a:hover{
-        background-color: #0485A2;
-        transition: 0.6s;
-      }
-      #check:checked ~ ul{
-        left: 0;
-      }
-      #check:checked ~ label #hambg{
-        display: none;
-      }
-      #check:checked ~ label #cross{
-        display: inline;
-      }
-
-      .slogan {
-        margin-bottom: 0;
-        position: static;
-        color: white;
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 52px;
-        text-shadow: none;
-        /* overflow: hidden;
-        text-overflow: ellipsis; */
-        text-align: center;
-        transform: translate(0%, -750%);
-      }
-
-
-    }
-  
-footer {
-    position: fixed;
-    bottom: 0rem;
-    text-align: center;
-    padding-left: 35%;
-}
 
 /* Homepage CSS */
 /* Flgihts CSS */
