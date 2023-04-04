@@ -84,15 +84,14 @@ nav a.active, a:hover{
   transition: 0.6s;
 }
 
-.menu-btn{
+.menu-btn, .cross-btn{
   display: none;
 }
 
-.cross-btn{
-  display: none;
+footer {
+  position: fixed;
+  bottom: 0px;
 }
-
-
 
 /* Media */
 

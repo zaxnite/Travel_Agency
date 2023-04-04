@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/style.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/flights.css" />
     <script src="https://kit.fontawesome.com/38a3b43a16.js" crossorigin="anonymous"></script>
     <title>Flights</title>
     <style>
@@ -30,32 +29,44 @@
         font-family: serif;
       } */
       .search {
+        display: grid;
+        grid: 'country1 country2' 'check1 check2';
+        width: 35%;
         background-color: #ffffff;
         border: solid black 2px;
-        padding: 60px;
-        height: 80px;
+        padding: 30px;
         border-radius: 2em;
         position: absolute;
         top: 400px;
-        left: 25%;
       }
+      #search {
+        width: 30%;
+        display: flex;
+        justify-self: center;
+      }
+      
+      .country1 {grid-area: country1;}
+      .country2 {grid-area: country2;}
+      .check1 {grid-area: check1;}
+      .check2 {grid-area: check2;}
 
-      .country, .check {
-        position: relative;
-        left: 40px;
+      .country1, .country2, .check1, .check2 {
+        font-size: large;
         border: solid white 10px;
         background-color: #95c1cb;
         padding: 10px;
       }
-      .check {
-        position: relative;
-        top: 50px;
-        left: 0;
-      }
+
       #rooms {
         width: 30px;
       }
-      
+      .countries {
+        position: relative;
+        top: 18%;
+        font-size: xx-large;
+        text-align: center;
+      }
+
     </style>
 </head>
 <body>
@@ -79,7 +90,7 @@
     </div>
 
   <form class="search" action="">
-    <label class="country" for="country">Country:
+    <label class="country1" for="country">Country:
     <select id="country" name="country">
       <option value="Japan">Japan</option>
       <option value="France">France</option>
@@ -90,14 +101,14 @@
     </select>
     </label>
 
-  <label class="country" for="rooms">Rooms
+  <label class="country2" for="rooms">Rooms
     <input type="number" id="rooms" name="rooms" min="1">
   </label><br>
 
-  <label class="check" for="ch_in">Check In
+  <label class="check1" for="ch_in">Check In
     <input type="date" min="2023-04-07" id="ch_in" name="ch_in">
   </label>
-  <label class="check" for="ch_out">Check Out
+  <label class="check2" for="ch_out">Check Out
     <input type="date" min="2023-04-07" id="ch_out" name="ch_out">
   </label>
 
@@ -106,9 +117,9 @@
   </div>
   
 </header>
-
+<div class="countries"
   <p>Visit famous tourist countries</p>
-
+</div>
 
     <footer>
         <a href="https://www.facebook.com/">
