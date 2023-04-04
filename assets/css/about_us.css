@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.googleapis.com/css?family=Inter');
+}
+
+.about-slogan {
+  margin-bottom: 0;
+  position: static;
+  color: white;
+  font-style: normal;
+  font-family: 'Inter', 'Helvetica';
+  font-size: 96px;
+  font-weight: 800;
+  line-height: 230px;
+  text-shadow: none;
+  text-align: center;
+  transform: translate(0%, -250%);
+}
+
+.about-message {
+  margin-bottom: 0;
+  position: static;
+  color: white;
+  font-style: normal;
+  font-family: 'Inter', 'Helvetica';
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 290px;
+  text-shadow: none;
+  text-align: center;
+  transform: translate(0%, -250%);
+}
+
+.about-story {
+  text-align: center;
+  color: #557177;
+}
+
+.about-story h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-story p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.about-story .center {
+  text-align: center;
+}
+
+.about-image {
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  height: 410px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.box {
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+  background-color: #557177;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
