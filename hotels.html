@@ -40,23 +40,22 @@
       .search {
         display: grid;
         grid: 'country1 num_room' 'check1 check2';
-        width: 35%;
+        width: 45%;
         background-color: #ffffff;
         border: solid black 2px;
         padding: 20px;
         border-radius: 1.5em;
         position: absolute;
         top: 245px;
-        left: 430px;
+        left: 350px;
       }
 
       .hotel_button {
         background-color: #3d56e0;
         border: none;
         color: white;
-        padding: 10px;
         text-decoration: none;
-        font-size: 16px;
+        font-size: 20px;
         cursor: pointer;
       }
       
@@ -65,22 +64,15 @@
       .check1 {grid-area: check1;}
       .check2 {grid-area: check2;}
 
-      .country1, .num_room, .check1, .check2 {
+      .country1, .num_room, .check1, .check2, .room-choice {
         font-size: large;
         border: solid white 10px;
         background-color: #95c1cb;
-      }
-
-      .country1, .num_room {
-        padding: 10px;
-      }
-
-      .check1, .check2 {
         padding: 15px;
       }
 
       #rooms {
-        width: 30px;
+        width: 90px;
       }
   </style>
 
@@ -117,12 +109,21 @@
 
   <label class="num_room" for="rooms">Rooms
     <input type="number" id="rooms" name="rooms" min="1">
-  </label><br>
+  </label>
 
-  <label class="check1" for="ch_in">Check In <br>
+  <label class="room-choice" for="room-type">Room type
+		<select id="room-type" name="room-type" required>
+			<option value="">Select a room type</option>
+			<option value="single">Single</option>
+			<option value="double">Double</option>
+			<option value="deluxe">Deluxe</option>
+	  </select>
+  </label>
+
+  <label class="check1" for="ch_in">Check In
     <input type="date" min="2023-04-07" id="ch_in" name="ch_in">
   </label>
-  <label class="check2" for="ch_out">Check Out <br>
+  <label class="check2" for="ch_out">Check Out
     <input type="date" min="2023-04-07" id="ch_out" name="ch_out">
   </label>
 
