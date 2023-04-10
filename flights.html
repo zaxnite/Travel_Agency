@@ -22,13 +22,8 @@
         font-size: 8vmin;
         font-weight: bolder;
       }
-        /* position: relative;
-        left: 10%;
-        top: 60px;
-        font-size: 2.188rem;
-        font-family: serif;
-      } */
-      .search {
+
+      /* .search {
         display: grid;
         grid: 'country1 country2' 'check1 check2';
         width: 35%;
@@ -56,10 +51,10 @@
         background-color: #95c1cb;
         padding: 10px;
       }
-
       #rooms {
         width: 30px;
-      }
+      } */
+
       .countries {
         position: relative;
         top: 18%;
@@ -89,7 +84,7 @@
       <h2>Plan Your Trip Here...</h2>
     </div>
 
-  <form class="search" action="">
+  <!-- <form class="search" action="">
     <label class="country1" for="country">Country:
     <select id="country" name="country">
       <option value="Japan">Japan</option>
@@ -113,8 +108,39 @@
   </label>
 
     <input type="submit" value="Search" id="search">
+  </form> -->
+
+  <form class="search" action="">
+    <label class="airport1" for="airport1">Country:
+    <select id="airport" name="airport">
+      <option value="AbuDhabi">Abu Dhabi</option>
+      <option value="Sharjah">Sharjah</option>
+      <option value="Dubai">Dubai</option>
+      <option value="Korea1">Incheon, Korea</option>
+      <option value="Korea2">Jeju, Korea</option>
+      <option value="Germany1">Frankfurt, Germany</option>
+      <option value="Germany2">Berlin, Germany</option>
+      <option value="Japan1">Narita, Japan</option>
+      <option value="Japan2">Haneda, Japan</option>
+      <option value="France">France</option>
+      <option value="Thailand">Thailand</option>
+      <option value="Spain">Spain</option>
+    </select>
+    </label>
+
+  <label class="country2" for="rooms">Rooms
+    <input type="number" id="rooms" name="rooms" min="1">
+  </label><br>
+
+  <label class="check1" for="ch_in">Check In
+    <input type="date" min="2023-04-07" id="ch_in" name="ch_in">
+  </label>
+  <label class="check2" for="ch_out">Check Out
+    <input type="date" min="2023-04-07" id="ch_out" name="ch_out">
+  </label>
+
+    <input type="submit" value="Search" id="search">
   </form>
-  </div>
   
 </header>
 <div class="countries"
