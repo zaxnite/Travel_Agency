@@ -3,54 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/style.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/about_us.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/about_us.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <script src="https://kit.fontawesome.com/38a3b43a16.js" crossorigin="anonymous"></script>
+
     <title>About Us</title>
 </head>
+<style>
+  .about-header {
+  background-image: url("./assets/media/about_us_bg.png");
+  width: 100%;
+  height: 874px;
+  background-position: center;
+  background-size: cover;
+}
+</style>
 <body>
-  <nav>
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-      <i class="fas fa-bars" id="hambg"></i>
-      <i class="fas fa-times" id="cross" ></i>
-    </label>
-    <label class="logo">Escape Artists</label>
-    <ul class="nav">
+  <nav class="navbar">
+    <h1 class="logo">EA</h1>
+    <ul class="nav-links">
       <li><a href="index.html">Homepage</a></li>
       <li><a href="flights.html">Flights</a></li>
       <li><a href="hotels.html">Hotels</a></li>
       <li><a href="about_us.html" class="active">About Us</a></li>
       <li><a href="support.html">Support</a></li>
     </ul>
-  </nav>
-  
-  <div class="about_us_header">
-    <img class="about_us_bg_image" src="assets/media/about_us_bg.png" alt="About Us Background Image">
-    <div class="about_us_header_text">ABOUT ESCAPE ARTISTS</div>
-    <div class="about_us_header_slogan">GET TO KNOW US</div>
-  </div>
+    <img src="assets\media\menu_btn.jpg" alt="" class="menu-btn">
+    <img src="assets\media\cross_btn.png" alt="" class="cross-btn">
     
-    <footer>
-        <a href="https://www.facebook.com/">
-          <img src="" alt="Facebook icon">
-        </a>
+  </nav>
+
+  <div>
+  <header class="about-header"></header>
+  <div class="about-slogan">ABOUT ESCAPE ARTISTS</div>
+  <div class="about-message">Get To Know US</div>
+  </div>
+
+  <div class="about-story">
+    <h2>Our Story</h2>
+    <p>-- Since 2023, Escape Artists has always had its customers as its upmost priority. Dedicated in provided a personalized international travel service for everyone. Whether you're looking to explore exotic new destinations, embark on a thrilling adventure, or simply relax and unwind in paradise, our team of Escape Artists is here to make it happen.</p>
+    <p class="center">So why wait? Let Escape Artists be your guide to the world of travel and embark on your next great adventure today!</p>
+  </div>
+  <div class="about-image">
+    <img src="assets/media/about_companyprofil.png" alt="Escape Artists">
+  </div>
+
+  <div class="about-story">
+    <h2>Company Profile</h2>
+    <p>Escape Artists is owned by a team of five passionate and experienced professionals who share a love for adventure and a dedication to providing exceptional travel services. Each of our owners brings a unique set of skills and experiences to the table, allowing us to offer a diverse range of travel packages and services that cater to the unique needs and preferences of our clients.</p>
+  </div>
+  <div class="about-image">
+    <img src="assets/media/about_journey.png" alt="Escape Artists">
+  </div>
   
-        <a href="https://twitter.com/">
-          <img src="" alt="Twitter icon">
-        </a>
+  <div class="about-story">
+    <h2>Our Journey</h2>
+    <p>Our journey began in a coffee shop between a group of friends who shared a common passion for travel. With a shared vision and a desire to create a travel agency that offered something different, we decided to pool our resources and make it a reality. Our friendship and shared values continue to drive us forward as we strive to provide exceptional travel experiences to our clients.</p>
+  </div>
+  <div class="about-image">
+    <img src="assets/media/about_team.png" alt="Escape Artists">
+  </div>
   
-        <a href="https://www.instagram.com/">
-          <img src="" alt="Instagram icon">
-        </a>
-  
-        <a href="https://gmail.com">
-          <img src="" alt="Email icon">
-        </a>
-        <p>
-          © Copyright 2023. All Rights Reserved.
-        </p>
-    </footer>
+  <div class="about-story">
+    <h2>Meet The Team</h2>
+  </div>
+
+  <div class="container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <div class="box">Box 4</div>
+    <div class="box">Box 5</div>
+  </div>
+
+  <footer>
+    <a href="https://www.facebook.com/">
+      <img src="" alt="Facebook icon">
+    </a>
+
+    <a href="https://twitter.com/">
+      <img src="" alt="Twitter icon">
+    </a>
+
+    <a href="https://www.instagram.com/">
+      <img src="" alt="Instagram icon">
+    </a>
+
+    <a href="https://gmail.com">
+      <img src="" alt="Email icon">
+    </a>
+    <p>
+      © Copyright 2023. All Rights Reserved.
+    </p>
+</footer>
 
 </body>
 </html>
