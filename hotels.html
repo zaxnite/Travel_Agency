@@ -36,6 +36,55 @@
         background-position: center;
         background-size: cover;
       }
+
+      .search {
+        display: grid;
+        grid: 'country1 num_room' 'check1 check2';
+        width: 35%;
+        background-color: #ffffff;
+        border: solid black 2px;
+        padding: 20px;
+        border-radius: 1.5em;
+        position: absolute;
+        top: 245px;
+        left: 430px;
+      }
+
+      .hotel_button {
+        background-color: #3d56e0;
+        border: none;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      
+      .country1 {grid-area: country1;}
+      .num_room {grid-area: num_room;}
+      .check1 {grid-area: check1;}
+      .check2 {grid-area: check2;}
+
+      .country1, .num_room, .check1, .check2 {
+        font-size: large;
+        border: solid white 10px;
+        background-color: #95c1cb;
+      }
+
+      .country1, .num_room {
+        font-size: large;
+        border: solid white 10px;
+        background-color: #95c1cb;
+        padding: 10px;
+      }
+
+      .check1, .check2 {
+        padding: 15px;
+      }
+
+      #rooms {
+        width: 30px;
+      }
   </style>
 
 </head>
@@ -56,8 +105,34 @@
 
   <header class="hotel-header"></header>
   <div class="slogan">Plan your trip here</div>
-  
 
+  <form class="search" action="">
+    <label class="country1" for="country">Country:
+    <select id="country" name="country">
+      <option value="Japan">Japan</option>
+      <option value="France">France</option>
+      <option value="Thailand">Thailand</option>
+      <option value="Korea">Korea</option>
+      <option value="Spain">Spain</option>
+      <option value="Germany">Germany</option>
+    </select>
+    </label>
+
+  <label class="num_room" for="rooms">Rooms
+    <input type="number" id="rooms" name="rooms" min="1">
+  </label><br>
+
+  <label class="check1" for="ch_in">Check In <br>
+    <input type="date" min="2023-04-07" id="ch_in" name="ch_in">
+  </label>
+  <label class="check2" for="ch_out">Check Out <br>
+    <input type="date" min="2023-04-07" id="ch_out" name="ch_out">
+  </label>
+
+  <button class="hotel_button">Search</button>
+    <!-- <input type="submit" value="Search" id="search"> -->
+  </form>
+  
   <footer>
       <a href="https://www.facebook.com/">
         <img src="" alt="Facebook icon">
