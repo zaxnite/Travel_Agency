@@ -30,6 +30,53 @@
         text-align: center;
       }
 
+      .hotel_button {
+        background-color: #3d56e0;
+        border: none;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .search {
+        display: grid;
+        grid: 'airport1 airport2' 'check1 check2';
+        width: 45%;
+        background-color: #ffffff;
+        border: solid black 2px;
+        padding: 20px;
+        border-radius: 1.5em;
+        position: absolute;
+        top: 245px;
+        left: 350px;
+      }
+      
+      .airport1 {grid-area: airport1;}
+      .airport2 {grid-area: airport2;}
+      .check1 {grid-area: check1;}
+      .check2 {grid-area: check2;}
+
+      .airport1, .airport2, .check1, .check2, .passengers {
+        font-size: large;
+        border: solid white 10px;
+        background-color: #95c1cb;
+      }
+
+      .airport1, .airport2, .passengers {
+        padding: 10px;
+      }
+
+      .check1, .check2 {
+        padding: 15px;
+      }
+
+      #rooms {
+        width: 30px;
+      }
+
+
     </style>
 </head>
 <body>
@@ -53,7 +100,7 @@
     </div>
 
   <form class="search" action="">
-    <label class="airport1" for="airport1">Country:
+    <label class="airport1" for="airport1">Country From:
     <select id="airport" name="airport">
       <option value="AbuDhabi">Abu Dhabi</option>
       <option value="Sharjah">Sharjah</option>
@@ -70,18 +117,36 @@
     </select>
     </label>
 
-  <label class="country2" for="rooms">Rooms
+    <label class="airport2" for="airport2">Country To:
+      <select id="airport" name="airport">
+        <option value="AbuDhabi">Abu Dhabi</option>
+        <option value="Sharjah">Sharjah</option>
+        <option value="Dubai">Dubai</option>
+        <option value="Korea1">Incheon, Korea</option>
+        <option value="Korea2">Jeju, Korea</option>
+        <option value="Germany1">Frankfurt, Germany</option>
+        <option value="Germany2">Berlin, Germany</option>
+        <option value="Japan1">Narita, Japan</option>
+        <option value="Japan2">Haneda, Japan</option>
+        <option value="France">France</option>
+        <option value="Thailand">Thailand</option>
+        <option value="Spain">Spain</option>
+      </select>
+      </label>
+
+  <label class="passengers" for="rooms">Passengers
     <input type="number" id="rooms" name="rooms" min="1">
   </label><br>
 
-  <label class="check1" for="ch_in">Check In
+  <label class="check1" for="ch_in">Departure
     <input type="date" min="2023-04-07" id="ch_in" name="ch_in">
   </label>
-  <label class="check2" for="ch_out">Check Out
+  <label class="check2" for="ch_out">Return
     <input type="date" min="2023-04-07" id="ch_out" name="ch_out">
   </label>
 
-    <input type="submit" value="Search" id="search">
+  <button class="hotel_button">Search</button>
+    <!-- <input type="submit" value="Search" id="search"> -->
   </form>
   
 </header>
