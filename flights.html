@@ -30,13 +30,12 @@
         text-align: center;
       }
 
-      .hotel_button {
+      .flight_button {
         background-color: #3d56e0;
         border: none;
         color: white;
-        padding: 10px;
         text-decoration: none;
-        font-size: 16px;
+        font-size: 20px;
         cursor: pointer;
       }
 
@@ -62,18 +61,11 @@
         font-size: large;
         border: solid white 10px;
         background-color: #95c1cb;
-      }
-
-      .airport1, .airport2, .passengers {
-        padding: 10px;
-      }
-
-      .check1, .check2 {
         padding: 15px;
       }
 
       #rooms {
-        width: 30px;
+        width: 90px;
       }
 
 
@@ -136,7 +128,7 @@
 
   <label class="passengers" for="rooms">Passengers
     <input type="number" id="rooms" name="rooms" min="1">
-  </label><br>
+  </label>
 
   <label class="check1" for="ch_in">Departure
     <input type="date" min="2023-04-07" id="ch_in" name="ch_in">
@@ -145,7 +137,7 @@
     <input type="date" min="2023-04-07" id="ch_out" name="ch_out">
   </label>
 
-  <button class="hotel_button">Search</button>
+  <button class="flight_button">Search</button>
     <!-- <input type="submit" value="Search" id="search"> -->
   </form>
   
