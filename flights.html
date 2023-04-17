@@ -20,6 +20,11 @@
       .header-content {
         position: relative;
         right: 20%;
+      }
+      
+      .line {
+        padding-bottom: 0rem;
+        font-size: 8vmin;
         font-weight: bolder;
       }
       .dropdown {
@@ -68,6 +73,46 @@
         font-size: xx-large;
         text-align: center;
       }
+
+      .flight_button {
+        background-color: #3d56e0;
+        border: none;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .search {
+        display: grid;
+        grid: 'airport1 airport2' 'check1 check2';
+        width: 45%;
+        background-color: #ffffff;
+        border: solid black 2px;
+        padding: 20px;
+        border-radius: 1.5em;
+        position: absolute;
+        top: 245px;
+        left: 350px;
+      }
+      
+      .airport1 {grid-area: airport1;}
+      .airport2 {grid-area: airport2;}
+      .check1 {grid-area: check1;}
+      .check2 {grid-area: check2;}
+
+      .airport1, .airport2, .check1, .check2, .passengers {
+        font-size: large;
+        border: solid white 10px;
+        background-color: #95c1cb;
+        padding: 15px;
+      }
+
+      #rooms {
+        width: 90px;
+      }
+
+
     </style>
 
 </head>
@@ -92,7 +137,7 @@
     </div>
 
   <form class="search" action="">
-    <!-- <label class="airport1" for="airport1">Country:
+    <label class="airport1" for="airport1">Country From:
     <select id="airport" name="airport">
       <option value="AbuDhabi">Abu Dhabi</option>
       <option value="Sharjah">Sharjah</option>
@@ -112,7 +157,7 @@
     </select>
     </label> -->
 
-    <div class="dropdown">
+    <!-- <div class="dropdown">
     <input type="search" id="myInput" class="dropbtn" onkeyup="search()" onclick="showList()" placeholder="Search for airports.." title="Type in a city">
     <ul id="myUL" class="dropdown-content">
       <li><a href="#">Abu Dhabi</a></li>
@@ -132,8 +177,28 @@
       <li><a href="#">Valencia, Spain</a></li>
     </ul>
     </div>
-    <br>
+    <br> -->
 
+    <label class="airport2" for="airport2">Country To:
+      <select id="airport" name="airport">
+        <option value="AbuDhabi">Abu Dhabi</option>
+        <option value="Sharjah">Sharjah</option>
+        <option value="Dubai">Dubai</option>
+        <option value="Korea1">Incheon, Korea</option>
+        <option value="Korea2">Jeju, Korea</option>
+        <option value="Germany1">Frankfurt, Germany</option>
+        <option value="Germany2">Berlin, Germany</option>
+        <option value="Japan1">Narita, Japan</option>
+        <option value="Japan2">Haneda, Japan</option>
+        <option value="France">France</option>
+        <option value="Thailand">Thailand</option>
+        <option value="Spain">Spain</option>
+      </select>
+      </label>
+
+  <label class="passengers" for="rooms">Passengers
+    <input type="number" id="rooms" name="rooms" min="1">
+  </label>
 
   <label class="check1" for="ch_in">Departure
     <input type="date" min="2023-04-07" id="ch_in" name="ch_in">
@@ -142,7 +207,8 @@
     <input type="date" min="2023-04-07" id="ch_out" name="ch_out">
   </label>
 
-    <input type="submit" value="Search" id="search">
+  <button class="flight_button">Search</button>
+    <!-- <input type="submit" value="Search" id="search"> -->
   </form>
 
   <script>
