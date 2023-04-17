@@ -13,47 +13,54 @@
         background-image: url('./assets/media/flights_bg.jpg');
         background-position: center;
         background-size: cover;
-        display: flex;
+        /* display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center; */
       }
-      .plan {
-        padding-bottom: 0rem;
-        font-size: 8vmin;
+      .header-content {
+        position: relative;
+        right: 20%;
         font-weight: bolder;
       }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      #myInput {
+        position: relative;
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 0px 10px 38px;
+        border: 1px solid #ddd;
+        margin-top: 100px;
+        right: 160%;
+      }
 
-      /* .search {
-        display: grid;
-        grid: 'country1 country2' 'check1 check2';
-        width: 35%;
-        background-color: #ffffff;
-        border: solid black 2px;
-        padding: 30px;
-        border-radius: 2em;
+      #myUL {
+        display: none;
+        list-style-type: none;
         position: absolute;
-        top: 400px;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
       }
-      #search {
-        width: 30%;
-        display: flex;
-        justify-self: center;
-      }
-      
-      .country1 {grid-area: country1;}
-      .country2 {grid-area: country2;}
-      .check1 {grid-area: check1;}
-      .check2 {grid-area: check2;}
 
-      .country1, .country2, .check1, .check2 {
-        font-size: large;
-        border: solid white 10px;
-        background-color: #95c1cb;
-        padding: 10px;
+      #myUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px; /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 14px;
+        color: black;
+        display: block;
       }
-      #rooms {
-        width: 30px;
-      } */
+
+      #myUL li a:hover:not(.header) {
+        background-color: #eee;
+      }
 
       .countries {
         position: relative;
@@ -61,8 +68,8 @@
         font-size: xx-large;
         text-align: center;
       }
-
     </style>
+
 </head>
 <body>
   <nav class="navbar">
@@ -84,34 +91,8 @@
       <h2>Plan Your Trip Here...</h2>
     </div>
 
-  <!-- <form class="search" action="">
-    <label class="country1" for="country">Country:
-    <select id="country" name="country">
-      <option value="Japan">Japan</option>
-      <option value="France">France</option>
-      <option value="Thailand">Thailand</option>
-      <option value="Korea">Korea</option>
-      <option value="Spain">Spain</option>
-      <option value="Germany">Germany</option>
-    </select>
-    </label>
-
-  <label class="country2" for="rooms">Rooms
-    <input type="number" id="rooms" name="rooms" min="1">
-  </label><br>
-
-  <label class="check1" for="ch_in">Check In
-    <input type="date" min="2023-04-07" id="ch_in" name="ch_in">
-  </label>
-  <label class="check2" for="ch_out">Check Out
-    <input type="date" min="2023-04-07" id="ch_out" name="ch_out">
-  </label>
-
-    <input type="submit" value="Search" id="search">
-  </form> -->
-
   <form class="search" action="">
-    <label class="airport1" for="airport1">Country:
+    <!-- <label class="airport1" for="airport1">Country:
     <select id="airport" name="airport">
       <option value="AbuDhabi">Abu Dhabi</option>
       <option value="Sharjah">Sharjah</option>
@@ -122,28 +103,84 @@
       <option value="Germany2">Berlin, Germany</option>
       <option value="Japan1">Narita, Japan</option>
       <option value="Japan2">Haneda, Japan</option>
-      <option value="France">France</option>
-      <option value="Thailand">Thailand</option>
-      <option value="Spain">Spain</option>
+      <option value="France">Paris, France</option>
+      <option value="France">Bordeaux, France</option>
+      <option value="Thailand">Bangkok, Thailand</option>
+      <option value="Spain">Chiang Mai, Thailand</option>
+      <option value="Spain">Barcelona, Spain</option>
+      <option value="Spain">Valencia, Spain</option>
     </select>
-    </label>
+    </label> -->
 
-  <label class="country2" for="rooms">Rooms
-    <input type="number" id="rooms" name="rooms" min="1">
-  </label><br>
+    <div class="dropdown">
+    <input type="search" id="myInput" class="dropbtn" onkeyup="search()" onclick="showList()" placeholder="Search for airports.." title="Type in a city">
+    <ul id="myUL" class="dropdown-content">
+      <li><a href="#">Abu Dhabi</a></li>
+      <li><a href="#">Sharjah</a></li>
+      <li><a href="#">Dubai</a></li>
+      <li><a href="#">Incheon, Korea</a></li>
+      <li><a href="#">Jeju, Korea</a></li>
+      <li><a href="#">Frankfurt, Germany</a></li>
+      <li><a href="#">Berlin, Germany</a></li>
+      <li><a href="#">Narita, Japan</a></li>
+      <li><a href="#">Haneda, Japan</a></li>
+      <li><a href="#">Paris, France</a></li>
+      <li><a href="#">Bordeaux, France</a></li>
+      <li><a href="#">Bangkok, Thailand</a></li>
+      <li><a href="#">Chiang Mai, Thailand</a></li>
+      <li><a href="#">Barcelona, Spain</a></li>
+      <li><a href="#">Valencia, Spain</a></li>
+    </ul>
+    </div>
+    <br>
 
-  <label class="check1" for="ch_in">Check In
+
+  <label class="check1" for="ch_in">Departure
     <input type="date" min="2023-04-07" id="ch_in" name="ch_in">
   </label>
-  <label class="check2" for="ch_out">Check Out
+  <label class="check2" for="ch_out">Return
     <input type="date" min="2023-04-07" id="ch_out" name="ch_out">
   </label>
 
     <input type="submit" value="Search" id="search">
   </form>
+
+  <script>
+    function search() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    function showList() {
+        document.getElementById("myUL").classList.toggle("show");
+      }
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
   
 </header>
-<div class="countries"
+<div class="countries">
   <p>Visit famous tourist countries</p>
 </div>
 
