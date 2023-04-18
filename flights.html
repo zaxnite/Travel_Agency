@@ -13,15 +13,58 @@
         background-image: url('./assets/media/flights_bg.jpg');
         background-position: center;
         background-size: cover;
-        display: flex;
+        /* display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center; */
+      }
+      .header-content {
+        position: relative;
+        right: 20%;
       }
       
       .line {
         padding-bottom: 0rem;
         font-size: 8vmin;
         font-weight: bolder;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      #myInput {
+        position: relative;
+        width: 100%;
+        font-size: 14px;
+        padding: 10px 0px 10px 38px;
+        border: 1px solid #ddd;
+        margin-top: 100px;
+        right: 160%;
+      }
+
+      #myUL {
+        display: none;
+        list-style-type: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      #myUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px; /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 14px;
+        color: black;
+        display: block;
+      }
+
+      #myUL li a:hover:not(.header) {
+        background-color: #eee;
       }
 
       .countries {
@@ -71,6 +114,7 @@
 
 
     </style>
+
 </head>
 <body>
   <nav class="navbar">
@@ -104,11 +148,36 @@
       <option value="Germany2">Berlin, Germany</option>
       <option value="Japan1">Narita, Japan</option>
       <option value="Japan2">Haneda, Japan</option>
-      <option value="France">France</option>
-      <option value="Thailand">Thailand</option>
-      <option value="Spain">Spain</option>
+      <option value="France">Paris, France</option>
+      <option value="France">Bordeaux, France</option>
+      <option value="Thailand">Bangkok, Thailand</option>
+      <option value="Spain">Chiang Mai, Thailand</option>
+      <option value="Spain">Barcelona, Spain</option>
+      <option value="Spain">Valencia, Spain</option>
     </select>
     </label>
+
+    <!-- <div class="dropdown">
+    <input type="search" id="myInput" class="dropbtn" onkeyup="search()" onclick="showList()" placeholder="Search for airports.." title="Type in a city">
+    <ul id="myUL" class="dropdown-content">
+      <li><a href="#">Abu Dhabi</a></li>
+      <li><a href="#">Sharjah</a></li>
+      <li><a href="#">Dubai</a></li>
+      <li><a href="#">Incheon, Korea</a></li>
+      <li><a href="#">Jeju, Korea</a></li>
+      <li><a href="#">Frankfurt, Germany</a></li>
+      <li><a href="#">Berlin, Germany</a></li>
+      <li><a href="#">Narita, Japan</a></li>
+      <li><a href="#">Haneda, Japan</a></li>
+      <li><a href="#">Paris, France</a></li>
+      <li><a href="#">Bordeaux, France</a></li>
+      <li><a href="#">Bangkok, Thailand</a></li>
+      <li><a href="#">Chiang Mai, Thailand</a></li>
+      <li><a href="#">Barcelona, Spain</a></li>
+      <li><a href="#">Valencia, Spain</a></li>
+    </ul>
+    </div>
+    <br> -->
 
     <label class="airport2" for="airport2">Country To:
       <select id="airport" name="airport">
@@ -141,9 +210,43 @@
   <button class="flight_button">Search</button>
     <!-- <input type="submit" value="Search" id="search"> -->
   </form>
+
+  <script>
+    function search() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    function showList() {
+        document.getElementById("myUL").classList.toggle("show");
+      }
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
   
 </header>
-<div class="countries"
+<div class="countries">
   <p>Visit famous tourist countries</p>
 </div>
 
