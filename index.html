@@ -1,80 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="assets/style.css" />
-  <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
-  <script src="https://kit.fontawesome.com/38a3b43a16.js" crossorigin="anonymous"></script>
-  <title>Homepage</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <title>Homepage</title>
 </head>
-
 <body>
-  <nav class="navbar">
-    <h1 class="logo">EA</h1>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Homepage</a></li>
-      <li><a href="flights.html">Flights</a></li>
-      <li><a href="hotels.html">Hotels</a></li>
-      <li><a href="about_us.html">About Us</a></li>
-      <li><a href="support.html">Support</a></li>
-    </ul>
-    <img src="assets\media\menu_btn.jpg" alt="" class="menu-btn">
-    <img src="assets\media\cross_btn.png" alt="" class="cross-btn">
-    
-  </nav>
-  <header>
-    <div class="header-content">
-      <h1>ESCAPE ARTISTS</h1>
-      <div class="line"></div>
-      <h2>Your escape journey starts here</h2>
+    <!--Header-->
+    <header>
+        <a href="#" class="logo">EA</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="index.html" class="active">Homepage</a></li>
+            <li><a href="flights.html">Flights</a></li>
+            <li><a href="hotels.html">Hotels</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="support.html">Support</a></li>
+        </ul>
+    </header>
+
+    <!--Home Section-->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>Escape Artists</h1>
+            <p>Your escape journey start here.</p>
+        </div>
+    </section>
+
+    <div class="home-offer">
+        <h1>What we offer</h1>
+        <p>Welcome to Escape Artists, your one-stop solution for hassle-free travel booking! 
+            We offer a wide range of travel services and packages, catering to all your travel needs. 
+            Whether you are looking for an exotic beach getaway, a cultural trip to a historic city, 
+            or a thrilling adventure in the great outdoors, we have got you covered.</p>
     </div>
-  </header>  
 
-  <div class="title">
-    <h1>What we offer</h1>
-    <h1>What we offer</h1>
-
-
-
-    <h1>What we offer</h1>
-    <h1>What we offer</h1>
-    <h1>What we offer</h1>
-    <h1>What we offer</h1>
-    
-    
-  </div>
-
-
-  <!-- <div class="navbar">
-    <label class="logo"><a href="#">Escape Artists</a></label>
-    <ul class="links">
-      <li><a href="index.html" class="active">Homepage</a></li>
-      <li><a href="flights.html">Flights</a></li>
-      <li><a href="hotels.html">Hotels</a></li>
-      <li><a href="about_us.html">About Us</a></li>
-      <li><a href="support.html">Support</a></li>
-    </ul>
-    <div class="toggle_btn">
-      <i class="fa-regular fa-bars"></i>
+    <div class="home-image-flex">
+        <div class="flexbox-item-1" id="flights">
+          <h1>Flights</h1>
+        </div>
+        <div class="flexbox-item-2" id="hotels">
+          <h1>Hotels</h1>
+        </div>
+        <div class="flexbox-item-3" id="about_us">
+          <h1>About Us</h1>
+        </div>
+        <div class="flexbox-item-4" id="support">
+          <h1>Support</h1>
+        </div>
     </div>
-  </div> -->
 
+    <script>
+      const header = document.querySelector("header");
 
-  <script>
-    const menuBtn = document.querySelector('.menu-btn')
-    const navlinks = document.querySelector('.nav-links')
-    const cross = document.querySelector('.cross-btn')
-    const menu = document.querySelector('.menu-btn')
-   
-    menuBtn.addEventListener("click", function() {
-    navlinks.classList.toggle("mobile-menu");
+      window.addEventListener ("scroll",function(){
+          header.classList.toggle ("sticky", window.scrollY > 100);
+      })
 
-    // cross.style.display = 'block'
-    // menu.style.display = 'none'
-    });
-  </script>
+      let menu = document.querySelector('#menu-icon')
+      let navbar = document.querySelector('.navbar')
+
+      menu.onclick = () => {
+        menu.classList.toggle('bx-x')
+        navbar.classList.toggle('open')
+      }
+
+      let image1 =document.querySelector('#flights')
+      image1.onclick = () => {
+        window.location.href = 'flights.html';
+      }
+
+      let image2 =document.querySelector('#hotels')
+      image2.onclick = () => {
+        window.location.href = 'hotels.html';
+      }
+
+      let image3 =document.querySelector('#about_us')
+      image3.onclick = () => {
+        window.location.href = 'about_us.html';
+      }
+
+      let image4 =document.querySelector('#support')
+      image4.onclick = () => {
+        window.location.href = 'support.html';
+      }
+    </script>
 </body>
-
 </html>
