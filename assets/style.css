@@ -75,7 +75,7 @@ header{
 
 }
 
-section{
+.home{
   padding-top: 80px;
   padding-right: 80px;
   padding-left: 25%;
@@ -177,7 +177,7 @@ header.sticky{
 
 }
 
-.flexbox-item-1{
+.home-flexbox-item-1{
   background: url(/assets/media/home_image1.png);
   background-position: center;
   background-size: cover;
@@ -186,12 +186,12 @@ header.sticky{
   transition: .3s;
 }
 
-.flexbox-item-1:hover{
+.home-flexbox-item-1:hover{
   transform: scaleY(1.2);
   z-index: 2;
 }
 
-.flexbox-item-2{
+.home-flexbox-item-2{
   background: url(/assets/media/home_image2.png);
   background-position: center;
   background-size: cover;
@@ -200,12 +200,12 @@ header.sticky{
   transition: .3s;
 }
 
-.flexbox-item-2:hover{
+.home-flexbox-item-2:hover{
   transform: scaleY(1.2);
   z-index: 2;
 }
 
-.flexbox-item-3{
+.home-flexbox-item-3{
   background: url(/assets/media/home_image3.png);
   background-position: center;
   background-size: cover;
@@ -214,12 +214,12 @@ header.sticky{
   transition: .3s;
 }
 
-.flexbox-item-3:hover{
+.home-flexbox-item-3:hover{
   transform: scaleY(1.2);
   z-index: 2;
 }
 
-.flexbox-item-4{
+.home-flexbox-item-4{
   background: url(/assets/media/home_image4.png);
   background-position: center;
   background-size: cover;
@@ -228,10 +228,45 @@ header.sticky{
   transition: .3s;
 }
 
-.flexbox-item-4:hover{
+.home-flexbox-item-4:hover{
   transform: scaleY(1.2);
   z-index: 2;
 }
+
+.text h2{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 200;
+  font-size: var(--big-font);
+  line-height: 103px;
+  color: #557177;
+  margin: 100px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.row-items{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.continer-box h4 {
+  position: absolute;
+  width: 150px;
+  height: 85px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 44px;
+
+  color: #557177;
+}
+
+
+
+
 
 /* Flgihts CSS */
 /* Support CSS */
