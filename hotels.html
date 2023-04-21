@@ -78,7 +78,7 @@
       .rec2 { grid-area: rec2; font-size: 25px;}
       .rec3 { grid-area: rec3; font-size: 25px;}
       .rec4 { grid-area: rec4; font-size: 25px;}
-      .recommendations {
+      .hotel_recommendations {
         width: 100%;
         display: grid;
         grid-template-areas: 
@@ -87,7 +87,7 @@
         padding: 50px;
         gap: 10px;
         position: absolute;
-        top: 97%;
+        top: 103%;
         font-size: xx-large;
         text-align: center;
       }
@@ -103,19 +103,19 @@
         cursor: pointer;
       }
 
-      .airport1 {grid-area: airport1;}
-      .airport2 {grid-area: airport2;}
+      .hotel_book {grid-area: hotel_book;}
+      .room_type {grid-area: room_type;}
       .check1 {grid-area: check1;}
       .check2 {grid-area: check2;}
 
-      .airport1, .airport2, .check1, .check2, .passengers, .num_room, .room-choice{
+      .hotel_book, .room_type, .check1, .check2, .passengers, .num_room, .room-choice{
         font-size: large;
         padding: 15px;
       }
       
       .search {
         display: grid;
-        grid: 'airport1 airport2' 'check1 check2';
+        grid: 'hotel_book room_type' 'check1 check2';
         width: 50%;
         background-color: #ffffffc6;
         border: solid black 2px;
@@ -157,9 +157,9 @@
   
 <form class="search" action="">
 
-  <label for="airport1" class="airport1">Country or City:
-  <input class="form-control" list="airport1" id="from" placeholder="City">
-  <datalist id="airport1">
+  <label for="hotel_book" class="hotel_book">Country or City:
+  <input class="form-control" list="hotel_book" id="from" placeholder="City">
+  <datalist id="hotel_book">
     <option value="Abu Dhabi">
     <option value="Sharjah">
     <option value="Dubai">
@@ -204,9 +204,9 @@
   <input type="number" id="passengers" name="passengers" min="1" placeholder="0">
 </label>
 
-<label for="airport2" class="airport2">Room Type:
-  <input class="form-control" list="airport2" id="to" placeholder="Select Room Type">
-  <datalist id="airport2">
+<label for="room_type" class="room_type">Room Type:
+  <input class="form-control" list="room_type" id="to" placeholder="Select Room Type">
+  <datalist id="room_type">
     <option value="Select Room Type"></option>
     <option value="Single"></option>
 		<option value="Double"></option>
@@ -233,12 +233,12 @@
 <div class="famous5"><img src="/assets/media/flights_country5.jpg" alt="Haneda"></br> Haneda, Japan</div>
 </div> -->
 
-<div class="recommendations">
+<div class="hotel_recommendations">
 <p class="title2">Our Recommendations</p>
-<div class="rec1"><img class="one" src="/assets/media/four-seasons.jpg" alt="Four Seasons Hotel, Paris"></br> Four Seasons Hotel, Paris </br><img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
-<div class="rec2"><img class="one" src="/assets/media/flights_rec2.jpg" alt="Signiel Hotel, Seoul, Korea"></br> Signiel Hotel, Seoul, Korea </br><img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
-<div class="rec3"><img class="one" src="/assets/media/flights_rec3.jpg" alt="Arbour Hotel and Residence, Pattaya, Thailand"></br> Arbour Hotel and Residence, Pattaya, Thailand </br><img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
-<div class="rec4"><img class="one" src="/assets/media/flights_rec4.jpg" alt="Kawaguchiko Hotel, Fujikawaguchiko, Japan"></br> Kawaguchiko Hotel, Fujikawaguchiko, Japan </br><img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
+<div class="rec1"><img class="one" src="/assets/media/hotel-four-seasons.jpg" alt="Four Seasons Hotel, Paris"></br> Four Seasons Hotel, Paris </br><img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
+<div class="rec2"><img class="one" src="/assets/media/hotel-signiel.jpg" alt="Signiel Hotel, Seoul, Korea"></br> Signiel Hotel, Seoul, Korea </br><img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
+<div class="rec3"><img class="one" src="/assets/media/hotel-arbour.jpg" alt="Arbour Hotel and Residence, Pattaya, Thailand"></br> Arbour Hotel and Residence, Pattaya, Thailand </br><img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
+<div class="rec4"><img class="one" src="/assets/media/hotel-kawa.jpg" alt="Kawaguchiko Hotel, Fujikawaguchiko, Japan"></br> Kawaguchiko Hotel, Fujikawaguchiko, Japan </br><img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
 </div>
 
 
