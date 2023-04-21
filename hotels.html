@@ -8,8 +8,79 @@
     <title>Hotels</title>
     <style>
       *{
-        overflow-x: hidden;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Inter';
+        scroll-behavior: smooth;
+        text-decoration: none;
+        list-style: none;
       }
+
+      :root{
+        --bg-color: #fff;
+        --text-color: #221314;
+        --second-color: #5a7184;
+        --big-font: 6rem;
+        --h2-font: 3rem;
+        --p-font: 1.1rem;
+        --small-font: 2rem;
+
+      }
+
+      body{
+        background-color: var(--bg-color);
+        color: var(--text-color);
+      }
+
+      header{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 12%;
+        transition: ease .40s;
+      }
+
+      .logo{
+        font-size: 35px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: var(--bg-color);
+      }
+
+      .navbar{
+        display: flex;
+      }
+
+      .navbar a {
+        color: var(--bg-color);
+        font-size: var(--p-font);
+        font-weight: 500;
+        padding: 10px 22px;
+        border-radius: 4px;
+        transition: ease .40s;
+      } 
+
+      .navbar a:hover{
+        background: var(--bg-color);
+        color: #29c3e5;
+        box-shadow: 5px 10px 30px rgba(46, 45, 45, 0.2);
+        border-radius: 4px;
+      }
+
+      #menu-icon{
+        color: var(--bg-color);
+        font-size: 35px;
+        z-index: 1001;
+        cursor: pointer;
+        display: none;
+      }
+
       .hotel{
         position: relative;
         width: 100%;
