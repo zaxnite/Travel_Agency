@@ -38,30 +38,7 @@
       .form-control {
         height: 30px;
       }
-      /* .countries div img {
-        border-radius: 50%;
-        max-width: 80%;
-        height: 180px;
-      }
-      .title { grid-area: header; }
-      .famous1 { grid-area: item1; font-size: 25px;}
-      .famous2 { grid-area: item2; font-size: 25px;}
-      .famous3 { grid-area: item3; font-size: 25px;}
-      .famous4 { grid-area: item4; font-size: 25px;}
-      .famous5 { grid-area: item5; font-size: 25px;}
-      .countries {
-        width: 100%;
-        display: grid;
-        grid-template-areas: 
-        'header header header header header'
-        'item1 item2 item3 item4 item5';
-        padding: 30px;
-        gap: 10px;
-        position: absolute;
-        top: 90%;
-        font-size: xx-large;
-        text-align: center;
-      } */
+
       .title {
         font-family: 'Inter';
         font-size: 40px;
@@ -113,14 +90,14 @@
 
       /* Caption text */
       .text {
-        background-color: #a8c3e094;
+        background-color: #a8c3e0af;
         border-radius: 25px;
         color: #f2f2f2;
-        font-size: 50px;
+        font-size: 45px;
         padding: 8px 12px;
         position: absolute;
         bottom: 8px;
-        width: 30%;
+        width: 25%;
         text-align: center;
       }
 
@@ -160,11 +137,12 @@
       }
       .one {
         border-radius: 25px;
-        max-width: 90%;
+        width: 100%;
         height: 250px;
       }
       .two {
         max-width: 110px;
+        float: right;
       }
 
       .title2 {
@@ -180,7 +158,7 @@
         margin-bottom: 2%;
         font-size: 40px;
       }
-      .rec1 { grid-area: rec1; font-size: 25px;}
+      /* .rec1 { grid-area: rec1; font-size: 25px;}
       .rec2 { grid-area: rec2; font-size: 25px;}
       .rec3 { grid-area: rec3; font-size: 25px;}
       .rec4 { grid-area: rec4; font-size: 25px;}
@@ -196,10 +174,11 @@
         top: 130%;
         font-size: xx-large;
         text-align: left;
-      }
+      } */
 
       .flight_button {
         border: none;
+        border-radius: 1em;
         text-decoration: none;
         font-size: 20px;
         cursor: pointer;
@@ -232,6 +211,102 @@
 
       #passengers {
         width: 90px;
+      }
+      input {
+        border-radius: 1em;
+      }
+      section .cust {
+        padding-top: 10px;
+        padding-right: 10px;
+      }
+      section .recommendations{
+        margin: 30px;
+        font-family: 'Inter';
+        color: #557177;
+      }
+      section h2{
+        font-size: 40px;
+        text-align: center;
+      }
+      section .rec-recommendations{
+        display: flex;
+      }
+      section .rec-recommendations .rec-box{
+        margin: 5px;
+        padding: 10px;
+        font-size: 20px;
+        text-decoration: none;
+      }
+      section .rec-recommendations .rec-box p{
+        padding-top: 10px;
+      }
+      section .reviewer {
+        text-align: left;
+        padding-left: 10px;
+      }
+
+      section .review .review1 {
+        text-align: center;
+        width: 50%;
+        float: left;
+      }
+      section .review .left-box {
+        padding-top: 30px;
+      }
+
+      @media (max-width: 900px){
+        section .rec-recommendations{
+          flex-direction: column;
+        }
+      }
+
+      .reveal {
+        position: relative;
+        opacity: 0;
+      }
+
+      .reveal.activeanim {
+        opacity: 1;
+      }
+      .activeanim.fade-bottom {
+        animation: fade-bottom 1s ease-in;
+      }
+      .activeanim.fade-left {
+        animation: fade-left 1s ease-in;
+      }
+      .activeanim.fade-right {
+        animation: fade-right 1s ease-in;
+      }
+      @keyframes fade-bottom {
+        0% {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes fade-left {
+        0% {
+          transform: translateX(-100px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade-right {
+        0% {
+          transform: translateX(100px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
       }
 
       .rec1, .rec2, .rec3, .rec4 {
@@ -313,7 +388,7 @@
   </label>
 
   <label class="passengers" for="passengers">Passengers
-    <input type="number" id="passengers" name="passengers" min="1">
+    <input type="number" id="passengers" name="passengers" min="1" value="0">
   </label>
 
   <label class="check1" for="ch_in">Departure
@@ -373,22 +448,61 @@
       <span class="dot" onclick="currentSlide(5)"></span> 
     </div>
 
-<!-- <div class="countries">
-  <p class="title">Visit Famous Tourist Countries</p>
-  <div class="famous1"><img src="/assets/media/flights_country.jpg" alt="Jeju"></br> Jeju, Korea</div>
-  <div class="famous2"><img src="/assets/media/flights_country2.jpg" alt="Berlin"></br> Berlin, Germany</div>
-  <div class="famous3"><img src="/assets/media/flights_country3.jpg" alt="Paris"></br> Paris, France</div>
-  <div class="famous4"><img src="/assets/media/flights_country4.jpg" alt="Bangkok"></br> Bangkok, Thailand</div>
-  <div class="famous5"><img src="/assets/media/flights_country5.jpg" alt="Haneda"></br> Haneda, Japan</div>
-</div> -->
-
-<div class="recommendations">
-  <p class="title2">Our Recommendations</p>
-  <div class="rec1"><img class="one" src="/assets/media/flights_rec.png" alt="Emirates"></br> Emirates <img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
-  <div class="rec2"><img class="one" src="/assets/media/flights_rec2.jpg" alt="Air Arabia"></br> Air Arabia <img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
-  <div class="rec3"><img class="one" src="/assets/media/flights_rec3.jpg" alt="FlyDubai"></br> FlyDubai <img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
-  <div class="rec4"><img class="one" src="/assets/media/flights_rec4.jpg" alt="Etihad Airways"></br> Etihad Airways <img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
+<section>
+<div class="recommendations reveal fade-bottom">
+  <h2>Our Recommendations</h2>
+  <div class="rec-recommendations">
+    <a class="rec-box" href="#"><img class="one" src="/assets/media/flights_rec.png" alt="Emirates"></br> Emirates
+      <img class="two" src="/assets/media/stars.jpg" alt="Stars"> <br>
+      <p>Based in Dubai, the Emirates is a subsidiary of The Emirates Group, which is owned by the government of Dubai's Investment Corporation of Dubai.</p>
+    </a>
+    <a class="rec-box" href="#"><img class="one" src="/assets/media/flights_rec2.jpg" alt="Air Arabia"></br> Air Arabia
+      <img class="two" src="/assets/media/stars.jpg" alt="Stars"> <br>
+      <p>Air Arabia is an Emirati low-cost airline with its head office in the A1 Building Sharjah Freight Center, Sharjah International Airport.</p>
+    </a>
+    <a class="rec-box" href="#"><img class="one" src="/assets/media/flights_rec3.jpg" alt="FlyDubai"></br> FlyDubai
+      <img class="two" src="/assets/media/stars.jpg" alt="Stars"><br>
+      <p>Flydubai is an Emirati government-owned low-cost airline in Dubai with its head office and flight operations in Terminal 2 of Dubai International Airport.</p>
+    </a>
+    <a class="rec-box" href="#"><img class="one" src="/assets/media/flights_rec4.jpg" alt="Etihad Airways"></br> Etihad Airways
+      <img class="two" src="/assets/media/stars.jpg" alt="Stars"><br>
+      <p>Etihad Airways is the national airline of the United Arab Emirates and one of two flag carriers of the United Arab Emirates.</p>
+    </a>
+  </div>
 </div>
+</section>
+
+<section>
+<div class="recommendations reveal fade-left review">
+  <h2>A word from our customers:</h2>
+  <div class="rec-recommendations review1 left-box">
+    <div class="rec-box">
+      <h3>AMAZING AIRLINE SERVICES</h3>
+      <p>The staff and hosts in the airlines are of best services. I was able to rent headphones in the Air Arabia flight to listen to songs during the ride. There was little to no turbulence in my flights.</p>
+      <img class="two cust" src="/assets/media/stars.jpg" alt="stars"><p class="reviewer">- John S. Smith</p>
+    </div>
+    <div class="rec-box">
+      <h3>BEST FIRST EXPERIENCE</h3>
+      <p>This was my first experience with a travel agency and I safely reached my dream tourist place with the best airline services provided. I took a night ride in the plane and it was peaceful with all the other friendly passengers.</p>
+      <img class="two cust" src="/assets/media/45stars.jpg" alt="45stars"><p class="reviewer">- Melinda J. Green</p>
+    </div>
+  </div>
+</div>
+<div class="recommendations reveal fade-right review">
+  <div class="rec-recommendations review1">
+    <div class="rec-box">
+      <h3>EASY FLIGHT BOOKING SERVICE</h3>
+      <p>I booked my flights to my favourite tourist country through the Escape Artists website and it was the easiest booking process I have had in a while. It was an easy to access website with features like searching for preferred flights and hotels.</p>
+      <img class="two cust" src="/assets/media/45stars.jpg" alt="45stars"><p class="reviewer">- Joe M. Paul</p>
+    </div>
+    <div class="rec-box">
+      <h3>CUSTOMER SUPPORT IS AMAZING</h3>
+      <p>The employees at this travel agency are very supportive and understood all my needs with my travel plans. They were able to guide me to my perfect vacation which I enjoyed with my family.</p>
+      <img class="two cust" src="/assets/media/4stars.jpg" alt="4stars"><p class="reviewer">- Jill P. Mist</p>
+    </div>
+  </div>
+</div>
+</section>
 
 
     <!-- <footer>
@@ -460,6 +574,24 @@
         slides[slideIndex-1].style.display = "block";  
         dots[slideIndex-1].className += " activepic";
       }
+
+      function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveals[i].getBoundingClientRect().top;
+          var elementVisible = 150;
+
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("activeanim");
+          } else {
+            reveals[i].classList.remove("activeanim");
+          }
+        }
+      }
+
+      window.addEventListener("scroll", reveal);
     </script>
 </body>
 </html>
