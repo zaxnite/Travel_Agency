@@ -45,18 +45,20 @@
         text-align: center;
         padding: 10px;
         color: #557177;
-        margin-top: 5%;
+        margin-top: 9%;
+        margin-bottom: 2%;
       }
       .mySlides {display: none}
       .mySlides > img {vertical-align: middle; 
         max-height: 400px;
-        width: 100%;
+        width: 90%;
       }
 
       /* Slideshow container */
       .slideshow-container {
         position: relative;
         margin: auto;
+        left: 6%;
       }
 
       /* Next & previous buttons */
@@ -142,8 +144,18 @@
         max-width: 110px;
         float: right;
       }
+
+      .title2 {
+        font-family: 'Inter';
+        font-size: 40px;
+        text-align: center;
+        padding: 10px;
+        color: #557177;
+      }
+
       .title2 { grid-area: header2; 
-        margin-top: 8%;
+        margin-top: 18%;
+        margin-bottom: 2%;
         font-size: 40px;
       }
       /* .rec1 { grid-area: rec1; font-size: 25px;}
@@ -297,6 +309,15 @@
         }
       }
 
+      .rec1, .rec2, .rec3, .rec4 {
+        transition: transform .2s;
+      }
+
+      .rec1:hover, .rec2:hover, .rec3:hover, .rec4:hover{
+        transform:scale(1.2);
+      }
+
+
     </style>
 
 </head>
@@ -385,7 +406,7 @@
     <p class="title">Visit Famous Tourist Countries</p>
     <div class="mySlides fade">
       <div class="numbertext">1 / 5</div>
-      <img src="/assets/media/flights_country.jpg" alt="Jeju">
+      <img src="/assets/media/hotel-arbour.jpg" alt="Jeju">
       <div class="text">Jeju, Korea</div>
     </div>
     
