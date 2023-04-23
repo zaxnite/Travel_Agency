@@ -7,80 +7,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
     <title>Hotels</title>
     <style>
-      *{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: 'Inter';
-        scroll-behavior: smooth;
-        text-decoration: none;
-        list-style: none;
-      }
-
-      :root{
-        --bg-color: #fff;
-        --text-color: #221314;
-        --second-color: #5a7184;
-        --big-font: 6rem;
-        --h2-font: 3rem;
-        --p-font: 1.1rem;
-        --small-font: 2rem;
-
-      }
-
-      body{
-        background-color: var(--bg-color);
-        color: var(--text-color);
-      }
-
-      header{
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 100%;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 30px 12%;
-        transition: ease .40s;
-      }
-
-      .logo{
-        font-size: 35px;
-        font-weight: 600;
-        letter-spacing: 1px;
-        color: var(--bg-color);
-      }
-
-      .navbar{
-        display: flex;
-      }
-
-      .navbar a {
-        color: var(--bg-color);
-        font-size: var(--p-font);
-        font-weight: 500;
-        padding: 10px 22px;
-        border-radius: 4px;
-        transition: ease .40s;
-      } 
-
-      .navbar a:hover{
-        background: var(--bg-color);
-        color: #29c3e5;
-        box-shadow: 5px 10px 30px rgba(46, 45, 45, 0.2);
-        border-radius: 4px;
-      }
-
-      #menu-icon{
-        color: var(--bg-color);
-        font-size: 35px;
-        z-index: 1001;
-        cursor: pointer;
-        display: none;
-      }
-
       .hotel{
         position: relative;
         width: 100%;
@@ -286,14 +212,13 @@
 
 <div class="container"> 
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
+    
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
 
-    <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
         <img src="la.jpg" alt="Los Angeles" style="width:100%;">
@@ -308,7 +233,6 @@
       </div>
     </div>
 
-    <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left"></span>
       <span class="sr-only">Previous</span>
