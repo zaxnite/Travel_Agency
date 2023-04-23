@@ -66,6 +66,11 @@
       }
 
       .title2 {
+        font-family: 'Inter';
+        font-size: 40px;
+        text-align: center;
+        padding: 10px;
+        color: #557177;
         padding-bottom: 25px;
       }
 
@@ -109,6 +114,101 @@
 
       .rec1:hover, .rec2:hover, .rec3:hover, .rec4:hover{
         transform:scale(1.2);
+      }
+
+      .title {
+        font-family: 'Inter';
+        font-size: 40px;
+        text-align: center;
+        padding: 10px;
+        color: #557177;
+        margin-top: 53%;
+      }
+      .mySlides {display: none}
+      .mySlides > img {vertical-align: middle; 
+        max-height: 400px;
+        width: 100%;
+      }
+
+      /* Slideshow container */
+      .slideshow-container {
+        position: relative;
+        margin: auto;
+      }
+
+      /* Next & previous buttons */
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+      }
+
+      /* Caption text */
+      .text {
+        background-color: #a8c3e094;
+        border-radius: 25px;
+        color: #f2f2f2;
+        font-size: 50px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 30%;
+        text-align: center;
+      }
+
+      /* Number text (1/5 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .activepic, .dot:hover {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
       }
 
       .text h2{
@@ -229,6 +329,53 @@
   <div class="rec3"><img class="one" src="/assets/media/hotel-arbour.jpg" alt="Arbour Hotel and Residence, Pattaya, Thailand"></br> Arbour Hotel and Residence, Pattaya, Thailand </br><img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
   <div class="rec4"><img class="one" src="/assets/media/hotel-kawa.jpg" alt="Kawaguchiko Hotel, Fujikawaguchiko, Japan"></br> Kawaguchiko Hotel, Fujikawaguchiko, Japan </br><img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
 </div>
+
+<!-- Carousel -->
+<div class="slideshow-container">
+  <p class="title">Visit Famous Tourist Countries</p>
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 5</div>
+    <img src="./assets/media/arya1.jpeg" alt="Jeju">
+    <div class="text">Jeju, Korea</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 5</div>
+    <img src="/assets/media/flights_country2.jpg" alt="Berlin">
+    <div class="text">Berlin, Germany</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 5</div>
+    <img src="/assets/media/flights_country3.jpg" alt="Paris">
+    <div class="text">Paris, France</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 5</div>
+    <img src="/assets/media/flights_country4.jpg" alt="Bangkok">
+    <div class="text">Bangkok, Thailand</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="/assets/media/flights_country5.jpg" alt="Haneda">
+    <div class="text">Haneda, Japan</div>
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)"></a>
+  <a class="next" onclick="plusSlides(1)"></a>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    <span class="dot" onclick="currentSlide(5)"></span> 
+  </div>
 
 <!-- Popular Attractions Carousel -->
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
