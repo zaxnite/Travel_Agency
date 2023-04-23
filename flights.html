@@ -20,6 +20,7 @@
       }
 
       .flight-text{
+        font-family: 'Inter';
         color: #ffffffda;
         position: relative;
         left: 5%;
@@ -37,7 +38,7 @@
       .form-control {
         height: 30px;
       }
-      .countries div img {
+      /* .countries div img {
         border-radius: 50%;
         max-width: 80%;
         height: 180px;
@@ -60,8 +61,97 @@
         top: 90%;
         font-size: xx-large;
         text-align: center;
+      } */
+      .title {
+        font-family: 'Inter';
+        font-size: 25px;
+        text-align: center;
+        padding: 10px;
+        color: #557177;
+      }
+      .mySlides {display: none}
+      .mySlides > img {vertical-align: middle; 
+        max-height: 400px;
+        width: 100%;
+        
       }
 
+      /* Slideshow container */
+      .slideshow-container {
+        position: relative;
+        margin: auto;
+      }
+
+      /* Next & previous buttons */
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+      }
+
+      /* Caption text */
+      .text {
+        background-color: #a8c3e094;
+        border-radius: 25px;
+        color: #f2f2f2;
+        font-size: 50px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 30%;
+        text-align: center;
+      }
+
+      /* Number text (1/5 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .activepic, .dot:hover {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
       .one {
         border-radius: 25px;
         max-width: 90%;
@@ -94,8 +184,10 @@
         text-decoration: none;
         font-size: 20px;
         cursor: pointer;
+        grid-area: search;
       }
 
+      .passengers {grid-area: passengers;}
       .airport1 {grid-area: airport1;}
       .airport2 {grid-area: airport2;}
       .check1 {grid-area: check1;}
@@ -108,15 +200,15 @@
       
       .search {
         display: grid;
-        grid: 'airport1 airport2' 'check1 check2';
-        width: 50%;
+        grid: 'airport1 airport2 passengers' 'check1 check2 search';
+        width: 60%;
         background-color: #ffffffc6;
-        border: solid black 2px;
         padding: 20px;
         border-radius: 1em;
+        z-index: 5;
         position: absolute;
-        top: 54%;
-        left: 350px;
+        top: 60%;
+        left: 18%;
       }
 
       #passengers {
@@ -288,14 +380,60 @@
     <!-- <input type="submit" value="Search" id="search"> -->
   </form>
 
-<div class="countries">
+  <div class="slideshow-container">
+    <p class="title">Visit Famous Tourist Countries</p>
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="/assets/media/flights_country.jpg" alt="Jeju">
+      <div class="text">Jeju, Korea</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <img src="/assets/media/flights_country2.jpg" alt="Berlin">
+      <div class="text">Berlin, Germany</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="/assets/media/flights_country3.jpg" alt="Paris">
+      <div class="text">Paris, France</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 5</div>
+      <img src="/assets/media/flights_country4.jpg" alt="Bangkok">
+      <div class="text">Bangkok, Thailand</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 5</div>
+      <img src="/assets/media/flights_country5.jpg" alt="Haneda">
+      <div class="text">Haneda, Japan</div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span> 
+      <span class="dot" onclick="currentSlide(5)"></span> 
+    </div>
+
+<!-- <div class="countries">
   <p class="title">Visit Famous Tourist Countries</p>
   <div class="famous1"><img src="/assets/media/flights_country.jpg" alt="Jeju"></br> Jeju, Korea</div>
   <div class="famous2"><img src="/assets/media/flights_country2.jpg" alt="Berlin"></br> Berlin, Germany</div>
   <div class="famous3"><img src="/assets/media/flights_country3.jpg" alt="Paris"></br> Paris, France</div>
   <div class="famous4"><img src="/assets/media/flights_country4.jpg" alt="Bangkok"></br> Bangkok, Thailand</div>
   <div class="famous5"><img src="/assets/media/flights_country5.jpg" alt="Haneda"></br> Haneda, Japan</div>
-</div>
+</div> -->
 
 <div class="recommendations">
   <p class="title2">Our Recommendations</p>
@@ -347,6 +485,33 @@
       menu.onclick = () => {
         menu.classList.toggle('bx-x')
         navbar.classList.toggle('open')
+      }
+
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" activepic", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " activepic";
       }
     </script>
 </body>
