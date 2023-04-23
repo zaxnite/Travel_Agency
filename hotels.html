@@ -60,7 +60,7 @@
         padding: 50px;
         gap: 10px;
         position: absolute;
-        top: 103%;
+        top: 95%;
         font-size: xx-large;
         text-align: center;
       }
@@ -101,6 +101,14 @@
 
       #passengers {
         width: 90px;
+      }
+
+      .rec1, .rec2, .rec3, .rec4 {
+        transition: transform .2s;
+      }
+
+      .rec1:hover, .rec2:hover, .rec3:hover, .rec4:hover{
+        transform:scale(1.2);
       }
 
       .text h2{
@@ -181,20 +189,6 @@
     <option value="Valencia, Spain">
   </datalist>
 </label>
-
-<!-- <div class="grid-container">
-  <div class="grid-item item1"><label class="passengers" for="passengers">Adults:
-  <input type="number" id="passengers" name="passengers" min="1" placeholder="0">
-  </label></div>
-  
-  <div class="grid-item item2"><label class="passengers" for="passengers">Children:
-  <input type="number" id="passengers" name="passengers" min="1" placeholder="0">
-  </label></div>
-
-  <div class="grid-item item3"><label class="passengers" for="passengers">Rooms:
-  <input type="number" id="passengers" name="passengers" min="1" placeholder="0">
-  </label></div> 
-</div> -->
 
 <label class="passengers" for="passengers">Adults:
   <input type="number" id="passengers" name="passengers" min="1" placeholder="0">
@@ -291,7 +285,7 @@
     }
   </script> -->
 
-  <section class="continer">
+  <!-- <section class="continer">
     <div class="text">
       <h2>THINGS TO KNOW</h2>
     </div>
@@ -325,7 +319,7 @@
       </div>
 
     </div>
-  </section>
+  </section> -->
 
   <script>
     const header = document.querySelector("header");
