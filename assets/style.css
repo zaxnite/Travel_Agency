@@ -780,6 +780,28 @@ header.sticky{
   margin-top: 43%;
 }
 
+/* Caption text */
+.desc {
+  background-color: #a8c3e094; 
+  border-radius: 25px;
+  color: #f2f2f2;
+  font-size: 40px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 30%;
+  text-align: center;
+}
+
+/* Number text (1/5 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
 
 
 /* About_Us CSS */
@@ -907,6 +929,50 @@ a {
   }
 }
 
+.slideshow-container2 {
+  position: relative;
+  margin: auto;
+}
+
+section .cust {
+  padding-top: 10px;
+  padding-right: 10px;
+}
+section .recommendations{
+  margin: 30px;
+  font-family: 'Inter';
+  color: #557177;
+}
+section h2{
+  font-size: 40px;
+  text-align: center;
+}
+section .rec-recommendations{
+  display: flex;
+}
+
+section .rec-recommendations .rec-box{
+  margin: 5px;
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+section .rec-recommendations .rec-box p{
+  padding-top: 10px;
+}
+section .reviewer {
+  text-align: left;
+  padding-left: 10px;
+}
+
+section .review .review1 {
+  text-align: center;
+  width: 50%;
+  float: left;
+}
+section .review .left-box {
+  padding-top: 30px;
+}
 
 /* SUPPORT */
 
