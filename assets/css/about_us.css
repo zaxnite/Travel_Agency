@@ -449,4 +449,29 @@
   .open{
     right: 0;
   }
+
+  .about-home-text h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 60px;
+    line-height: 97px;
+    color: #FFFFFF;
+  }
+  
+  .about-home-text p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 30px;
+    line-height: 48px;
+    color: #FFFFFF;
+  }
+
+  .about-home-text{
+    position: relative; /* position the text content relative to the section */
+    margin-right: auto;
+    margin-left: auto;
+  }
+
 }
