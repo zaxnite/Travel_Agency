@@ -297,8 +297,8 @@
   }
 
   footer{
-    padding-top: 2rem;
-    background: #6c869c;
+    padding-top: 5rem;
+    background: #5a7184;
     height: auto;
     width: 100vw;
     color: #f2f2f2;
@@ -353,7 +353,7 @@
   }
   
   .footer-bottom{
-    background:  #6093be;
+    background:  #5a7184;
     width: 100vw;
     padding: 20px 0;
     text-align: center;
