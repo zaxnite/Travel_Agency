@@ -605,6 +605,7 @@ a {
     padding-right: 80px;
     padding-left: 25%;
     padding-bottom: 60px;
+    transition: .2s;
   }
 
   :root{
