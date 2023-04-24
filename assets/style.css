@@ -535,6 +535,9 @@ header.sticky{
   font-family: 'Inter';
   color: #557177;
 }
+.rec h2 {
+  padding-top: 30px;
+}
 .flights .rec-recommendations{
   display: flex;
 }
