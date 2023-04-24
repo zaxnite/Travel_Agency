@@ -7,7 +7,7 @@
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <title>Hotels</title>
     <style>
-      .hotel{
+      /* .hotel{
         position: relative;
         width: 100%;
         height: 70vh;
@@ -26,9 +26,9 @@
         bottom: 18%;
         font-size: 50px;
         font-weight: 500;
-      }
+      } */
 
-      #from {
+      /* #from {
         width: 140px;
       }
       input {
@@ -36,9 +36,9 @@
       }
       .form-control {
         height: 30px;
-      }
+      } */
 
-      .one {
+      /* .hotel-one {
         border-radius: 25px;
         max-width: 90%;
         height: 250px;
@@ -46,16 +46,15 @@
       .rev-star {
         max-width: 110px;
         margin-top: 4%;
-        /* margin-right: 35%; */
       }
 
-      .two {
+      .hotel-two {
         max-width: 110px;
         margin-top: 4%;
         margin-right: 35%;
-      }
+      } */
 
-      .title2 { grid-area: header2;}
+      /* .title-rec { grid-area: header2;}
       .rec1 { grid-area: rec1; font-size: 25px;}
       .rec2 { grid-area: rec2; font-size: 25px;}
       .rec3 { grid-area: rec3; font-size: 25px;}
@@ -74,7 +73,7 @@
         text-align: center;
       }
 
-      .title2 {
+      .title-rec {
         font-family: 'Inter';
         font-size: 70px;
         text-align: center;
@@ -82,46 +81,40 @@
         color: #557177;
         padding-bottom: 25px;
         margin-top: -5%;
-      }
+      } */
 
-      .hotel_book {grid-area: hotel_book;}
+      /* .hotel_book {grid-area: hotel_book;}
       .room_type {grid-area: room_type;}
       .hotel-check1 {grid-area: hotel-check1;}
       .hotel-check2 {grid-area: hotel-check2;}
 
       .hotel_book {
         font-size: large;
-        /* padding: 15px; */
         transform: translate(20px, 5px);
       }
 
       .room_type {
         font-size: large;
-        /* padding: 15px; */
         transform: translate(100px, 5px);
       }
 
       .hotel-check1 {
         font-size: large;
-        /* padding: 15px; */
         transform: translate(20px, -30px);
       }
 
       .hotel-check2 {
         font-size: large;
-        /* padding: 15px; */
         transform: translate(100px, -30px);
       }
 
       .room-choice {
         font-size: large;
-        /* padding: 15px; */
         transform: translate(200px, 10px);
       }
 
       .adults {
         font-size: large;
-        /* padding: 15%; */
         transform: translate(-295px, 145px);
       } 
       
@@ -131,13 +124,12 @@
         transform: translate(-260px, 119px);
       }
 
-      .passengers {
+      .no_of_room {
         font-size: large;
-        /* padding: 15%; */
-        transform: translate(-100px, -35px);
-      }
+        transform: translate(10px, 32px);
+      } */
       
-      .search {
+      /* .hotel-search {
         display: grid;
         grid: 'hotel_book room_type' 'hotel-check1 hotel-check2';
         width: 30%;
@@ -161,29 +153,29 @@
         height: 40px;
         width: 180px;
         background-color: #cfe0e4;
-        transform: translate(-290px, 55px);
-      }
+        transform: translate(-290px, 25px);
+      } */
 
-      #passengers {
+      /* #hotel-passengers {
         width: 90px;
-      }
+      } */
 
-      .rec1, .rec2, .rec3, .rec4, .continer-box {
+      /* .rec1, .rec2, .rec3, .rec4, .continer-box {
         transition: transform .2s;
       }
 
       .rec1:hover, .rec2:hover, .rec3:hover, .rec4:hover, .continer-box:hover{
         transform:scale(1.2);
-      }
+      } */
 
-      .title-pop {
+      /* .title-pop {
         font-family: 'Inter';
         font-size: 70px;
         text-align: center;
         padding: 10px;
         color: #557177;
         margin-top: 43%;
-      }
+      } */
       .mySlides {display: none}
       .mySlides > img {vertical-align: middle; 
         max-height: 400px;
@@ -375,7 +367,7 @@
     </div>
   </section>
   
-<form class="search" action="">
+<form class="hotel-search" action="">
 
 <label for="hotel_book" class="hotel_book">Country or City:
   <input class="form-control" list="hotel_book" id="from" placeholder="Country or City">
@@ -398,16 +390,16 @@
   </datalist>
 </label>
 
-<label class="adults" for="passengers">Adults:
-  <input type="number" id="passengers" name="passengers" min="1" placeholder="0">
+<label class="adults" for="hotel-passengers">Adults:
+  <input type="number" id="hotel-passengers" name="hotel-passengers" min="1" placeholder="0">
 </label>
 
-<label class="children" for="passengers">Children:
-  <input type="number" id="passengers" name="passengers" min="1" placeholder="0">
+<label class="children" for="hotel-passengers">Children:
+  <input type="number" id="hotel-passengers" name="hotel-passengers" min="1" placeholder="0">
 </label>
 
-<label class="passengers" for="passengers">Rooms:
-  <input type="number" id="passengers" name="passengers" min="1" placeholder="0">
+<label class="no_of_room" for="hotel-passengers">Rooms:
+  <input type="number" id="hotel-passengers" name="hotel-passengers" min="1" placeholder="0">
 </label>
 
 <label for="room_type" class="room_type">Room Type:
@@ -431,15 +423,15 @@
 </form>
 
 <div class="hotel_recommendations">
-  <p class="title2">Our Recommendations</p>
-  <div class="rec1"><img class="one" src="/assets/media/hotel-four-seasons.jpg" alt="Four Seasons Hotel, Paris"></br> Four Seasons Hotel, Paris </br>
-    <img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
-  <div class="rec2"><img class="one" src="/assets/media/hotel-signiel.jpg" alt="Signiel Hotel, Seoul, Korea"></br> Signiel Hotel, Seoul, Korea </br>
-    <img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
-  <div class="rec3"><img class="one" src="/assets/media/hotel-arbour.jpg" alt="Arbour Hotel and Residence, Pattaya, Thailand"></br> Arbour Hotel and Residence, Pattaya, Thailand </br>
-    <img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
-  <div class="rec4"><img class="one" src="/assets/media/hotel-kawa.jpg" alt="Kawaguchiko Hotel, Fujikawaguchiko, Japan"></br> Kawaguchiko Hotel, Fujikawaguchiko, Japan </br>
-    <img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
+  <p class="title-rec">Our Recommendations</p>
+  <div class="rec1"><img class="hotel-one" src="/assets/media/hotel-four-seasons.jpg" alt="Four Seasons Hotel, Paris"></br> Four Seasons Hotel, Paris </br>
+    <img class="hotel-two" src="/assets/media/stars.jpg" alt="Stars"></div>
+  <div class="rec2"><img class="hotel-one" src="/assets/media/hotel-signiel.jpg" alt="Signiel Hotel, Seoul, Korea"></br> Signiel Hotel, Seoul, Korea </br>
+    <img class="hotel-two" src="/assets/media/stars.jpg" alt="Stars"></div>
+  <div class="rec3"><img class="hotel-one" src="/assets/media/hotel-arbour.jpg" alt="Arbour Hotel and Residence, Pattaya, Thailand"></br> Arbour Hotel and Residence, Pattaya, Thailand </br>
+    <img class="hotel-two" src="/assets/media/stars.jpg" alt="Stars"></div>
+  <div class="rec4"><img class="hotel-one" src="/assets/media/hotel-kawa.jpg" alt="Kawaguchiko Hotel, Fujikawaguchiko, Japan"></br> Kawaguchiko Hotel, Fujikawaguchiko, Japan </br>
+    <img class="hotel-two" src="/assets/media/stars.jpg" alt="Stars"></div>
 </div>
 
 <!-- Carousel -->
