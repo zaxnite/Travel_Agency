@@ -6,296 +6,6 @@
     <link rel="stylesheet" type="text/css" href="assets/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
     <title>Flights</title>
-    <style>
-      .flight{
-        position: relative;
-        width: 100%;
-        height: 70vh;
-        background: url(/assets/media/flights_bg.jpg);
-        background-position: center;
-        background-size: cover;
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        align-items: center;
-      }
-
-      .flight-text{
-        color: #ffffffda;
-        position: relative;
-        float: left;
-        padding: 30px;
-        bottom: 20%;
-        font-size: 50px;
-        font-weight: 500;
-      }
-
-      #from {
-        width: 140px;
-      }
-      input {
-        padding: 5px;
-      }
-      .form-control {
-        height: 30px;
-      }
-
-      .title {
-        font-family: 'Inter';
-        font-size: 40px;
-        text-align: center;
-        padding: 10px;
-        color: #557177;
-        margin-top: 5%;
-        margin-bottom: 2%;
-      }
-      .mySlides {display: none}
-      .mySlides > img {vertical-align: middle; 
-        max-height: 400px;
-        width: 100%;
-      }
-
-      /* Slideshow container */
-      .slideshow-container {
-        position: relative;
-        margin: auto;
-      }
-
-      /* Next & previous buttons */
-      .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: -22px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-      }
-
-      /* Position the "next button" to the right */
-      .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-      }
-
-      /* On hover, add a black background color with a little bit see-through */
-      .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
-      }
-
-      /* Caption text */
-      .text {
-        background-color: #a8c3e0af;
-        border-radius: 25px;
-        color: #f2f2f2;
-        font-size: 45px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 8px;
-        width: 25%;
-        text-align: center;
-      }
-
-      /* Number text (1/5 etc) */
-      .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-      }
-
-      /* The dots/bullets/indicators */
-      .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-      }
-
-      .activepic, .dot:hover {
-        background-color: #717171;
-      }
-
-      /* Fading animation */
-      .fade {
-        animation-name: fade;
-        animation-duration: 1.5s;
-      }
-      @keyframes fade {
-        from {opacity: .4} 
-        to {opacity: 1}
-      }
-      .one {
-        border-radius: 25px;
-        width: 100%;
-        height: 250px;
-      }
-      .two {
-        max-width: 110px;
-        float: right;
-      }
-
-      .title2 {
-        font-family: 'Inter';
-        font-size: 40px;
-        text-align: center;
-        padding: 10px;
-        color: #557177;
-      }
-
-      .title2 { grid-area: header2; 
-        margin-top: 12%;
-        margin-bottom: 2%;
-        font-size: 40px;
-      }
-
-      .flight_button {
-        border: none;
-        border-radius: 1em;
-        text-decoration: none;
-        font-size: 20px;
-        cursor: pointer;
-        grid-area: search;
-      }
-
-      .passengers {grid-area: passengers;}
-      .airport1 {grid-area: airport1;}
-      .airport2 {grid-area: airport2;}
-      .check1 {grid-area: check1;}
-      .check2 {grid-area: check2;}
-
-      .airport1, .airport2, .check1, .check2, .passengers {
-        font-size: large;
-        padding: 15px;
-      }
-      
-      .search {
-        display: grid;
-        grid: 'airport1 airport2 passengers' 'check1 check2 search';
-        width: 70%;
-        background-color: #ffffffc6;
-        padding: 20px;
-        border-radius: 1em;
-        z-index: 5;
-        position: absolute;
-        top: 59%;
-        margin-left: 15%;
-      }
-
-      #passengers {
-        width: 90px;
-      }
-      input {
-        border-radius: 1em;
-      }
-
-      section .cust {
-        padding-top: 10px;
-        padding-right: 10px;
-      }
-      section .recommendations{
-        margin: 30px;
-        font-family: 'Inter';
-        color: #557177;
-      }
-      section h2{
-        font-size: 40px;
-        text-align: center;
-        font-family: 'Inter';
-        color: #557177;
-      }
-      section .rec-recommendations{
-        display: flex;
-      }
-      section .rec-recommendations .rec-box{
-        margin: 5px;
-        padding: 15px;
-        font-size: 20px;
-        text-decoration: none;
-        transition: transform .2s;
-      }
-      section .rec-recommendations .rec-box:hover{
-        transform:scale(1.1);
-      }
-      section .rec-recommendations .rec-box p{
-        padding-top: 10px;
-      }
-      section .reviewer {
-        text-align: left;
-        padding-left: 10px;
-      }
-
-      section .review .review1 {
-        text-align: center;
-        width: 50%;
-        float: left;
-      }
-
-      @media (max-width: 900px){
-        section .rec-recommendations{
-          flex-direction: column;
-        }
-      }
-
-      .reveal {
-        position: relative;
-        opacity: 0;
-      }
-
-      .reveal.activeanim {
-        opacity: 1;
-      }
-      .activeanim.fade-bottom {
-        animation: fade-bottom 1s ease-in;
-      }
-      .activeanim.fade-left {
-        animation: fade-left 1s ease-in;
-      }
-      .activeanim.fade-right {
-        animation: fade-right 1s ease-in;
-      }
-      @keyframes fade-bottom {
-        0% {
-          transform: translateY(50px);
-          opacity: 0;
-        }
-        100% {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
-      @keyframes fade-left {
-        0% {
-          transform: translateX(-100px);
-          opacity: 0;
-        }
-        100% {
-          transform: translateX(0);
-          opacity: 1;
-        }
-      }
-
-      @keyframes fade-right {
-        0% {
-          transform: translateX(100px);
-          opacity: 0;
-        }
-        100% {
-          transform: translateX(0);
-          opacity: 1;
-        }
-      }
-
-    </style>
 
 </head>
 <body>
@@ -382,31 +92,31 @@
   <div class="slideshow-container">
     <p class="title">Visit Famous Tourist Countries</p>
     <div class="mySlides fade">
-      <div class="numbertext">1 / 5</div>
+      <!-- <div class="numbertext">1 / 5</div> -->
       <img src="/assets/media/flights_country.jpg" alt="Jeju">
-      <div class="text">Jeju, Korea</div>
+      <div class="slidetext">Jeju, Korea</div>
     </div>
     
     <div class="mySlides fade">
-      <div class="numbertext">2 / 5</div>
+      <!-- <div class="numbertext">2 / 5</div> -->
       <img src="/assets/media/flights_country2.jpg" alt="Berlin">
-      <div class="text">Berlin, Germany</div>
+      <div class="slidetext">Berlin, Germany</div>
     </div>
     
     <div class="mySlides fade">
-      <div class="numbertext">3 / 5</div>
+      <!-- <div class="numbertext">3 / 5</div> -->
       <img src="/assets/media/flights_country3.jpg" alt="Paris">
-      <div class="text">Paris, France</div>
+      <div class="slidetext">Paris, France</div>
     </div>
 
     <div class="mySlides fade">
-      <div class="numbertext">4 / 5</div>
+      <!-- <div class="numbertext">4 / 5</div> -->
       <img src="/assets/media/flights_country4.jpg" alt="Bangkok">
-      <div class="text">Bangkok, Thailand</div>
+      <div class="slidetext">Bangkok, Thailand</div>
     </div>
 
     <div class="mySlides fade">
-      <div class="numbertext">5 / 5</div>
+      <!-- <div class="numbertext">5 / 5</div> -->
       <img src="/assets/media/flights_country5.jpg" alt="Haneda">
       <div class="text">Haneda, Japan</div>
     </div>
@@ -425,26 +135,26 @@
       <span class="dot" onclick="currentSlide(5)"></span> 
     </div>
 
-<section>
+<section class="flights">
 <h2 class="reveal fade-bottom">Our Recommendations</h2>
-<div class="recommendations reveal fade-left review">
+<div class="recommendations reveal fade-left">
   <div class="rec-recommendations">
-    <a class="rec-box reveal fade-left" href="https://www.emirates.com/ae/english/">
+    <a class="rec-box reveal fade-left recanim" href="https://www.emirates.com/ae/english/">
       <img class="one" src="/assets/media/flights_rec.png" alt="Emirates"></br> Emirates
       <img class="two" src="/assets/media/stars.jpg" alt="Stars"> <br>
       <p>Based in Dubai, the Emirates is a subsidiary of The Emirates Group, which is owned by the government of Dubai's Investment Corporation of Dubai.</p>
     </a>
-    <a class="rec-box" href="https://www.airarabia.com/en">
+    <a class="rec-box recanim" href="https://www.airarabia.com/en">
       <img class="one" src="/assets/media/flights_rec2.jpg" alt="Air Arabia"></br> Air Arabia
       <img class="two" src="/assets/media/stars.jpg" alt="Stars"> <br>
       <p>Air Arabia is an Emirati low-cost airline with its head office in the A1 Building Sharjah Freight Center, Sharjah International Airport.</p>
     </a>
-    <a class="rec-box reveal fade-left" href="https://www.flydubai.com/en/">
+    <a class="rec-box reveal fade-left recanim" href="https://www.flydubai.com/en/">
       <img class="one" src="/assets/media/flights_rec3.jpg" alt="FlyDubai"></br> FlyDubai
       <img class="two" src="/assets/media/stars.jpg" alt="Stars"><br>
       <p>Flydubai is an Emirati government-owned low-cost airline in Dubai with its head office and flight operations in Terminal 2 of Dubai International Airport.</p>
     </a>
-    <a class="rec-box" href="https://www.etihad.com/en-ae/">
+    <a class="rec-box recanim" href="https://www.etihad.com/en-ae/">
       <img class="one" src="/assets/media/flights_rec4.jpg" alt="Etihad Airways"></br> Etihad Airways
       <img class="two" src="/assets/media/stars.jpg" alt="Stars"><br>
       <p>Etihad Airways is the national airline of the United Arab Emirates and one of two flag carriers of the United Arab Emirates.</p>
@@ -453,7 +163,7 @@
 </div>
 </section>
 
-<section>
+<section class="flights">
 <h2 class="reveal fade-bottom">A word from our customers:</h2>
 <div class="recommendations reveal fade-left review">
   <div class="rec-recommendations review1 left-box">
@@ -485,6 +195,41 @@
 </div>
 </section>
 
+<section class="continer">
+  <div class="know">
+    <h2>THINGS TO KNOW</h2>
+  </div>
+  <div class="row-items">
+    <div class="continer-box">
+      <div class="continer-img">
+        <img src="/assets/media/travel_tip1.png">
+      </div>
+      <h4>Visas</h4>
+    </div>
+
+    <div class="continer-box">
+      <div class="continer-img">
+        <img src="/assets/media/travel_tip2.png">
+      </div>
+      <h4>Getting Here</h4>
+    </div>
+
+    <div class="continer-box">
+      <div class="continer-img">
+        <img src="/assets/media/travel_tip3.png">
+      </div>
+      <h4>Travel Tips</h4>
+    </div>
+
+    <div class="continer-box">
+      <div class="continer-img">
+        <img src="/assets/media/travel_tip4.png">
+      </div>
+      <h4>Getting Around</h4>
+    </div>
+
+  </div>
+</section>
 
     <!-- <footer>
         <a href="https://www.facebook.com/">
