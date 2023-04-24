@@ -84,34 +84,84 @@
         margin-top: -5%;
       }
 
-      .hotel_button {
-        border: none;
-        text-decoration: none;
-        font-size: 20px;
-        cursor: pointer;
-      }
-
       .hotel_book {grid-area: hotel_book;}
       .room_type {grid-area: room_type;}
       .hotel-check1 {grid-area: hotel-check1;}
       .hotel-check2 {grid-area: hotel-check2;}
 
-      .hotel_book, .room_type, .hotel-check1, .hotel-check2, .passengers, .num_room, .room-choice{
+      .hotel_book {
         font-size: large;
-        padding: 15px;
+        /* padding: 15px; */
+        transform: translate(20px, 5px);
+      }
+
+      .room_type {
+        font-size: large;
+        /* padding: 15px; */
+        transform: translate(100px, 5px);
+      }
+
+      .hotel-check1 {
+        font-size: large;
+        /* padding: 15px; */
+        transform: translate(20px, -30px);
+      }
+
+      .hotel-check2 {
+        font-size: large;
+        /* padding: 15px; */
+        transform: translate(100px, -30px);
+      }
+
+      .room-choice {
+        font-size: large;
+        /* padding: 15px; */
+        transform: translate(200px, 10px);
+      }
+
+      .adults {
+        font-size: large;
+        /* padding: 15%; */
+        transform: translate(-295px, 145px);
+      } 
+      
+      .children {
+        font-size: large;
+        padding: 15%;
+        transform: translate(-260px, 119px);
+      }
+
+      .passengers {
+        font-size: large;
+        /* padding: 15%; */
+        transform: translate(-100px, -35px);
       }
       
       .search {
         display: grid;
         grid: 'hotel_book room_type' 'hotel-check1 hotel-check2';
-        width: 50%;
+        width: 30%;
+        height: 35%;
         background-color: #ffffffc6;
         border: solid black 2px;
         padding: 20px;
         border-radius: 1em;
         position: absolute;
         top: 54%;
-        margin-left: 27%;
+        margin-left: 37.5%;
+      }
+
+      .hotel_button {
+        border-radius: 1em;
+        text-decoration: none;
+        font-size: 20px;
+        cursor: pointer;
+        grid-area: search;
+        border: none;
+        height: 40px;
+        width: 180px;
+        background-color: #cfe0e4;
+        transform: translate(-290px, 55px);
       }
 
       #passengers {
@@ -328,7 +378,7 @@
 <form class="search" action="">
 
 <label for="hotel_book" class="hotel_book">Country or City:
-  <input class="form-control" list="hotel_book" id="from" placeholder="City">
+  <input class="form-control" list="hotel_book" id="from" placeholder="Country or City">
   <datalist id="hotel_book">
     <option value="Abu Dhabi">
     <option value="Sharjah">
@@ -348,11 +398,11 @@
   </datalist>
 </label>
 
-<label class="passengers" for="passengers">Adults:
+<label class="adults" for="passengers">Adults:
   <input type="number" id="passengers" name="passengers" min="1" placeholder="0">
 </label>
 
-<label class="passengers" for="passengers">Children:
+<label class="children" for="passengers">Children:
   <input type="number" id="passengers" name="passengers" min="1" placeholder="0">
 </label>
 
