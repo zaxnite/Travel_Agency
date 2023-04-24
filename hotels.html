@@ -84,17 +84,17 @@
 
       .hotel_book {grid-area: hotel_book;}
       .room_type {grid-area: room_type;}
-      .check1 {grid-area: check1;}
-      .check2 {grid-area: check2;}
+      .hotel-check1 {grid-area: hotel-check1;}
+      .hotel-check2 {grid-area: hotel-check2;}
 
-      .hotel_book, .room_type, .check1, .check2, .passengers, .num_room, .room-choice{
+      .hotel_book, .room_type, .hotel-check1, .hotel-check2, .passengers, .num_room, .room-choice{
         font-size: large;
         padding: 15px;
       }
       
       .search {
         display: grid;
-        grid: 'hotel_book room_type' 'check1 check2';
+        grid: 'hotel_book room_type' 'hotel-check1 hotel-check2';
         width: 50%;
         background-color: #ffffffc6;
         border: solid black 2px;
@@ -109,15 +109,15 @@
         width: 90px;
       }
 
-      .rec1, .rec2, .rec3, .rec4 {
+      .rec1, .rec2, .rec3, .rec4, .continer-box {
         transition: transform .2s;
       }
 
-      .rec1:hover, .rec2:hover, .rec3:hover, .rec4:hover{
+      .rec1:hover, .rec2:hover, .rec3:hover, .rec4:hover, .continer-box:hover{
         transform:scale(1.2);
       }
 
-      .title {
+      .title-pop {
         font-family: 'Inter';
         font-size: 70px;
         text-align: center;
@@ -133,7 +133,7 @@
       }
 
       /* Slideshow container */
-      .slideshow-container {
+      .slideshow-container2 {
         position: relative;
         margin: auto;
       }
@@ -221,6 +221,7 @@
         line-height: 103px;
         color: #557177;
         margin: 100px;
+        margin-top: 23%;
         margin-bottom: 40px;
         text-align: center;
       }
@@ -242,6 +243,52 @@
         line-height: 44px;
 
         color: #557177;
+      }
+
+      section .cust {
+        padding-top: 10px;
+        padding-right: 10px;
+      }
+      section .recommendations{
+        margin: 30px;
+        font-family: 'Inter';
+        color: #557177;
+      }
+      section h2{
+        font-size: 40px;
+        text-align: center;
+      }
+      section .rec-recommendations{
+        display: flex;
+      }
+
+      section .rec-recommendations .rec-box{
+        margin: 5px;
+        padding: 10px;
+        font-size: 20px;
+        text-decoration: none;
+      }
+      section .rec-recommendations .rec-box p{
+        padding-top: 10px;
+      }
+      section .reviewer {
+        text-align: left;
+        padding-left: 10px;
+      }
+
+      section .review .review1 {
+        text-align: center;
+        width: 50%;
+        float: left;
+      }
+      section .review .left-box {
+        padding-top: 30px;
+      }
+
+      @media (max-width: 900px){
+        section .rec-recommendations{
+          flex-direction: column;
+        }
       }
 
     </style>
@@ -314,10 +361,10 @@
   </datalist>
 </label>
 
-<label class="check1" for="ch_in">Check In:
+<label class="hotel-check1" for="ch_in">Check In:
   <input type="date" min="2023-04-07" id="ch_in" name="ch_in">
 </label>
-<label class="check2" for="ch_out">Check Out:
+<label class="hotel-check2" for="ch_out">Check Out:
   <input type="date" min="2023-04-07" id="ch_out" name="ch_out">
 </label>
 
@@ -333,8 +380,8 @@
 </div>
 
 <!-- Carousel -->
-<div class="slideshow-container">
-  <p class="title">Popular Attractions</p>
+<div class="slideshow-container2">
+  <p class="title-pop">Popular Attractions</p>
   <div class="mySlides fade">
     <div class="numbertext">1 / 5</div>
     <img src="./assets/media/Falls_Niagara.jpg" alt="Canada">
@@ -378,6 +425,38 @@
     <span class="dot" onclick="currentSlide(4)"></span> 
     <span class="dot" onclick="currentSlide(5)"></span> 
   </div>
+
+  <section>
+    <div class="recommendations reveal fade-left review">
+      <h2>A word from our customers:</h2>
+      <div class="rec-recommendations review1 left-box">
+        <div class="rec-box">
+          <h3>BEST TRAVEL AGENCY SERVICE</h3>
+          <p>Prompt and excellent service at all times which exceeded our expectations! Will definitely recommend Escape Artists to my family, friends and colleagues. My stay was comfortable and fun.</p>
+          <img class="two cust" src="/assets/media/stars.jpg" alt="stars"><p class="reviewer">- Amy Santiago </p>
+        </div>
+        <div class="rec-box">
+          <h3>EASY HOTEL BOOKING SERVICE</h3>
+          <p>I was extremely impressed with the ease and convenience of the Escape Artists' hotel booking service as the website was easy to use. Clear and concise information was provided about each hotel.</p>
+          <img class="two cust" src="/assets/media/45stars.jpg" alt="45stars"><p class="reviewer">- Raymond Holt</p>
+        </div>
+      </div>
+    </div>
+    <div class="recommendations reveal fade-right review">
+      <div class="rec-recommendations review1">
+        <div class="rec-box">
+          <h3>A WONDERFUL SERVICE</h3>
+          <p>I had an amazing vacation thanks to the exceptional service. They helped me plan the perfect trip, taking care of all the details and making sure everything went smoothly. Their services are highly recommend for a stress-free travel experience!</p>
+          <img class="two cust" src="/assets/media/45stars.jpg" alt="45stars"><p class="reviewer">- Jake Peralta</p>
+        </div>
+        <div class="rec-box">
+          <h3>CUSTOMER SUPPORT IS AMAZING</h3>
+          <p>The employees at Escape Artists were quick to respond and and very understanding of all my requests. My family and I were able to enjoy our travel in comfort with their support.</p>
+          <img class="two cust" src="/assets/media/4stars.jpg" alt="4stars"><p class="reviewer">- Rosa Diaz</p>
+        </div>
+      </div>
+    </div>
+    </section>
 
     <section class="continer">
       <div class="know">
