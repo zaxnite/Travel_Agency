@@ -51,7 +51,7 @@
   }
   
   .navbar a {
-    color: var(--bg-color);
+    color: darkgray;
     font-size: var(--p-font);
     font-weight: 500;
     padding: 10px 22px;
