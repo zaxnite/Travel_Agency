@@ -1,129 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
-    <title>Homepage</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="assets/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+  <title>Homepage</title>
 </head>
+
 <body>
-    <!--Header-->
-    <header>
-        <a href="#" class="logo">EA</a>
-        <div class="bx bx-menu" id="menu-icon"></div>
+  <!--Header-->
+  <header>
+    <a href="#" class="logo">EA</a>
+    <div class="bx bx-menu" id="menu-icon"></div>
 
-        <ul class="navbar">
-            <li><a href="index.html" class="active">Homepage</a></li>
-            <li><a href="flights.html">Flights</a></li>
-            <li><a href="hotels.html">Hotels</a></li>
-            <li><a href="about_us.html">About Us</a></li>
-            <li><a href="support.html">Support</a></li>
-        </ul>
-    </header>
+    <ul class="navbar">
+      <li><a href="index.html" class="active">Homepage</a></li>
+      <li><a href="flights.html">Flights</a></li>
+      <li><a href="hotels.html">Hotels</a></li>
+      <li><a href="about_us.html">About Us</a></li>
+      <li><a href="support.html">Support</a></li>
+    </ul>
+  </header>
 
-    <!--Home Section-->
-    <section class="home" id="home">
-        <div class="home-text">
-            <h1>Escape Artists</h1>
-            <p>Your escape journey start here.</p>
-        </div>
-    </section>
-
-    <div class="home-offer">
-        <h1>What we offer</h1>
-        <p>Welcome to Escape Artists, your one-stop solution for hassle-free travel booking! 
-            We offer a wide range of travel services and packages, catering to all your travel needs. 
-            Whether you are looking for an exotic beach getaway, a cultural trip to a historic city, 
-            or a thrilling adventure in the great outdoors, we have got you covered.</p>
+  <!--Home Section-->
+  <section class="home" id="home">
+    <div class="home-text">
+      <h1>Escape Artists</h1>
+      <p>Your escape journey start here.</p>
     </div>
+  </section>
 
-    <div class="home-image-flex">
-        <div class="home-flexbox-item-1" id="flights">
-          <h1>Flights</h1>
-        </div>
-        <div class="home-flexbox-item-2" id="hotels">
-          <h1>Hotels</h1>
-        </div>
-        <div class="home-flexbox-item-3" id="about_us">
-          <h1>About Us</h1>
-        </div>
-        <div class="home-flexbox-item-4" id="support">
-          <h1>Support</h1>
-        </div>
+  <div class="home-offer">
+    <h1>What we offer</h1>
+    <p>Welcome to Escape Artists, your one-stop solution for hassle-free travel booking!
+      We offer a wide range of travel services and packages, catering to all your travel needs.
+      Whether you are looking for an exotic beach getaway, a cultural trip to a historic city,
+      or a thrilling adventure in the great outdoors, we have got you covered.</p>
+  </div>
+
+  <div class="home-image-flex">
+    <div class="home-flexbox-item-1" id="flights">
+      <h1>Flights</h1>
     </div>
+    <div class="home-flexbox-item-2" id="hotels">
+      <h1>Hotels</h1>
+    </div>
+    <div class="home-flexbox-item-3" id="about_us">
+      <h1>About Us</h1>
+    </div>
+    <div class="home-flexbox-item-4" id="support">
+      <h1>Support</h1>
+    </div>
+  </div>
 
-    <section class="continer">
-      <div class="text">
-        <h2>THINGS TO KNOW</h2>
+  <section class="continer">
+    <div class="text">
+      <h2>THINGS TO KNOW</h2>
+    </div>
+    <div class="row-items">
+      <div class="continer-box">
+        <div class="continer-img">
+          <img src="/assets/media/travel_tip1.png">
+        </div>
+        <h4>Visas</h4>
       </div>
-      <div class="row-items">
-        <div class="continer-box">
-          <div class="continer-img">
-            <img src="/assets/media/travel_tip1.png">
-          </div>
-          <h4>Visas</h4>
-        </div>
 
-        <div class="continer-box">
-          <div class="continer-img">
-            <img src="/assets/media/travel_tip2.png">
-          </div>
-          <h4>Getting Here</h4>
+      <div class="continer-box">
+        <div class="continer-img">
+          <img src="/assets/media/travel_tip2.png">
         </div>
-
-        <div class="continer-box">
-          <div class="continer-img">
-            <img src="/assets/media/travel_tip3.png">
-          </div>
-          <h4>Travel Tips</h4>
-        </div>
-
-        <div class="continer-box">
-          <div class="continer-img">
-            <img src="/assets/media/travel_tip4.png">
-          </div>
-          <h4>Getting Around</h4>
-        </div>
-
+        <h4>Getting Here</h4>
       </div>
-    </section>
 
-    <script>
-      const header = document.querySelector("header");
+      <div class="continer-box">
+        <div class="continer-img">
+          <img src="/assets/media/travel_tip3.png">
+        </div>
+        <h4>Travel Tips</h4>
+      </div>
 
-      window.addEventListener ("scroll",function(){
-          header.classList.toggle ("sticky", window.scrollY > 100);
-      })
+      <div class="continer-box">
+        <div class="continer-img">
+          <img src="/assets/media/travel_tip4.png">
+        </div>
+        <h4>Getting Around</h4>
+      </div>
 
-      let menu = document.querySelector('#menu-icon')
-      let navbar = document.querySelector('.navbar')
+    </div>
+  </section>
 
-      menu.onclick = () => {
-        menu.classList.toggle('bx-x')
-        navbar.classList.toggle('open')
-      }
+  <footer>
+    <div class="footer-content">
+      <h3>Escape Artists</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est reiciendis explicabo doloribus, similique eius
+        distinctio?
+        Iusto corporis amet laudantium dolorum, incidunt harum reiciendis dolorem accusamus animi perferendis esse sunt
+        numquam.</p>
+      <ul class="socials">
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>copyright &copy; 2020 EscapeArtists</p>
+    </div>
+  </footer>
 
-      let image1 =document.querySelector('#flights')
-      image1.onclick = () => {
-        window.location.href = 'flights.html';
-      }
+  <script>
+    const header = document.querySelector("header");
 
-      let image2 =document.querySelector('#hotels')
-      image2.onclick = () => {
-        window.location.href = 'hotels.html';
-      }
+    window.addEventListener("scroll", function () {
+      header.classList.toggle("sticky", window.scrollY > 100);
+    })
 
-      let image3 =document.querySelector('#about_us')
-      image3.onclick = () => {
-        window.location.href = 'about_us.html';
-      }
+    let menu = document.querySelector('#menu-icon')
+    let navbar = document.querySelector('.navbar')
 
-      let image4 =document.querySelector('#support')
-      image4.onclick = () => {
-        window.location.href = 'support.html';
-      }
-    </script>
+    menu.onclick = () => {
+      menu.classList.toggle('bx-x')
+      navbar.classList.toggle('open')
+    }
+
+    let image1 = document.querySelector('#flights')
+    image1.onclick = () => {
+      window.location.href = 'flights.html';
+    }
+
+    let image2 = document.querySelector('#hotels')
+    image2.onclick = () => {
+      window.location.href = 'hotels.html';
+    }
+
+    let image3 = document.querySelector('#about_us')
+    image3.onclick = () => {
+      window.location.href = 'about_us.html';
+    }
+
+    let image4 = document.querySelector('#support')
+    image4.onclick = () => {
+      window.location.href = 'support.html';
+    }
+  </script>
 </body>
+
 </html>
