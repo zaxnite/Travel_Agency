@@ -475,12 +475,9 @@ header.sticky{
   text-align: center;
   padding: 10px;
   color: #557177;
-}
-
-.title2 { grid-area: header2; 
+  grid-area: header2; 
   margin-top: 12%;
   margin-bottom: 2%;
-  font-size: 40px;
 }
 
 .flight_button {
@@ -529,6 +526,9 @@ header.sticky{
   font-family: 'Inter';
   color: #557177;
 }
+.review1 {
+  font-style: italic;
+}
 .flights h2{
   font-size: 40px;
   text-align: center;
@@ -543,7 +543,7 @@ header.sticky{
 }
 .flights .rec-recommendations .rec-box{
   margin: 5px;
-  padding: 15px;
+  padding: 17px;
   font-size: 20px;
   text-decoration: none;
   transition: transform .2s;
