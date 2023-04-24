@@ -156,13 +156,15 @@
     justify-content: center;
     align-items: center;
     margin: 100px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
   
   .about-home-offer h1{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 200;
-    font-size: var(--big-font);
+    font-size: 60px;
     line-height: 103px;
     color: #557177;
     padding-bottom: 3rem;
@@ -172,7 +174,7 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 200;
-    font-size: var(--small-font);
+    font-size: 25px;
     line-height: 39px;
     text-align: center;
   
