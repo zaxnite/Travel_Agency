@@ -22,7 +22,7 @@
       .hotel-text{
         color: #ffffffda;
         position: relative;
-        left: 15%;
+        left: 38%;
         bottom: 18%;
         font-size: 50px;
         font-weight: 500;
@@ -72,6 +72,7 @@
         padding: 10px;
         color: #557177;
         padding-bottom: 25px;
+        margin-top: -5%;
       }
 
       .hotel_button {
@@ -101,7 +102,7 @@
         border-radius: 1em;
         position: absolute;
         top: 54%;
-        left: 350px;
+        margin-left: 27%;
       }
 
       #passengers {
@@ -122,12 +123,13 @@
         text-align: center;
         padding: 10px;
         color: #557177;
-        margin-top: 53%;
+        margin-top: 40%;
       }
       .mySlides {display: none}
       .mySlides > img {vertical-align: middle; 
         max-height: 400px;
         width: 100%;
+        margin-top: 2%;
       }
 
       /* Slideshow container */
@@ -143,7 +145,7 @@
         top: 50%;
         width: auto;
         padding: 16px;
-        margin-top: -22px;
+        margin-top: 50px;
         color: white;
         font-weight: bold;
         font-size: 18px;
@@ -165,13 +167,13 @@
 
       /* Caption text */
       .text {
-        /* background-color: #a8c3e094; */
+        background-color: #a8c3e094; 
         border-radius: 25px;
         color: #f2f2f2;
         font-size: 50px;
         padding: 8px 12px;
         position: absolute;
-        bottom: -980px;
+        bottom: 8px;
         width: 30%;
         text-align: center;
       }
@@ -215,7 +217,7 @@
         font-family: 'Inter';
         font-style: normal;
         font-weight: 200;
-        /* font-size: var(--big-font); */
+        font-size: var(--big-font);
         line-height: 103px;
         color: #557177;
         margin: 100px;
@@ -335,31 +337,31 @@
   <p class="title">Visit Famous Tourist Countries</p>
   <div class="mySlides fade">
     <div class="numbertext">1 / 5</div>
-    <img src="./assets/media/arya1.jpeg" alt="Jeju">
-    <div class="text">Jeju, Korea</div>
+    <img src="./assets/media/Falls_Niagara.jpg" alt="Jeju">
+    <div class="text">Niagara Fall, Canada</div>
   </div>
   
   <div class="mySlides fade">
     <div class="numbertext">2 / 5</div>
-    <img src="/assets/media/flights_country2.jpg" alt="Berlin">
+    <img src="" alt="Berlin">
     <div class="text">Berlin, Germany</div>
   </div>
   
   <div class="mySlides fade">
     <div class="numbertext">3 / 5</div>
-    <img src="/assets/media/flights_country3.jpg" alt="Paris">
+    <img src="" alt="Paris">
     <div class="text">Paris, France</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">4 / 5</div>
-    <img src="/assets/media/flights_country4.jpg" alt="Bangkok">
+    <img src="" alt="Bangkok">
     <div class="text">Bangkok, Thailand</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">5 / 5</div>
-    <img src="/assets/media/flights_country5.jpg" alt="Haneda">
+    <img src="" alt="Haneda">
     <div class="text">Haneda, Japan</div>
   </div>
   
@@ -377,7 +379,7 @@
     <span class="dot" onclick="currentSlide(5)"></span> 
   </div>
 
-      <section class="continer">
+    <section class="continer">
       <div class="text">
         <h2>THINGS TO KNOW</h2>
       </div>
@@ -428,6 +430,33 @@
       navbar.classList.toggle('open')
     }
 
+    let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" activepic", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " activepic";
+      }
+      
     let image1 =document.querySelector('#flights')
     image1.onclick = () => {
       window.location.href = 'flights.html';
