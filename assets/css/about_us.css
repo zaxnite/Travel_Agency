@@ -256,9 +256,6 @@
   .about-box:hover{
     transform: translateY(-20px);
     cursor: pointer;
-<<<<<<< Updated upstream
-  }
-=======
   }
 
   .about-text h2{
@@ -452,4 +449,3 @@
     }
   }
   
->>>>>>> Stashed changes
