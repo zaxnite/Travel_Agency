@@ -6,352 +6,6 @@
     <link rel="stylesheet" type="text/css" href="./assets/style.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <title>Hotels</title>
-    <style>
-      .hotel{
-        position: relative;
-        width: 100%;
-        height: 70vh;
-        background: url(/assets/media/hotel_bg.jpg);
-        background-position: center;
-        background-size: cover;
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        align-items: center;
-      }
-
-      .hotel-text{
-        color: #ffffffda;
-        position: relative;
-        left: 38%;
-        bottom: 18%;
-        font-size: 50px;
-        font-weight: 500;
-      }
-
-      #from {
-        width: 140px;
-      }
-      input {
-        padding: 5px;
-      }
-      .form-control {
-        height: 30px;
-      }
-
-      .one {
-        border-radius: 25px;
-        max-width: 90%;
-        height: 250px;
-      }
-      .rev-star {
-        max-width: 110px;
-        margin-top: 4%;
-        /* margin-right: 35%; */
-      }
-
-      .two {
-        max-width: 110px;
-        margin-top: 4%;
-        margin-right: 35%;
-      }
-
-      .title2 { grid-area: header2;}
-      .rec1 { grid-area: rec1; font-size: 25px;}
-      .rec2 { grid-area: rec2; font-size: 25px;}
-      .rec3 { grid-area: rec3; font-size: 25px;}
-      .rec4 { grid-area: rec4; font-size: 25px;}
-      .hotel_recommendations {
-        width: 100%;
-        display: grid;
-        grid-template-areas: 
-        'header2 header2 header2 header2'
-        'rec1 rec2 rec3 rec4';
-        padding: 50px;
-        gap: 10px;
-        position: absolute;
-        top: 95%;
-        font-size: xx-large;
-        text-align: center;
-      }
-
-      .title2 {
-        font-family: 'Inter';
-        font-size: 70px;
-        text-align: center;
-        padding: 10px;
-        color: #557177;
-        padding-bottom: 25px;
-        margin-top: -5%;
-      }
-
-      .hotel_book {grid-area: hotel_book;}
-      .room_type {grid-area: room_type;}
-      .hotel-check1 {grid-area: hotel-check1;}
-      .hotel-check2 {grid-area: hotel-check2;}
-
-      .hotel_book {
-        font-size: large;
-        /* padding: 15px; */
-        transform: translate(20px, 5px);
-      }
-
-      .room_type {
-        font-size: large;
-        /* padding: 15px; */
-        transform: translate(100px, 5px);
-      }
-
-      .hotel-check1 {
-        font-size: large;
-        /* padding: 15px; */
-        transform: translate(20px, -30px);
-      }
-
-      .hotel-check2 {
-        font-size: large;
-        /* padding: 15px; */
-        transform: translate(100px, -30px);
-      }
-
-      .room-choice {
-        font-size: large;
-        /* padding: 15px; */
-        transform: translate(200px, 10px);
-      }
-
-      .adults {
-        font-size: large;
-        /* padding: 15%; */
-        transform: translate(-295px, 145px);
-      } 
-      
-      .children {
-        font-size: large;
-        padding: 15%;
-        transform: translate(-260px, 119px);
-      }
-
-      .passengers {
-        font-size: large;
-        /* padding: 15%; */
-        transform: translate(-100px, -35px);
-      }
-      
-      .search {
-        display: grid;
-        grid: 'hotel_book room_type' 'hotel-check1 hotel-check2';
-        width: 30%;
-        height: 35%;
-        background-color: #ffffffc6;
-        border: solid black 2px;
-        padding: 20px;
-        border-radius: 1em;
-        position: absolute;
-        top: 54%;
-        margin-left: 37.5%;
-      }
-
-      .hotel_button {
-        border-radius: 1em;
-        text-decoration: none;
-        font-size: 20px;
-        cursor: pointer;
-        grid-area: search;
-        border: none;
-        height: 40px;
-        width: 180px;
-        background-color: #cfe0e4;
-        transform: translate(-290px, 55px);
-      }
-
-      #passengers {
-        width: 90px;
-      }
-
-      .rec1, .rec2, .rec3, .rec4, .continer-box {
-        transition: transform .2s;
-      }
-
-      .rec1:hover, .rec2:hover, .rec3:hover, .rec4:hover, .continer-box:hover{
-        transform:scale(1.2);
-      }
-
-      .title-pop {
-        font-family: 'Inter';
-        font-size: 70px;
-        text-align: center;
-        padding: 10px;
-        color: #557177;
-        margin-top: 43%;
-      }
-      .mySlides {display: none}
-      .mySlides > img {vertical-align: middle; 
-        max-height: 400px;
-        width: 100%;
-        margin-top: 2%;
-      }
-
-      /* Slideshow container */
-      .slideshow-container2 {
-        position: relative;
-        margin: auto;
-      }
-
-      /* Next & previous buttons */
-      .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: 50px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-      }
-
-      /* Position the "next button" to the right */
-      .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-      }
-
-      /* On hover, add a black background color with a little bit see-through */
-      .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
-      }
-
-      /* Caption text */
-      .desc {
-        background-color: #a8c3e094; 
-        border-radius: 25px;
-        color: #f2f2f2;
-        font-size: 40px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 8px;
-        width: 30%;
-        text-align: center;
-      }
-
-      /* Number text (1/5 etc) */
-      .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-      }
-
-      /* The dots/bullets/indicators */
-      .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-      }
-
-      .activepic, .dot:hover {
-        background-color: #717171;
-      }
-
-      /* Fading animation */
-      .fade {
-        animation-name: fade;
-        animation-duration: 1.5s;
-      }
-      @keyframes fade {
-        from {opacity: .4} 
-        to {opacity: 1}
-      }
-
-      .text h2{
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 200;
-        font-size: var(--big-font);
-        line-height: 103px;
-        color: #557177;
-        margin: 100px;
-        margin-top: 6%;
-        margin-bottom: 40px;
-        text-align: center;
-      }
-
-      .row-items{
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-      }
-
-      .continer-box h4 {
-        position: absolute;
-        width: 150px;
-        height: 85px;
-        text-align: center;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 36px;
-        line-height: 44px;
-
-        color: #557177;
-      }
-
-      section .cust {
-        padding-top: 10px;
-        padding-right: 10px;
-      }
-      section .recommendations{
-        margin: 30px;
-        font-family: 'Inter';
-        color: #557177;
-      }
-      section h2{
-        font-size: 40px;
-        text-align: center;
-      }
-      section .rec-recommendations{
-        display: flex;
-      }
-
-      section .rec-recommendations .rec-box{
-        margin: 5px;
-        padding: 10px;
-        font-size: 20px;
-        text-decoration: none;
-      }
-      section .rec-recommendations .rec-box p{
-        padding-top: 10px;
-      }
-      section .reviewer {
-        text-align: left;
-        padding-left: 10px;
-      }
-
-      section .review .review1 {
-        text-align: center;
-        width: 50%;
-        float: left;
-      }
-      section .review .left-box {
-        padding-top: 30px;
-      }
-
-      @media (max-width: 900px){
-        section .rec-recommendations{
-          flex-direction: column;
-        }
-      }
-
-    </style>
-
 </head>
 <body>
   <!--Header-->
@@ -375,7 +29,7 @@
     </div>
   </section>
   
-<form class="search" action="">
+<form class="hotel-search" action="">
 
 <label for="hotel_book" class="hotel_book">Country or City:
   <input class="form-control" list="hotel_book" id="from" placeholder="Country or City">
@@ -398,16 +52,16 @@
   </datalist>
 </label>
 
-<label class="adults" for="passengers">Adults:
-  <input type="number" id="passengers" name="passengers" min="1" placeholder="0">
+<label class="adults" for="hotel-passengers">Adults:
+  <input type="number" id="hotel-passengers" name="hotel-passengers" min="1" placeholder="0">
 </label>
 
-<label class="children" for="passengers">Children:
-  <input type="number" id="passengers" name="passengers" min="1" placeholder="0">
+<label class="children" for="hotel-passengers">Children:
+  <input type="number" id="hotel-passengers" name="hotel-passengers" min="1" placeholder="0">
 </label>
 
-<label class="passengers" for="passengers">Rooms:
-  <input type="number" id="passengers" name="passengers" min="1" placeholder="0">
+<label class="no_of_room" for="hotel-passengers">Rooms:
+  <input type="number" id="hotel-passengers" name="hotel-passengers" min="1" placeholder="0">
 </label>
 
 <label for="room_type" class="room_type">Room Type:
@@ -431,15 +85,15 @@
 </form>
 
 <div class="hotel_recommendations">
-  <p class="title2">Our Recommendations</p>
-  <div class="rec1"><img class="one" src="/assets/media/hotel-four-seasons.jpg" alt="Four Seasons Hotel, Paris"></br> Four Seasons Hotel, Paris </br>
-    <img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
-  <div class="rec2"><img class="one" src="/assets/media/hotel-signiel.jpg" alt="Signiel Hotel, Seoul, Korea"></br> Signiel Hotel, Seoul, Korea </br>
-    <img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
-  <div class="rec3"><img class="one" src="/assets/media/hotel-arbour.jpg" alt="Arbour Hotel and Residence, Pattaya, Thailand"></br> Arbour Hotel and Residence, Pattaya, Thailand </br>
-    <img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
-  <div class="rec4"><img class="one" src="/assets/media/hotel-kawa.jpg" alt="Kawaguchiko Hotel, Fujikawaguchiko, Japan"></br> Kawaguchiko Hotel, Fujikawaguchiko, Japan </br>
-    <img class="two" src="/assets/media/stars.jpg" alt="Stars"></div>
+  <p class="title-rec">Our Recommendations</p>
+  <div class="rec1"><img class="hotel-one" src="/assets/media/hotel-four-seasons.jpg" alt="Four Seasons Hotel, Paris"></br> Four Seasons Hotel, Paris </br>
+    <img class="hotel-two" src="/assets/media/stars.jpg" alt="Stars"></div>
+  <div class="rec2"><img class="hotel-one" src="/assets/media/hotel-signiel.jpg" alt="Signiel Hotel, Seoul, Korea"></br> Signiel Hotel, Seoul, Korea </br>
+    <img class="hotel-two" src="/assets/media/stars.jpg" alt="Stars"></div>
+  <div class="rec3"><img class="hotel-one" src="/assets/media/hotel-arbour.jpg" alt="Arbour Hotel and Residence, Pattaya, Thailand"></br> Arbour Hotel and Residence, Pattaya, Thailand </br>
+    <img class="hotel-two" src="/assets/media/stars.jpg" alt="Stars"></div>
+  <div class="rec4"><img class="hotel-one" src="/assets/media/hotel-kawa.jpg" alt="Kawaguchiko Hotel, Fujikawaguchiko, Japan"></br> Kawaguchiko Hotel, Fujikawaguchiko, Japan </br>
+    <img class="hotel-two" src="/assets/media/stars.jpg" alt="Stars"></div>
 </div>
 
 <!-- Carousel -->
