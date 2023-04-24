@@ -424,11 +424,11 @@ header.sticky{
   background-color: #a8c3e0af;
   border-radius: 25px;
   color: #f2f2f2;
-  font-size: 45px;
+  font-size: 40px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
-  width: 25%;
+  width: 26%;
   text-align: center;
 }
 
@@ -969,9 +969,6 @@ section .review .review1 {
   text-align: center;
   width: 50%;
   float: left;
-}
-section .review .left-box {
-  padding-top: 30px;
 }
 
 /* SUPPORT */
