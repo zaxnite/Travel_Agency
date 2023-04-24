@@ -307,24 +307,6 @@ header.sticky{
   z-index: 2;
 }
 
-.text h2{
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 200;
-  font-size: var(--big-font);
-  line-height: 103px;
-  color: #557177;
-  margin: 80px;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.row-items{
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
 .continer{
   padding-bottom: 10rem;
 }
@@ -340,6 +322,25 @@ header.sticky{
   line-height: 44px;
   color: #557177;
 }
+
+.row-items{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.text h2{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 200;
+  font-size: var(--big-font);
+  line-height: 103px;
+  color: #557177;
+  margin: 80px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
 
 
 /* Flgihts CSS */
