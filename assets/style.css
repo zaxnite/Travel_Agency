@@ -365,11 +365,23 @@ header.sticky{
 }
 
 #from {
-  width: 140px;
+  width: 200px;
 }
-.form-control {
-  height: 30px;
+#to {
+  width: 200px;
 }
+.search input {
+  border:1px solid rgba(0,0,0,.25);
+  border-radius: 0.4em;
+  font-size: 17px;
+  padding: 10px;
+}
+.search input:focus, select:focus{
+  outline: #a8c3e094;
+  
+  /* border: 2px; */
+}
+
 
 .title {
   font-family: 'Inter';
