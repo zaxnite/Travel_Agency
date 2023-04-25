@@ -160,7 +160,7 @@ footer{
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url(/assets/media/index_bg.png);
+  background: url(./media/index_bg.png);
   background-position: center;
   background-size: cover;
   display: grid;
@@ -252,7 +252,7 @@ header.sticky{
 }
 
 .home-flexbox-item-1{
-  background: url(/assets/media/home_image1.png);
+  background: url(./media/home_image1.png);
   background-position: center;
   background-size: cover;
   max-width: 100%;
@@ -266,7 +266,7 @@ header.sticky{
 }
 
 .home-flexbox-item-2{
-  background: url(/assets/media/home_image2.png);
+  background: url(./media/home_image2.png);
   background-position: center;
   background-size: cover;
   max-width: 100%;
@@ -280,7 +280,7 @@ header.sticky{
 }
 
 .home-flexbox-item-3{
-  background: url(/assets/media/home_image3.png);
+  background: url(./media/home_image3.png);
   background-position: center;
   background-size: cover;
   max-width: 100%;
@@ -294,7 +294,7 @@ header.sticky{
 }
 
 .home-flexbox-item-4{
-  background: url(/assets/media/home_image4.png);
+  background: url(./media/home_image4.png);
   background-position: center;
   background-size: cover;
   max-width: 100%;
@@ -346,7 +346,7 @@ header.sticky{
   position: relative;
   width: 100%;
   height: 70vh;
-  background: url(/assets/media/flights_bg.jpg);
+  background: url(./media/flights_bg.jpg);
   background-position: center;
   background-size: cover;
   display: grid;
@@ -636,7 +636,7 @@ header.sticky{
   position: relative;
   width: 100%;
   height: 70vh;
-  background: url(/assets/media/hotel_bg.jpg);
+  background: url(./media/hotel_bg.jpg);
   background-position: center;
   background-size: cover;
   display: grid;
@@ -817,10 +817,13 @@ header.sticky{
 
 
 /* About_Us CSS */
+
+
+
 /* Support CSS */
 
 .support_container1 { 
-  background-image: url(/assets/media/dubai.jpg);
+  background-image: url(./media/dubai.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -939,7 +942,33 @@ a {
   .open{
     right: 0;
   }
+
+  .about-home-text h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 60px;
+    line-height: 97px;
+    color: #FFFFFF;
+  }
+  
+  .about-home-text p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 30px;
+    line-height: 48px;
+    color: #FFFFFF;
+  }
+
+  .about-home-text{
+    position: relative; /* position the text content relative to the section */
+    margin-right: auto;
+    margin-left: auto;
+  }
+
 }
+
 
 .slideshow-container2 {
   position: relative;
@@ -986,7 +1015,7 @@ section .review .review1 {
 /* SUPPORT */
 
 .support_container1 { 
-  background-image: url(/assets/media/dubai.jpg);
+  background-image: url(./media/dubai.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
