@@ -705,22 +705,22 @@ header.sticky{
 
 .hotel_book {
   font-size: large;
-  transform: translate(20px, 5px);
+  transform: translate(10px, 5px);
 }
 
 .room_type {
   font-size: large;
-  transform: translate(100px, 5px);
+  transform: translate(25px, 5px);
 }
 
 .hotel-check1 {
   font-size: large;
-  transform: translate(20px, -30px);
+  transform: translate(10px, -40px);
 }
 
 .hotel-check2 {
   font-size: large;
-  transform: translate(100px, -30px);
+  transform: translate(30px, -40px);
 }
 
 .room-choice {
@@ -730,18 +730,18 @@ header.sticky{
 
 .adults {
   font-size: large;
-  transform: translate(-295px, 130px);
+  transform: translate(-390px, 130px);
 } 
 
 .children {
   font-size: large;
   padding: 15%;
-  transform: translate(-260px, 105px);
+  transform: translate(-360px, 105px);
 }
 
 .no_of_room {
   font-size: large;
-  transform: translate(10px, 30px);
+  transform: translate(-100px, 25px);
 }
 
 .hotel-search {
@@ -768,7 +768,7 @@ header.sticky{
   height: 40px;
   width: 180px;
   background-color: #cfe0e4;
-  transform: translate(-290px, 25px);
+  transform: translate(-375px, 17px);
 }
 
 #hotel-passengers {
