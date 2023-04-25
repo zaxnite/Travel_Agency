@@ -718,18 +718,18 @@ header.sticky{
 
 .adults {
   font-size: large;
-  transform: translate(-295px, 145px);
+  transform: translate(-295px, 130px);
 } 
 
 .children {
   font-size: large;
   padding: 15%;
-  transform: translate(-260px, 119px);
+  transform: translate(-260px, 105px);
 }
 
 .no_of_room {
   font-size: large;
-  transform: translate(10px, 32px);
+  transform: translate(10px, 30px);
 }
 
 .hotel-search {
