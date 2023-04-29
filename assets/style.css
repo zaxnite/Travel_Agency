@@ -661,6 +661,7 @@ header.sticky{
 .rev-star {
   max-width: 110px;
   margin-top: 4%;
+  /* border-radius: 50%; */
 }
 
 .hotel-two {
