@@ -667,7 +667,7 @@ header.sticky{
   color: #ffffffda;
   position: relative;
   left: 38%;
-  bottom: 18%;
+  top: -50%;
   font-size: 50px;
   font-weight: 500;
 }
@@ -738,12 +738,12 @@ header.sticky{
 
 .hotel-check1 {
   font-size: large;
-  transform: translate(10px, -40px);
+  transform: translate(10px, -15px);
 }
 
 .hotel-check2 {
   font-size: large;
-  transform: translate(30px, -40px);
+  transform: translate(30px, -15px);
 }
 
 .adults {
@@ -754,12 +754,12 @@ header.sticky{
 .children {
   font-size: large;
   padding: 15%;
-  transform: translate(-360px, 105px);
+  transform: translate(-350px, 105px);
 }
 
 .no_of_room {
   font-size: large;
-  transform: translate(-100px, 25px);
+  transform: translate(-100px, 50px);
 }
 
 .hotel-search {
@@ -1371,7 +1371,7 @@ a {
   .hotel-text{
     font-size: 35px;
     margin-left: -48%;
-    margin-top: 20%;
+    margin-top: 110%;
   }
 
   .hotel-search {
@@ -1577,8 +1577,6 @@ a {
   .slideshow-container {
     padding-top: 500px;
   }
-
-}
 
 
 /*for tablet*/
