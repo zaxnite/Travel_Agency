@@ -5,8 +5,7 @@
     $passengers = $_POST['passengers'];
     $departure = $_POST['departure'];
     $return = $_POST['return'];
-
-    $conn = new mysqli('localhost','root','','flights_booking');
+    require_once("connection.php");
     if($conn->connect_error){
         die('Connection failed : '.$conn->connect_error);
     }else{
