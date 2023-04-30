@@ -1242,7 +1242,8 @@ a {
 
 /*for mobile*/
 @media only screen and (max-width: 767px) {
-  
+ 
+  /*about-us*/
   .about-home-text{
     position: left;
   }
@@ -1284,6 +1285,7 @@ a {
     font-size: 10px;
   }
 
+  /*things to know*/
   .continer-box {
     padding-bottom: 5rem;
   }
@@ -1313,6 +1315,7 @@ a {
     margin-right: auto;
   }
 
+  /*footer*/
   footer{
     padding-top: 3rem;
   }
@@ -1330,11 +1333,55 @@ a {
   .footer-bottom p{
     font-size: 16px;
   }
+
+  /*index*/
+  .home-text h1{
+    font-size: 50px;
+  }
+  
+  .home-text p{
+    font-size: 20px;
+  }
+
+  .home-offer h1{
+    font-size: 45px;
+    text-align: center;
+    line-height: 70px;
+  }
+  
+  .home-offer p{
+    font-size: 15px;
+    width: 90%;
+  }
+
+  .home-image-flex h1{
+    font-size: 40px;
+    margin-top: 20px;
+    margin-left: 35px;
+  
+  }
+  
+  .home-flexbox-item-1{
+    height: 200px;
+  }
+  
+  .home-flexbox-item-2{
+    height: 200px;
+  }
+  
+  .home-flexbox-item-3{
+    height: 200px;
+  }
+  
+  .home-flexbox-item-4{
+    height: 200px;
+  }
 }
 
 /*for tablet*/
 @media only screen and (min-width: 768px) and (max-width: 1040px) {
 
+  /*about-us*/
   .about-home-text{
     position: left;
   }
@@ -1376,6 +1423,7 @@ a {
     font-size: 10px;
   }
 
+  /*things to know*/
   .continer-box {
     padding-bottom: 5rem;
   }
@@ -1404,6 +1452,7 @@ a {
     text-align: center;
   }
 
+  /*footer*/
   footer{
     padding-top: 3rem;
   }
@@ -1420,6 +1469,49 @@ a {
 
   .footer-bottom p{
     font-size: 16px;
+  }
+
+  /*index*/
+  .home-text h1{
+    font-size: 50px;
+  }
+  
+  .home-text p{
+    font-size: 20px;
+  }
+
+  .home-offer h1{
+    font-size: 45px;
+    text-align: center;
+    line-height: 70px;
+  }
+  
+  .home-offer p{
+    font-size: 15px;
+    width: 90%;
+  }
+
+  .home-image-flex h1{
+    font-size: 40px;
+    margin-top: 20px;
+    margin-left: 35px;
+  
+  }
+  
+  .home-flexbox-item-1{
+    height: 200px;
+  }
+  
+  .home-flexbox-item-2{
+    height: 200px;
+  }
+  
+  .home-flexbox-item-3{
+    height: 200px;
+  }
+  
+  .home-flexbox-item-4{
+    height: 200px;
   }
 }
 
