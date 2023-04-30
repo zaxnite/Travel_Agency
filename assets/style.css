@@ -1327,12 +1327,6 @@ a {
     padding: 60px 20px;
   }
   
-  /* Things to Know */
-  .row-items {
-    flex-wrap: wrap;
-    margin: 0 -10px;
-  }
-  
   .continer-box {
     width: 50%;
     padding: 0 10px;
@@ -1386,17 +1380,6 @@ a {
   /* Container 2 */
   .container2 {
     padding: 80px;
-  }
-  
-  /* Things to Know */
-  .row-items {
-    flex-wrap: wrap;
-    margin: 0 -20px;
-  }
-  
-  .continer-box {
-    width: 33.33333%;
-    padding: 0 20px;
   }
   
   /* Footer */
