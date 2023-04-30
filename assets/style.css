@@ -659,8 +659,12 @@ header.sticky{
   height: 250px;
 }
 .rev-star {
-  max-width: 110px;
+  max-width: 350px;
+  margin-left: 35%;
   margin-top: 4%;
+  border-radius: 50%;
+  justify-content: space-evenly;
+  transition: transform .2s;
 }
 
 .hotel-two {
@@ -812,6 +816,24 @@ header.sticky{
   padding: 8px 12px;
   position: absolute;
   top: 0;
+}
+
+.fac-box h3 {
+  margin-top: 35px;
+  margin-left: 65%;
+  font-size: 25px;
+  text-decoration: none;
+  transition: transform .2s;
+}
+
+.fac-recommendations{
+  margin-top: 5%;
+  font-family: 'Inter';
+  color: #557177;
+}
+
+.fac-recommendations h2{
+  margin-left: 6%;
 }
 
 
