@@ -845,13 +845,13 @@ header.sticky{
   transition: transform .2s;
 }
 
-.fac-recommendations{
+.facilities{
   margin-top: 5%;
   font-family: 'Inter';
   color: #557177;
 }
 
-.fac-recommendations h2{
+.facilities h2{
   margin-left: 1%;
 }
 
