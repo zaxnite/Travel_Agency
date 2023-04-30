@@ -42,9 +42,9 @@
     <label for="airport1" class="airport1">Country From:
       <input class="form-control" list="airport1" id="from" placeholder="Airport or City">
       <datalist id="airport1">
-        <option value="Abu Dhabi">
-        <option value="Sharjah">
-        <option value="Dubai">
+        <option value="Abu Dhabi, UAE">
+        <option value="Sharjah, UAE">
+        <option value="Dubai, UAE">
         <option value="Incheon, Korea">
         <option value="Jeju, Korea">
         <option value="Frankfurt, Germany">
@@ -238,6 +238,9 @@
   </footer>
 
   <script>
+    import React, { useState } from 'react';
+    import './assets/style.css';
+
     const header = document.querySelector("header");
 
     window.addEventListener("scroll", function () {
@@ -293,6 +296,22 @@
           reveals[i].classList.remove("activeanim");
         }
       }
+    }
+    function TextInput({ type = 'text', label }) {
+      const [value, setValue] = useState('');
+
+      function handleChange(e) {
+        setValue(e.target.value);
+      }
+
+      return (
+        <div className="input-container">
+          <input type={type} value={value} onChange={handleChange} />
+          <label className={value && 'filled'} htmlFor={name}>
+            {label}
+          </label>
+        </div>
+      );
     }
 
     window.addEventListener("scroll", reveal);
