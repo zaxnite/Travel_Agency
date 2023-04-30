@@ -5,7 +5,7 @@
     $passengers = $_POST['passengers'];
     $departure = $_POST['departure'];
     $return = $_POST['return'];
-    require_once("connection.php");
+    require_once("config.php");
     if($conn->connect_error){
         die('Connection failed : '.$conn->connect_error);
     }else{
