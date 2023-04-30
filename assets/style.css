@@ -845,14 +845,14 @@ header.sticky{
   transition: transform .2s;
 }
 
-.fac-recommendations{
+.facilities{
   margin-top: 5%;
   font-family: 'Inter';
   color: #557177;
 }
 
-.fac-recommendations h2{
-  margin-left: 6%;
+.facilities h2{
+  margin-left: 1%;
 }
 
 
@@ -1027,16 +1027,44 @@ section{
 
 /* Support CSS */
 
-.support_container1 { 
+.support_container1{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  align-items: center;
+  overflow: hidden; /* hide any overflow caused by the parallax effect */
+}
+
+.support_container1::before { /* create a pseudo-element to hold the background image */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./media/dubai.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; /* set the background image to fixed */
+  z-index: -1; /* send the pseudo-element to the back */
+}
+
+.support_title1{
+  position: relative; /* position the text content relative to the section */
+}
+
+/*.support_container1 { 
   background-image: url(./media/dubai.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
   padding-bottom:0%;
   padding-top: 15%;
-}
+}*/
 
-.support_title1 {
+.support_title1 h1{
   text-align: right;
   padding-right: 20%;
   padding-bottom: 40%;
@@ -1124,9 +1152,9 @@ section .review .review1 {
 
 .support_title1 {
   text-align: right;
-  padding-right: 20%;
-  padding-bottom: 40%;
-  padding-left: 20%;
+  padding-right: 12%;
+  padding-bottom: 50%;
+  padding-left: 40%;
   font-size: 70px;
   font-family: 'Inter';
   color: #5a7184;
@@ -1314,6 +1342,15 @@ a {
     padding: 80px;
   }
 
+  .support_container1{
+    position: left;
+  }
+  
+  .support_container1 h1{
+    font-size: 50px;
+
+  }
+
   .support_title2 {
     font-size: 25px;
     padding-left: 20px;
@@ -1333,12 +1370,6 @@ a {
     padding-top: 80px;
     color: #FFFFFF;
     text-align: right;
-  }
-
-  .support_container1{
-    background-size: cover;
-    width: 500px;
-    height: 600px;
   }
 
 
@@ -1594,6 +1625,15 @@ a {
   /*flights*/
 
   /*support*/
+
+  .support_container1{
+    position: left;
+  }
+  
+  .support_container1 h1{
+    font-size: 50px;
+
+  }
   .container1 {
     padding: 80px;
   }
@@ -1619,10 +1659,6 @@ a {
     text-align: right;
   }
 
-  .support_container1{
-    background-size: fixed;
-    
-  }
   
 }
 
