@@ -238,8 +238,8 @@
   </footer>
 
   <script>
-    import React, { useState } from 'react';
-    import './assets/style.css';
+    // import React, { useState } from 'react';
+    // import './assets/style.css';
 
     const header = document.querySelector("header");
 
@@ -297,22 +297,22 @@
         }
       }
     }
-    function TextInput({ type = 'text', label }) {
-      const [value, setValue] = useState('');
+    // function TextInput({ type = 'text', label }) {
+    //   const [value, setValue] = useState('');
 
-      function handleChange(e) {
-        setValue(e.target.value);
-      }
+    //   function handleChange(e) {
+    //     setValue(e.target.value);
+    //   }
 
-      return (
-        <div className="input-container">
-          <input type={type} value={value} onChange={handleChange} />
-          <label className={value && 'filled'} htmlFor={name}>
-            {label}
-          </label>
-        </div>
-      );
-    }
+    //   return (
+    //     <div className="input-container">
+    //       <input type={type} value={value} onChange={handleChange} />
+    //       <label className={value && 'filled'} htmlFor={name}>
+    //         {label}
+    //       </label>
+    //     </div>
+    //   );
+    // }
 
     window.addEventListener("scroll", reveal);
   </script>
