@@ -37,11 +37,9 @@
     </div>
   </section>
 
-  <form class="search" action="">
-
-    <label for="airport1" class="airport1">Country From:
-      <input class="form-control" list="airport1" id="from" placeholder="Airport or City">
-      <datalist id="airport1">
+  <div class="search">
+    <form action="book.php" method="post">
+      <datalist id="airport">
         <option value="Abu Dhabi, UAE">
         <option value="Sharjah, UAE">
         <option value="Dubai, UAE">
@@ -58,26 +56,41 @@
         <option value="Barcelona, Spain">
         <option value="Valencia, Spain">
       </datalist>
-    </label>
 
-    <label for="airport2" class="airport2">Country To:
-      <input class="form-control" list="airport1" id="to" placeholder="Airport or City">
-    </label>
+      <div class="field-holder">
+        <input type="text" class="name" id="name" name="name" required>
+        <label for="username" class="username">Username </label>
+      </div>
+      
+      <div class="field-holder">
+        <input class="from" list="airport" id="from" name="from">
+        <label for="airport1" class="airport1">From</label>
+      </div>
 
-    <label class="passengers" for="passengers">Passengers
-      <input type="number" id="passengers" name="passengers" min="1" value="0">
-    </label>
+      <div class="field-holder">
+        <input class="to" list="airport" id="to" name="to">
+        <label for="airport2" class="airport2">To</label>
+      </div>
 
-    <label class="check1" for="ch_in">Departure
-      <input type="date" min="2023-04-07" id="ch_in" name="ch_in">
-    </label>
-    <label class="check2" for="ch_out">Return
-      <input type="date" min="2023-04-07" id="ch_out" name="ch_out">
-    </label>
+      <div class="field-holder">
+        <input type="number" class="passengers" id="passengers" name="passengers" min="1">
+        <label for="passengers">Passengers</label>
+      </div>
 
-    <button class="flight_button">Search</button>
-    <!-- <input type="submit" value="Search" id="search"> -->
-  </form>
+      <div class="field-holder">
+        <input type="date" min="2023-04-07" class="departure" id="departure" name="departure">
+        <label for="departure">Departure</label>
+      </div>
+
+      <div class="field-holder">
+        <input type="date" min="2023-04-07" class="return" id="retunr" name="return">
+        <label for="return">Return</label>
+      </div>
+
+      <button class="flight_button">Submit</button>
+      <!-- <input type="submit" value="Search" id="search"> -->
+    </form>
+  </div>
 
   <div class="slideshow-container">
     <p class="title">Visit Famous Tourist Countries</p>
@@ -237,85 +250,7 @@
     </div>
   </footer>
 
-  <script>
-    // import React, { useState } from 'react';
-    // import './assets/style.css';
-
-    const header = document.querySelector("header");
-
-    window.addEventListener("scroll", function () {
-      header.classList.toggle("sticky", window.scrollY > 100);
-    })
-
-    let menu = document.querySelector('#menu-icon')
-    let navbar = document.querySelector('.navbar')
-
-    menu.onclick = () => {
-      menu.classList.toggle('bx-x')
-      navbar.classList.toggle('open')
-    }
-
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" activepic", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " activepic";
-    }
-
-    function reveal() {
-      var reveals = document.querySelectorAll(".reveal");
-
-      for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150;
-
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("activeanim");
-        } else {
-          reveals[i].classList.remove("activeanim");
-        }
-      }
-    }
-    // function TextInput({ type = 'text', label }) {
-    //   const [value, setValue] = useState('');
-
-    //   function handleChange(e) {
-    //     setValue(e.target.value);
-    //   }
-
-    //   return (
-    //     <div className="input-container">
-    //       <input type={type} value={value} onChange={handleChange} />
-    //       <label className={value && 'filled'} htmlFor={name}>
-    //         {label}
-    //       </label>
-    //     </div>
-    //   );
-    // }
-
-    window.addEventListener("scroll", reveal);
-  </script>
+  <script src="./assets/script.js"></script>
 </body>
 
 </html>
