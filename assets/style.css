@@ -1360,6 +1360,11 @@ a {
 
   .continer{
     padding-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
   }
   
   .continer-box h4 {
