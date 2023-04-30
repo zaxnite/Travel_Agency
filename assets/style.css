@@ -1309,6 +1309,39 @@ a {
     font-size: 10px;
   }
 
+  /* Support */
+  .container1 {
+    padding: 80px;
+  }
+
+  .support_title2 {
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 100px;
+  }
+
+  .support_title3 {
+    font-size: 20px;
+    padding-top: 20px;
+  }
+
+  .support_title1 {
+    font-size: 40px;
+    padding-right: 4000px;
+    padding-left: 30px;
+    padding-top: 80px;
+    color: #FFFFFF;
+    text-align: right;
+  }
+
+  .support_container1{
+    background-size: cover;
+    width: 500px;
+    height: 600px;
+  }
+
+
   /*things to know*/
   .continer-box {
     padding-bottom: 5rem;
@@ -1419,8 +1452,8 @@ a {
     padding-top: 500px;
   }
 
-  /*support*/
 }
+
 
 /*for tablet*/
 @media only screen and (min-width: 768px) and (max-width: 1040px) {
@@ -1561,6 +1594,36 @@ a {
   /*flights*/
 
   /*support*/
+  .container1 {
+    padding: 80px;
+  }
+
+  .support_title2 {
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 150px;
+  }
+
+  .support_title3 {
+    font-size: 25px;
+    padding-top: 20px;
+  }
+
+  .support_title1 {
+    font-size: 50px;
+    padding-right: 4000px;
+    padding-left: 90px;
+    padding-top: 30px;
+    color: #FFFFFF;
+    text-align: right;
+  }
+
+  .support_container1{
+    background-size: fixed;
+    
+  }
+  
 }
 
 /*
