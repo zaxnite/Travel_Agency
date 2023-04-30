@@ -1367,16 +1367,17 @@ a {
     text-align: right;
   }
 
-  /* hotels */
-  .hotel-text {
-    margin-left: -35%;
+  /* hotels*/
+  .hotel-text{
+    font-size: 35px;
+    margin-left: -48%;
     margin-top: 20%;
   }
 
   .hotel-search {
-    width: 85%;
+    width: 75%;
     height: 35%;
-    margin-left: 9%;
+    margin-left: 14%;
     top: 54%;
   }
 
@@ -1409,16 +1410,16 @@ a {
   }
 
   .adults {
-    transform: translate(-235px, 130px);
+    transform: translate(-235px, 140px);
   } 
   
   .children {
     padding: 15%;
-    transform: translate(-235px, 103px);
+    transform: translate(-235px, 115px);
   }
   
   .no_of_room {
-    transform: translate(-10px, 55px);
+    transform: translate(-10px, 58px);
   }
 
   .hotel_recommendations {
@@ -1435,12 +1436,7 @@ a {
     text-align: center;
     /* padding: 10px; */
     margin-top: -5%;
-    transform: translate(-18%, 0%);
-  }
-
-  .rec1 {
-    display: grid;
-    grid-template-columns: repeat(12, [col-start] 1fr);
+    transform: translate(-4%, 0%);
   }
 
   .title-pop {
@@ -1448,20 +1444,28 @@ a {
     font-size: 35px;
     text-align: center;
     padding: 10px;
-    margin-top: 170%;
-  }
-
-  .hotel-one {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
+    margin-top: 145%;
   }
 
   .desc {
     font-size: 20px;
     width: 60%;
+    color: #000000;
+    background-color: #f2f2f2;
   }
+
+  .facilities {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .facilities h2{
+    font-size: 35px;
+    text-align: center;
+    margin-left: -15%;
+  }
+
+}
 
 
   /*things to know*/
