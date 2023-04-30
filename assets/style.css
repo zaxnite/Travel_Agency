@@ -1360,11 +1360,6 @@ a {
 
   .continer{
     padding-bottom: 10rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    
   }
   
   .continer-box h4 {
@@ -1381,6 +1376,7 @@ a {
   
   .row-items{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
   }
