@@ -7,21 +7,6 @@
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
     <title>Hotels</title>
-
-  <style>
-    @media (max-width: 1400px) {
-      header{
-        padding: 17px 3%;
-        transition: .3s;
-      }
-    }
-
-    @media only screen and (max-width: 767px) {
-      .slideshow-container {
-        padding-top: 500px;
-      }
-    }
-  </style>
 </head>
 <body>
 
@@ -49,7 +34,7 @@
 <form class="hotel-search" action="">
 
 <label for="hotel_book" class="hotel_book">Place of stay:
-  <input class="form-control" list="hotel_book" id="from" placeholder="Country or City">
+  <input class="form-control" list="hotel_book" id="from" placeholder="City">
   <datalist id="hotel_book">
     <option value="Abu Dhabi">
     <option value="Sharjah">
@@ -73,8 +58,8 @@
   <input type="number" id="hotel-passengers" name="hotel-passengers" min="1" placeholder="0">
 </label>
 
-<label class="children" for="hotel-passengers">Children:
-  <input type="number" id="hotel-passengers" name="hotel-passengers" min="1" placeholder="0">
+<label class="children" for="child-passengers">Children:
+  <input type="number" id="child-passengers" name="child-passengers" min="1" placeholder="0">
 </label>
 
 <label class="no_of_room" for="hotel-passengers">Rooms:
