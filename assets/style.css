@@ -1565,6 +1565,47 @@ a {
     margin: 10%;
   }
 
+  .search {
+    height: 40%;
+    top: 50%;
+  }
+
+  .search .field-holder #name, .username {
+    width: 150%;
+    transform: translate(5%, 10%);
+  }
+
+  .search .field-holder #passengers, .passengers {
+    width: 130%;
+    transform: translate(150%, -130%);
+  }
+
+  .search .field-holder #from, .airport1 {
+    width: 130%;
+    transform: translate(-70%, 150%);
+  }
+
+  .search .field-holder #to, .airport2 {
+    width: 130%;
+    transform: translate(-10%, 150%);
+  }
+
+  .search .field-holder #departure, .departure {
+    width: 155%;
+    transform: translate(-70%, 140%);
+  }
+
+  .search .field-holder #return, .return {
+    width: 155%;
+    transform: translate(-10%, 140%);
+  }
+  
+  .flight_button {
+    height: 40px;
+    width: 180px;
+    transform: translate(55px, 90px);
+  }
+
 }
 
 
