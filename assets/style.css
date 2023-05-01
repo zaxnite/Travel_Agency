@@ -850,12 +850,6 @@ header.sticky{
 
 /* About_Us CSS */
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-section{
-  padding-top: 210px;
-  padding-right: 0px;
-  padding-left: 3%;
-
-}
 
 .about-home{
   position: relative;
@@ -864,6 +858,8 @@ section{
   display: grid;
   grid-template-columns: repeat(1,1fr);
   align-items: center;
+  padding-top: 210px;
+  padding-left: 3%;
   overflow: hidden; /* hide any overflow caused by the parallax effect */
 }
 
