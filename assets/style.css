@@ -779,56 +779,6 @@ header.sticky{
   padding-bottom: 25px;
   margin-top: -5%;
 }
-
-/* .hotel_book {grid-area: hotel_book;}
-.room_type {grid-area: room_type;}
-.hotel-check1 {grid-area: hotel-check1;}
-.hotel-check2 {grid-area: hotel-check2;}
-
-.hotel_book {
-  font-size: large;
-  transform: translate(10px, 5px);
-}
-
-.room_type {
-  font-size: large;
-  transform: translate(25px, 5px);
-}
-
-.hotel-check1 {
-  font-size: large;
-  transform: translate(10px, -15px);
-}
-
-.hotel-check2 {
-  font-size: large;
-  transform: translate(30px, -15px);
-}
-
-.adults {
-  font-size: large;
-  transform: translate(-390px, 130px);
-} 
-
-.children {
-  font-size: large;
-  padding: 15%;
-  transform: translate(-350px, 105px);
-}
-
-.no_of_room {
-  font-size: large;
-  transform: translate(-100px, 50px);
-} */
-
-/* #hotel-passengers {
-  width: 70px;
-}
-
-#child-passengers {
-  width: 75px;
-} */
-
 .rec1, .rec2, .rec3, .rec4, .continer-box {
   transition: transform .2s;
 }
@@ -1606,7 +1556,10 @@ a {
     transform: translate(55px, 90px);
   }
 
-}
+  .title {
+    font-size: 35px;
+    margin-top: 45%;
+  }
 
 
   /*things to know*/
@@ -1971,8 +1924,6 @@ a {
     margin-top: 4%;
     justify-content: space-evenly;
   }
-
-  
 }
 
 /*
