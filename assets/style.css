@@ -385,6 +385,7 @@ header.sticky{
   position: absolute;
   top: 59%;
   margin-left: 15%;
+  border: solid black 2px;
 }
 
 #passengers {
@@ -782,6 +783,10 @@ header.sticky{
 
 #hotel-passengers {
   width: 70px;
+}
+
+#child-passengers {
+  width: 75px;
 }
 
 .rec1, .rec2, .rec3, .rec4, .continer-box {
@@ -1357,17 +1362,15 @@ a {
     text-align: right;
   }
 
-
-
   /* hotels*/
   .hotel-text{
-    font-size: 35px;
-    margin-left: -48%;
-    margin-top: 110%;
+    font-size: 25px;
+    margin-left: -42%;
+    margin-top: 120%;
   }
 
   .hotel-search {
-    width: 75%;
+    width: 80%;
     height: 35%;
     margin-left: 14%;
     top: 54%;
@@ -1407,11 +1410,11 @@ a {
   
   .children {
     padding: 15%;
-    transform: translate(-235px, 115px);
+    transform: translate(-220px, 115px);
   }
   
   .no_of_room {
-    transform: translate(-10px, 58px);
+    transform: translate(-10px, 66px);
   }
 
   .hotel_recommendations {
@@ -1426,7 +1429,6 @@ a {
     font-family: 'Inter';
     font-size: 35px;
     text-align: center;
-    /* padding: 10px; */
     margin-top: -5%;
     transform: translate(-4%, 0%);
   }
@@ -1456,6 +1458,23 @@ a {
     text-align: center;
     margin-left: -15%;
   }
+
+  /* flights */
+
+  .flight-text p{
+    font-size: 25px;
+    margin-left: 5%;
+    margin-top: 40%;
+  }
+
+  .search {
+    width: 80%;
+    height: 50%;
+    margin-left: 14%;
+    top: 54%;
+    border: solid black 2px;
+  }
+
 
 }
 
