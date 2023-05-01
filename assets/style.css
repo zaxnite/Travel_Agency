@@ -1461,18 +1461,29 @@ a {
 
   /* flights */
 
-  .flight-text p{
+  .flight-text {
     font-size: 25px;
-    margin-left: 5%;
+    margin-left: 2%;
     margin-top: 40%;
   }
 
   .search {
     width: 80%;
-    height: 50%;
+    max-height: 50%;
     margin-left: 14%;
     top: 54%;
     border: solid black 2px;
+  }
+
+  .search {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+  }
+
+  .slideshow-container {
+    padding-top: 500px;
   }
 
 
@@ -1569,24 +1580,6 @@ a {
   
   .home-flexbox-item-4{
     height: 200px;
-  }
-
-  /*flight*/
-  .flight-text{
-    font-size: 45px;
-    margin-left: -80px;
-    margin-top: -25px;
-  }
-
-  .search {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    height: auto;
-  }
-
-  .slideshow-container {
-    padding-top: 500px;
   }
 
 
