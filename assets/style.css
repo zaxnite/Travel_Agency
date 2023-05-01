@@ -1416,31 +1416,65 @@ a {
     transform: translate(35px, -10px);
   }
 
+  .title-rec { grid-area: header2;}
+  .rec1 { grid-area: rec1;}
+  .rec2 { grid-area: rec2;}
+  .rec3 { grid-area: rec3;}
+  .rec4 { grid-area: rec4;}
   .hotel_recommendations {
-    top: 105%;
+  width: 90%;
+  display: grid;
+  grid-template-areas: 
+  'header2 header2 header2 header2'
+  'rec1 rec1 rec1 rec1' 
+  'rec2 rec2 rec2 rec2' 
+  'rec3 rec3 rec3 rec3' 
+  'rec4 rec4 rec4 rec4';
+  gap: 1px;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  margin: auto;
   }
 
   .title-rec {
     font-family: 'Inter';
     font-size: 35px;
     text-align: center;
-    margin-top: -5%;
-    transform: translate(-12%, 0%);
+    margin-top: 70%;
   }
+
+  .rec1,.rec2,.rec3,.rec4 {
+    font-size: 17px;
+    font-family: "Inter";
+    padding-bottom: 17px;
+  }
+
+  .hotel-one {
+    width: 200px;
+    height: 160px;
+  }
+
+  
   
   .title-pop {
     font-family: 'Inter';
     font-size: 35px;
     text-align: center;
     padding: 10px;
-    margin-top: 190%;
+    margin-top: 20%;
   }
 
   .desc {
     font-size: 20px;
-    width: 60%;
+    width: 70%;
     color: #000000;
     background-color: #f2f2f2;
+  }
+
+  .facilities {
+    margin-top: -25%;
+    margin-bottom: -75%;
   }
 
   .fac-box {
