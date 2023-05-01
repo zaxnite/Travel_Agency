@@ -394,6 +394,7 @@ header.sticky{
   position: absolute;
   top: 59%;
   margin-left: 15%;
+  border: solid black 2px;
 }
 
 #passengers {
@@ -1474,6 +1475,15 @@ a {
     margin-left: 5%;
     margin-top: 40%;
   }
+
+  .search {
+    width: 80%;
+    height: 50%;
+    margin-left: 14%;
+    top: 54%;
+    border: solid black 2px;
+  }
+
 
 }
 
