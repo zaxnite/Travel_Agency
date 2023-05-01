@@ -1358,14 +1358,15 @@ a {
     padding-top: 20px;
   }
 
-  .support_title1 {
-    font-size: 40px;
-    padding-right: 4000px;
-    padding-left: 30px;
-    padding-top: 80px;
-    color: #FFFFFF;
+  .support_title1 h1 {
+    font-size: 30px;
+    padding-left: 26px;
+    padding-top: 0px;
+    padding-bottom: 150px;
     text-align: right;
   }
+
+
 
   /* hotels*/
   .hotel-text{
