@@ -1549,7 +1549,7 @@ a {
     font-size: 35px;
     text-align: center;
     margin-top: -15%;
-    margin-left: -20%;
+    margin-left: -60px;
   }
 
   .rec-recommendations p {
@@ -1559,11 +1559,18 @@ a {
   .rec-box p{
     font-size: 20px;
     width: 100%;
+    margin-right: 90px;
   }
 
   .rec-box .two {
-    margin: 10%;
+    margin-left: -60px;
   }
+
+  .rec-box .one {
+    width: 200px;
+    height: 190px;
+    margin-left: -60px;
+  } 
 
   .search {
     height: 40%;
