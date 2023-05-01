@@ -754,7 +754,7 @@ header.sticky{
   transform: translate(-100px, 50px);
 }
 
-.hotel-search {
+/* .hotel-search {
   display: grid;
   grid: 'hotel_book room_type' 'hotel-check1 hotel-check2';
   width: 30%;
@@ -766,7 +766,7 @@ header.sticky{
   position: absolute;
   top: 54%;
   margin-left: 37.5%;
-}
+} */
 
 .hotel_button {
   border-radius: 1em;
@@ -1369,12 +1369,12 @@ a {
     margin-top: 120%;
   }
 
-  .hotel-search {
+  /* .hotel-search {
     width: 80%;
     height: 35%;
     margin-left: 14%;
     top: 54%;
-  }
+  } */
 
   #from, #to {
     width: 80%;
