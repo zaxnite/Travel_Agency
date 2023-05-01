@@ -581,6 +581,11 @@ header.sticky{
 .flights .rec-recommendations .rec-box p{
   padding-top: 10px;
 }
+
+.rec-recommendations p {
+  color: #000000;
+}
+
 .flights .reviewer {
   text-align: left;
   padding-left: 10px;
@@ -669,13 +674,13 @@ header.sticky{
   max-width: 90%;
   height: 250px;
 }
+
 .rev-star {
   max-width: 350px;
   margin-left: 35%;
   margin-top: 4%;
   border-radius: 50%;
   justify-content: space-evenly;
-  transition: transform .2s;
 }
 
 .hotel-two {
@@ -833,7 +838,6 @@ header.sticky{
   margin-left: 65%;
   font-size: 25px;
   text-decoration: none;
-  transition: transform .2s;
 }
 
 .facilities{
@@ -1359,6 +1363,7 @@ a {
   }
 
   /* hotels*/
+
   .hotel-text{
     font-size: 25px;
     margin-left: -42%;
@@ -1426,7 +1431,7 @@ a {
     font-size: 35px;
     text-align: center;
     margin-top: -5%;
-    transform: translate(-4%, 0%);
+    transform: translate(-12%, 0%);
   }
 
   .title-pop {
@@ -1444,16 +1449,26 @@ a {
     background-color: #f2f2f2;
   }
 
-  .facilities {
-    font-size: 35px;
-    text-align: center;
-  }
-
   .facilities h2{
     font-size: 35px;
     text-align: center;
     margin-left: -15%;
   }
+
+  .fac-box h3 {
+    margin-top: 35px;
+    margin-left: 9%;
+    font-size: 25px;
+  }
+
+  .rev-star {
+    max-width: 350px;
+    margin-left: -20%;
+    margin-top: 4%;
+    justify-content: space-evenly;
+  }
+
+
 
   /* flights */
 
@@ -1499,6 +1514,10 @@ a {
     text-align: center;
     margin-top: -15%;
     margin-left: -20%;
+  }
+
+  .rec-recommendations p {
+    color: #000000;
   }
 
 }
