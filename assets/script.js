@@ -1,5 +1,3 @@
-// import React, { useState } from 'react';
-
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", function () {
@@ -57,20 +55,3 @@ function reveal() {
     }
 }
 window.addEventListener("scroll", reveal);
-
-// function TextInput({ type = 'text', label }) {
-//     const [value, setValue] = useState('');
-
-//     function handleChange(e) {
-//     setValue(e.target.value);
-//     }
-
-//     return (
-//     <div className="input-container">
-//         <input type={type} value={value} onChange={handleChange} />
-//         <label className={value && 'filled'} htmlFor={name}>
-//         {label}
-//         </label>
-//     </div>
-//     );
-// }

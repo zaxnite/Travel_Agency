@@ -45,10 +45,78 @@
       <p>Book your stay here...</p>
     </div>
   </section>
-  
-<form class="hotel-search" action="">
 
-<label for="hotel_book" class="hotel_book">Place of stay:
+  <div class="search">
+    <form action="book.php" method="post">
+      <datalist id="hotel-book">
+        <option value="Abu Dhabi, UAE">
+        <option value="Sharjah, UAE">
+        <option value="Dubai, UAE">
+        <option value="Incheon, Korea">
+        <option value="Jeju, Korea">
+        <option value="Frankfurt, Germany">
+        <option value="Berlin, Germany">
+        <option value="Narita, Japan">
+        <option value="Haneda, Japan">
+        <option value="Paris, France">
+        <option value="Bordeaux, France">
+        <option value="Bangkok, Thailand">
+        <option value="Chiang Mai, Thailand">
+        <option value="Barcelona, Spain">
+        <option value="Valencia, Spain">
+      </datalist>
+
+      <div class="field-holder">
+        <input type="text" class="name" id="name" name="name" required>
+        <label for="username" class="username">Username </label>
+      </div>
+      
+      <div class="field-holder">
+        <input class="input_stay" list="hotel_book" id="from">
+        <label for="hotel_book" class="stay">City</label>
+      </div>
+
+      <div class="field-holder">
+        <input type="number" name="hotel-passengers" min="1">
+        <label for="hotel-passengers">Adults</label>
+      </div>
+
+      <div class="field-holder">
+        <input type="number" id="hotel-passengers" name="hotel-passengers" min="1">
+        <label for="hotel-passengers">Children</label>
+      </div>
+
+      <div class="field-holder">
+        <input type="number" id="hotel-passengers" name="hotel-passengers" min="1">
+        <label for="hotel-passengers">Rooms</label>
+      </div>
+
+      <div class="field-holder">
+        <input class="form-control" list="room_type" id="to">
+        <label for="room_type">Type</label>
+        <datalist id="room_type">
+          <option value="Single"></option>
+          <option value="Double"></option>
+          <option value="Deluxe"></option>
+        </datalist>
+      </div>
+
+      <div class="field-holder">
+        <input type="date" min="2023-04-07" id="ch_in" name="ch_in">
+        <label for="ch_in">Check In</label>
+      </div>
+
+      <div class="field-holder">
+        <input type="date" min="2023-04-07" id="ch_out" name="ch_out">
+        <label for="ch_out">Check Out</label>
+      </div>
+
+      <button class="flight_button">Submit</button>
+      <!-- <input type="submit" value="Search" id="search"> -->
+    </form>  
+
+<!-- <form class="hotel-search" action="book.php">
+  <label for="hotel_book" class="hotel_book">Place of stay:
   <input class="form-control" list="hotel_book" id="from" placeholder="Country or City">
   <datalist id="hotel_book">
     <option value="Abu Dhabi">
@@ -84,7 +152,6 @@
 <label for="room_type" class="room_type">Room Type:
   <input class="form-control" list="room_type" id="to" placeholder="Select Room Type">
   <datalist id="room_type">
-    <option value="Select Room Type"></option>
     <option value="Single"></option>
 		<option value="Double"></option>
 		<option value="Deluxe"></option>
@@ -98,7 +165,7 @@
   <input type="date" min="2023-04-07" id="ch_out" name="ch_out">
 </label>
 
-<button class="hotel_button">Search</button>
+<button class="hotel_button">Search</button> -->
 </form>
 
 <div class="hotel_recommendations">

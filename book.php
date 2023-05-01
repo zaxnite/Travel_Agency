@@ -6,16 +6,15 @@
     $departure = $_POST['departure'];
     $return = $_POST['return'];
     require_once("config.php");
-    if($conn->connect_error){
-        die('Connection failed : '.$conn->connect_error);
-    }else{
-        $stmt = $conn->prepare("insert into flight_booking(customer_name, country_from, country_to, passengers, departure, arrival) 
-        values(?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssiss",$username, $countryfrom, $countryto, $passengers, $departure, $return);
-        $stmt->execute();
-        echo "Booked successfully";
-        $stmt->close();
-        $conn->close();
-    }
+    // insert data
+    $stmt = $conn->prepare("insert into flight_booking(customer_name, country_from, country_to, passengers, departure, arrival) 
+    values(?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssiss",$username, $countryfrom, $countryto, $passengers, $departure, $return);
+    $stmt->execute();
+    echo "Booked successfully";
+    $stmt->close();
+    $conn->close();
+
+
 ?>
 

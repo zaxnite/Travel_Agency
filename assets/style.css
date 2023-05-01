@@ -371,21 +371,12 @@ header.sticky{
   margin-bottom: 1.25em;
 }
 
-/* .name {grid-area: name;}
-.passengers {grid-area: passengers;}
-.from {grid-area: from;}
-.to {grid-area: to;}
-.departure {grid-area: departure;}
-.return {grid-area: return;} */
-
 .name, .from, .to, .departure, .return, .passengers {
   font-size: large;
   padding: 15px;
 }
 
 .search {
-  /* display: grid;
-  grid: 'name from to' 'passengers departure return '; */
   width: 70%;
   background-color: #ffffffc6;
   padding: 20px;
