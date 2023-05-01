@@ -14,7 +14,5 @@
     echo "Booked successfully";
     $stmt->close();
     $conn->close();
-
-
 ?>
 
