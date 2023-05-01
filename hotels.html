@@ -53,7 +53,7 @@
 
       <div class="field-holder">
         <input type="text" class="name" id="name" name="name" required>
-        <label for="username" class="username">Username </label>
+        <label for="hotel-username" class="hotel-username">Username </label>
       </div>
       
       <div class="field-holder">
@@ -62,23 +62,23 @@
       </div>
 
       <div class="field-holder">
-        <input class="name"type="number" name="adults" min="1">
-        <label for="hotel-passengers">Adults</label>
+        <input class="name" type="number" id="adults" name="adults" min="1">
+        <label for="hotel-passengers" class="adults">Adults</label>
       </div>
 
       <div class="field-holder">
-        <input type="number" class="name" id="hotel-passengers" name="children" min="1">
-        <label for="hotel-passengers">Children</label>
+        <input type="number" class="name" id="children" name="children" min="1">
+        <label for="hotel-passengers" class="children">Children</label>
       </div>
 
       <div class="field-holder">
-        <input type="number" class="name" id="hotel-passengers" name="rooms" min="1">
-        <label for="hotel-passengers">Rooms</label>
+        <input type="number" class="name" id="rooms" name="rooms" min="1">
+        <label for="hotel-passengers" class="rooms">Rooms</label>
       </div>
 
-      <div class="field-holder">
+      <div class="field-holder"> 
         <input class="name" list="room_type" id="to" name="type">
-        <label for="room_type">Type</label>
+        <label for="room_type" class="type">Room Type</label>
         <datalist id="room_type">
           <option value="Single"></option>
           <option value="Double"></option>
@@ -88,16 +88,15 @@
 
       <div class="field-holder">
         <input class="name" type="date" min="2023-04-07" id="ch_in" name="ch_in">
-        <label for="ch_in">Check In</label>
+        <label for="ch_in" class="ch_in">Check In</label>
       </div>
 
       <div class="field-holder">
         <input class="name" type="date" min="2023-04-07" id="ch_out" name="ch_out">
-        <label for="ch_out">Check Out</label>
+        <label for="ch_out" class="ch_out">Check Out</label>
       </div>
 
-      <button class="flight_button">Submit</button>
-      <!-- <input type="submit" value="Search" id="search"> -->
+      <button class="hotel_button">Submit</button>
     </form> 
 
 <!-- <form class="hotel-search" action="book.php">

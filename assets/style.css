@@ -670,96 +670,6 @@ header.sticky{
   font-weight: 500;
 }
 
-.hotel-one {
-  border-radius: 25px;
-  max-width: 90%;
-  height: 250px;
-}
-
-.rev-star {
-  max-width: 350px;
-  margin-left: 35%;
-  margin-top: 4%;
-  border-radius: 50%;
-  justify-content: space-evenly;
-}
-
-.hotel-two {
-  max-width: 110px;
-  margin-top: 4%;
-  margin-right: 35%;
-}
-
-.title-rec { grid-area: header2;}
-.rec1 { grid-area: rec1; font-size: 25px;}
-.rec2 { grid-area: rec2; font-size: 25px;}
-.rec3 { grid-area: rec3; font-size: 25px;}
-.rec4 { grid-area: rec4; font-size: 25px;}
-.hotel_recommendations {
-  width: 100%;
-  display: grid;
-  grid-template-areas: 
-  'header2 header2 header2 header2'
-  'rec1 rec2 rec3 rec4';
-  gap: 10px;
-  top: 100%;
-  font-size: xx-large;
-  text-align: center;
-  position: absolute;
-  margin: auto;
-}
-
-.title-rec {
-  font-family: 'Inter';
-  font-size: 70px;
-  text-align: center;
-  padding: 10px;
-  color: #557177;
-  padding-bottom: 25px;
-  margin-top: -5%;
-}
-
-/* .hotel_book {grid-area: hotel_book;}
-.room_type {grid-area: room_type;}
-.hotel-check1 {grid-area: hotel-check1;}
-.hotel-check2 {grid-area: hotel-check2;}
-
-.hotel_book {
-  font-size: large;
-  transform: translate(10px, 5px);
-}
-
-.room_type {
-  font-size: large;
-  transform: translate(25px, 5px);
-}
-
-.hotel-check1 {
-  font-size: large;
-  transform: translate(10px, -15px);
-}
-
-.hotel-check2 {
-  font-size: large;
-  transform: translate(30px, -15px);
-}
-
-.adults {
-  font-size: large;
-  transform: translate(-390px, 130px);
-} 
-
-.children {
-  font-size: large;
-  padding: 15%;
-  transform: translate(-350px, 105px);
-}
-
-.no_of_room {
-  font-size: large;
-  transform: translate(-100px, 50px);
-} */
-
 .hotel-search {
   width: 70%;
   background-color: #ffffffc6;
@@ -821,6 +731,96 @@ header.sticky{
   transform: translate(-375px, 17px);
 }
 
+.hotel-one {
+  border-radius: 25px;
+  max-width: 90%;
+  height: 250px;
+}
+
+.rev-star {
+  max-width: 350px;
+  margin-left: 35%;
+  margin-top: 4%;
+  border-radius: 50%;
+  justify-content: space-evenly;
+}
+
+.hotel-two {
+  max-width: 110px;
+  margin-top: 4%;
+  margin-right: 35%;
+}
+
+.title-rec { grid-area: header2;}
+.rec1 { grid-area: rec1; font-size: 25px;}
+.rec2 { grid-area: rec2; font-size: 25px;}
+.rec3 { grid-area: rec3; font-size: 25px;}
+.rec4 { grid-area: rec4; font-size: 25px;}
+.hotel_recommendations {
+  width: 100%;
+  display: grid;
+  grid-template-areas: 
+  'header2 header2 header2 header2'
+  'rec1 rec2 rec3 rec4';
+  gap: 10px;
+  top: 105%;
+  font-size: xx-large;
+  text-align: center;
+  position: absolute;
+  margin: auto;
+}
+
+.title-rec {
+  font-family: 'Inter';
+  font-size: 60px;
+  text-align: center;
+  padding: 10px;
+  color: #557177;
+  padding-bottom: 25px;
+  margin-top: -5%;
+}
+
+/* .hotel_book {grid-area: hotel_book;}
+.room_type {grid-area: room_type;}
+.hotel-check1 {grid-area: hotel-check1;}
+.hotel-check2 {grid-area: hotel-check2;}
+
+.hotel_book {
+  font-size: large;
+  transform: translate(10px, 5px);
+}
+
+.room_type {
+  font-size: large;
+  transform: translate(25px, 5px);
+}
+
+.hotel-check1 {
+  font-size: large;
+  transform: translate(10px, -15px);
+}
+
+.hotel-check2 {
+  font-size: large;
+  transform: translate(30px, -15px);
+}
+
+.adults {
+  font-size: large;
+  transform: translate(-390px, 130px);
+} 
+
+.children {
+  font-size: large;
+  padding: 15%;
+  transform: translate(-350px, 105px);
+}
+
+.no_of_room {
+  font-size: large;
+  transform: translate(-100px, 50px);
+} */
+
 /* #hotel-passengers {
   width: 70px;
 }
@@ -839,7 +839,7 @@ header.sticky{
 
 .title-pop {
   font-family: 'Inter';
-  font-size: 70px;
+  font-size: 60px;
   text-align: center;
   padding: 10px;
   color: #557177;
@@ -876,8 +876,9 @@ header.sticky{
 }
 
 .facilities{
-  margin-top: 5%;
   font-family: 'Inter';
+  font-size: 60px;
+  margin-top: 5%;
   color: #557177;
 }
 
@@ -1402,63 +1403,65 @@ a {
   .hotel-text{
     font-size: 25px;
     margin-left: -42%;
-    margin-top: 120%;
+    margin-top: -20%;
   }
 
-  /* .hotel-search {
-    width: 80%;
-    height: 35%;
-    margin-left: 14%;
-    top: 54%;
-  } */
-
-  #from, #to {
-    width: 80%;
+  .hotel-search {
+    height: 45%;
+    top: 50%;
   }
 
-  #hotel-passengers {
-    width: 90%;
+  .hotel-search .field-holder #name, .hotel-username {
+    width: 120%;
+    margin-top: 10%;
+    margin-left: 10%;
   }
 
+  .hotel-search .field-holder #from, .stay {
+    width: 100%;
+    margin-top: 10%;
+    margin-left: 100%;
+  }
+
+  .hotel-search .field-holder #to, .type {
+    width: 220%;
+    transform: translate(-70%, -10%);
+  }
+
+  .hotel-search .field-holder #adults, .adults {
+    width: 100%;
+    margin-top: 100%;
+    margin-left: -190%;
+  }
+
+  .hotel-search .field-holder #children, .children {
+    width: 100%;
+    transform: translate(120%, -140%);
+  }
+
+  .hotel-search .field-holder #rooms, .rooms {
+    width: 100%;
+    transform: translate(130%, -140%);
+  }
+  .hotel-search .field-holder #ch_in, .ch_in {
+    width: 160%;
+    transform: translate(-10%, -10%);
+  }
+
+  .hotel-search .field-holder #ch_out, .ch_out {
+    width: 160%;
+    transform: translate(50%, -10%);
+  }
+  
   .hotel_button {
-    transform: translate(-245px, 30px);
-  }
-
-  .hotel_book {
-    transform: translate(10px, 5px);
-  }
-  
-  .room_type {
-    transform: translate(55px, 5px);
-  }
-  
-  .hotel-check1 {
-    transform: translate(10px, -10px);
-  }
-  
-  .hotel-check2 {
-    transform: translate(55px, -10px);
-  }
-
-  .adults {
-    transform: translate(-235px, 140px);
-  } 
-  
-  .children {
-    padding: 15%;
-    transform: translate(-220px, 115px);
-  }
-  
-  .no_of_room {
-    transform: translate(-10px, 66px);
+    font-size: 20px;
+    height: 40px;
+    width: 180px;
+    transform: translate(35px, -10px);
   }
 
   .hotel_recommendations {
-    top: 95%;
-    position: absolute;
-    width: 100%;
-    display: grid;
-    gap: 10px;
+    top: 105%;
   }
 
   .title-rec {
@@ -1474,7 +1477,7 @@ a {
     font-size: 35px;
     text-align: center;
     padding: 10px;
-    margin-top: 170%;
+    margin-top: 190%;
   }
 
   .desc {
@@ -1836,13 +1839,6 @@ a {
     margin-left: -28%;
     margin-top: -5%;
   }
-
-  /* .hotel-search {
-    width: 80%;
-    height: 35%;
-    margin-left: 14%;
-    top: 54%;
-  } */
 
   #from, #to {
     width: 80%;
