@@ -388,7 +388,6 @@ header.sticky{
   border: solid black 2px;
 }
 
-
 #passengers {
   width: 110px;
 }
@@ -665,7 +664,7 @@ header.sticky{
   color: #ffffffda;
   position: relative;
   left: 38%;
-  top: -10%;
+  top: -15%;
   font-size: 50px;
   font-weight: 500;
 }
@@ -728,21 +727,13 @@ header.sticky{
   height: 40px;
   width: 180px;
   background-color: #cfe0e4;
-  transform: translate(-375px, 17px);
+  transform: translate(15px, 17px);
 }
 
 .hotel-one {
   border-radius: 25px;
   max-width: 90%;
   height: 250px;
-}
-
-.rev-star {
-  max-width: 350px;
-  margin-left: 35%;
-  margin-top: 4%;
-  border-radius: 50%;
-  justify-content: space-evenly;
 }
 
 .hotel-two {
@@ -818,24 +809,39 @@ header.sticky{
   top: 0;
 }
 
-.fac-box h3 {
-  margin-top: 35px;
-  margin-left: 65%;
-  font-size: 25px;
-  text-decoration: none;
+.facilities{
+  padding-bottom: 10rem;
 }
 
-.facilities{
-  font-family: 'Inter';
-  font-size: 60px;
-  margin-top: 5%;
+.fac-box h4 {
+  position: absolute;
+  width: 150px;
+  height: 85px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 44px;
   color: #557177;
 }
 
-.facilities h2{
-  margin-left: 1%;
+.fac-items{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
+.fac-text h2{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 60px;
+  line-height: 103px;
+  color: #557177;
+  margin: 80px;
+  margin-bottom: 40px;
+  text-align: center;
+}
 
 
 /* About_Us CSS */
@@ -1437,23 +1443,33 @@ a {
     background-color: #f2f2f2;
   }
 
-  .facilities h2{
-    font-size: 35px;
+  .fac-box {
+    padding-bottom: 5rem;
+  }
+  
+  .fac-box h4 {
+    font-size: 15px;
     text-align: center;
-    margin-left: -15%;
+    margin-left: -2rem;
   }
-
-  .fac-box h3 {
-    margin-top: 35px;
-    margin-left: 9%;
-    font-size: 25px;
-  }
-
-  .rev-star {
-    max-width: 350px;
-    margin-left: -20%;
-    margin-top: 4%;
+  
+  .fac-items{
+    display: flex;
+    align-items: center;
     justify-content: space-evenly;
+    flex-direction: column;
+  }
+
+  .fac-img img {
+    width: 100px;
+    height: auto;
+    align-items: center;
+  }
+  
+  .fac-text h2{
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* flights */
@@ -1653,6 +1669,7 @@ a {
   .home-flexbox-item-4{
     height: 200px;
   }
+}
 
 
 /*for tablet*/
@@ -1834,53 +1851,62 @@ a {
     margin-top: -5%;
   }
 
-  #from, #to {
-    width: 80%;
+  .hotel-search {
+    height: 45%;
+    top: 50%;
   }
 
-  #hotel-passengers {
-    width: 90%;
+  .hotel-search .field-holder #name, .hotel-username {
+    width: 120%;
+    margin-top: 10%;
+    margin-left: 10%;
   }
 
+  .hotel-search .field-holder #from, .stay {
+    width: 100%;
+    margin-top: 10%;
+    margin-left: 100%;
+  }
+
+  .hotel-search .field-holder #to, .type {
+    width: 220%;
+    transform: translate(-70%, -330%);
+  }
+
+  .hotel-search .field-holder #adults, .adults {
+    width: 100%;
+    margin-top: 100%;
+    margin-left: -190%;
+  }
+
+  .hotel-search .field-holder #children, .children {
+    width: 100%;
+    transform: translate(120%, -140%);
+  }
+
+  .hotel-search .field-holder #rooms, .rooms {
+    width: 100%;
+    transform: translate(130%, -140%);
+  }
+  .hotel-search .field-holder #ch_in, .ch_in {
+    width: 130%;
+    transform: translate(5%, -150%);
+  }
+
+  .hotel-search .field-holder #ch_out, .ch_out {
+    width: 130%;
+    transform: translate(75%, -150%);
+  }
+  
   .hotel_button {
-    transform: translate(-245px, 30px);
-  }
-
-  .hotel_book {
-    transform: translate(10px, 5px);
-  }
-  
-  .room_type {
-    transform: translate(55px, 5px);
-  }
-  
-  .hotel-check1 {
-    transform: translate(10px, -10px);
-  }
-  
-  .hotel-check2 {
-    transform: translate(55px, -10px);
-  }
-
-  .adults {
-    transform: translate(-235px, 140px);
-  } 
-  
-  .children {
-    padding: 15%;
-    transform: translate(-220px, 115px);
-  }
-  
-  .no_of_room {
-    transform: translate(-10px, 66px);
+    font-size: 20px;
+    height: 40px;
+    width: 180px;
+    transform: translate(-90%, -10px);
   }
 
   .hotel_recommendations {
-    top: 95%;
-    position: absolute;
-    width: 100%;
-    display: grid;
-    gap: 10px;
+    top: 105%;
   }
 
   .title-rec {
@@ -1888,7 +1914,6 @@ a {
     font-size: 35px;
     text-align: center;
     margin-top: -5%;
-    transform: translate(-12%, 0%);
   }
   
   .title-pop {
@@ -1896,7 +1921,7 @@ a {
     font-size: 35px;
     text-align: center;
     padding: 10px;
-    margin-top: 170%;
+    margin-top: 85%;
   }
 
   .desc {
@@ -1906,24 +1931,159 @@ a {
     background-color: #f2f2f2;
   }
 
-  .facilities h2{
+  .fac-box {
+    padding-bottom: 5rem;
+  }
+
+  .fac-text h2{
     font-size: 35px;
     text-align: center;
-    margin-left: -15%;
+    margin-top: -5%;
   }
-
-  .fac-box h3 {
-    margin-top: 35px;
-    margin-left: 9%;
-    font-size: 25px;
+  
+  .fac-box h4 {
+    font-size: 15px;
+    text-align: center;
+    margin-left: -2rem;
   }
-
-  .rev-star {
-    max-width: 350px;
-    margin-left: -20%;
-    margin-top: 4%;
+  
+  .fac-items{
+    display: flex;
+    align-items: center;
     justify-content: space-evenly;
+    flex-direction: column;
   }
+
+  .fac-img img {
+    width: 100px;
+    height: auto;
+    align-items: center;
+  }
+
+  /* flights */
+
+  .flight-text {
+    font-size: 45px;
+    margin-left: 2%;
+    margin-top: 10%;
+  }
+
+  .search {
+    width: 80%;
+    height: 33%;
+    margin-left: 10%;
+    top: 50%;
+    border: solid black 2px;
+  }
+
+  .title {
+    font-family: 'Inter';
+    font-size: 35px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30%;
+  }
+
+  .slidetext {
+    font-size: 20px;
+    width: 60%;
+    color: #000000;
+    background-color: #f2f2f2;
+  }
+
+  .rec h2 {
+    font-family: 'Inter';
+    font-size: 35px;
+    text-align: center;
+    margin-top: -15%;
+    margin-left: -20%;
+  }
+
+  .rec-recommendations p {
+    color: #000000;
+  }
+  
+  .rec-box p{
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .rec-box .two {
+    margin: 10%;
+  }
+
+  .search .field-holder #name, .username {
+    width: 150%;
+    transform: translate(5%, 10%);
+  }
+
+  .search .field-holder #passengers, .passengers {
+    width: 130%;
+    transform: translate(145%, -130%);
+  }
+
+  .search .field-holder #from, .airport1 {
+    width: 130%;
+    transform: translate(-70%, 150%);
+  }
+
+  .search .field-holder #to, .airport2 {
+    width: 130%;
+    transform: translate(-10%, 150%);
+  }
+
+  .search .field-holder #departure, .departure {
+    width: 150%;
+    transform: translate(-60%, 140%);
+  }
+
+  .search .field-holder #return, .return {
+    width: 150%;
+    transform: translate(-10%, 140%);
+  }
+  
+  .flight_button {
+    height: 40px;
+    width: 180px;
+    transform: translate(250px, 65px);
+  }
+
+  .title {
+    font-size: 35px;
+    margin-top: 20%;
+  }
+
+
+  /*things to know*/
+  .continer-box {
+    padding-bottom: 5rem;
+  }
+  
+  .continer-box h4 {
+    font-size: 15px;
+    text-align: center;
+    margin-left: -2rem;
+  }
+  
+  .row-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+
+  .continer-img img {
+    width: 100px;
+    height: auto;
+    align-items: center;
+  }
+  
+  .text h2{
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
 
 /*

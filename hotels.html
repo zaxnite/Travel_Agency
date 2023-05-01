@@ -99,69 +99,12 @@
       <button class="hotel_button">Submit</button>
     </form> 
 
-<!-- <form class="hotel-search" action="book.php">
-  <label for="hotel_book" class="hotel_book">Place of stay:
-  <input class="form-control" list="hotel_book" id="from" placeholder="Country or City">
-  <datalist id="hotel_book">
-    <option value="Abu Dhabi">
-    <option value="Sharjah">
-    <option value="Dubai">
-    <option value="Incheon, Korea">
-    <option value="Jeju, Korea">
-    <option value="Frankfurt, Germany">
-    <option value="Berlin, Germany">
-    <option value="Narita, Japan">
-    <option value="Haneda, Japan">
-    <option value="Paris, France">
-    <option value="Bordeaux, France">
-    <option value="Bangkok, Thailand">
-    <option value="Chiang Mai, Thailand">
-    <option value="Barcelona, Spain">
-    <option value="Valencia, Spain">
-  </datalist>
-</label>
-
-<label class="adults" for="hotel-passengers">Adults:
-  <input type="number" id="hotel-passengers" name="hotel-passengers" min="1" placeholder="0">
-</label>
-
-<label class="children" for="child-passengers">Children:
-  <input type="number" id="child-passengers" name="child-passengers" min="1" placeholder="0">
-</label>
-
-<label class="no_of_room" for="hotel-passengers">Rooms:
-  <input type="number" id="hotel-passengers" name="hotel-passengers" min="1" placeholder="0">
-</label>
-
-<label for="room_type" class="room_type">Room Type:
-  <input class="form-control" list="room_type" id="to" placeholder="Select Room Type">
-  <datalist id="room_type">
-    <option value="Single"></option>
-		<option value="Double"></option>
-		<option value="Deluxe"></option>
-  </datalist>
-</label>
-
-<label class="hotel-check1" for="ch_in">Check In:
-  <input type="date" min="2023-04-07" id="ch_in" name="ch_in">
-</label>
-<label class="hotel-check2" for="ch_out">Check Out:
-  <input type="date" min="2023-04-07" id="ch_out" name="ch_out">
-</label>
-
-<button class="hotel_button">Search</button>
-</form> -->
-
 <div class="hotel_recommendations">
   <p class="title-rec">Our Recommendations</p>
-  <div class="rec1"><img class="hotel-one" src="./assets/media/hotel-four-seasons.jpg" alt="Four Seasons Hotel, Paris"></br> Four Seasons Hotel, Paris </br>
-    <img class="hotel-two" src="./assets/media/stars.jpg" alt="Stars"></div>
-  <div class="rec2"><img class="hotel-one" src="./assets/media/hotel-signiel.jpg" alt="Signiel Hotel, Seoul, Korea"></br> Signiel Hotel, Seoul, Korea </br>
-    <img class="hotel-two" src="./assets/media/stars.jpg" alt="Stars"></div>
-  <div class="rec3"><img class="hotel-one" src="./assets/media/hotel-arbour.jpg" alt="Arbour Hotel and Residence, Pattaya, Thailand"></br> Arbour Hotel and Residence, Pattaya, Thailand </br>
-    <img class="hotel-two" src="./assets/media/stars.jpg" alt="Stars"></div>
-  <div class="rec4"><img class="hotel-one" src="./assets/media/hotel-kawa.jpg" alt="Kawaguchiko Hotel, Fujikawaguchiko, Japan"></br> Kawaguchiko Hotel, Fujikawaguchiko, Japan </br>
-    <img class="hotel-two" src="./assets/media/stars.jpg" alt="Stars"></div>
+  <div class="rec1"><img class="hotel-one" src="./assets/media/hotel-four-seasons.jpg" alt="Four Seasons Hotel, Paris"></br> Four Seasons Hotel, Paris</div>
+  <div class="rec2"><img class="hotel-one" src="./assets/media/hotel-signiel.jpg" alt="Signiel Hotel, Seoul, Korea"></br> Signiel Hotel, Seoul, Korea</div>
+  <div class="rec3"><img class="hotel-one" src="./assets/media/hotel-arbour.jpg" alt="Arbour Hotel and Residence, Pattaya, Thailand"></br> Arbour Hotel and Residence, Pattaya, Thailand</div>
+  <div class="rec4"><img class="hotel-one" src="./assets/media/hotel-kawa.jpg" alt="Kawaguchiko Hotel, Fujikawaguchiko, Japan"></br> Kawaguchiko Hotel, Fujikawaguchiko, Japan</div>
 </div>
 
 <!-- Carousel -->
@@ -211,28 +154,42 @@
     <span class="dot" onclick="currentSlide(5)"></span> 
   </div>
 
-  <section>
-    <div class="facilities">
-      <h2>Additional Facilities</h2>
-      <div class="hotel-rec-recommendations">
-        <div class="fac-box">
-          <h3>RENT A CAR</h3>
-          <img class="rev-star cust" src="./assets/media/car.png" alt="stars">
-        </div>
-        <div class="fac-box">
-          <h3>CATERING SERVICES</h3>
-          <img class="rev-star cust" src="./assets/media/cater.png" alt="45stars">
-        </div>
-        <div class="fac-box">
-          <h3>EVENT PLANNING</h3>
-          <img class="rev-star cust" src="./assets/media/event.png" alt="45stars">
-        </div>
-        <div class="fac-box">
-          <h3>DRYCLEANING SERVICES</h3>
-          <img class="rev-star cust" src="./assets/media/dryclean.png" alt="4stars">
-        </div>
+<!-- Additional Facilities -->
+
+<section class="facilities">
+  <div class="fac-text">
+    <h2>Additional Services</h2>
+  </div>
+  <div class="fac-items">
+    <div class="fac-box">
+      <div class="fac-img">
+        <img src="./assets/media/car.png">
       </div>
-  </section>
+      <h4>Car Rental</h4>
+    </div>
+
+    <div class="fac-box">
+      <div class="fac-img">
+        <img src="./assets/media/cater.png">
+      </div>
+      <h4>Catering</h4>
+    </div>
+
+    <div class="fac-box">
+      <div class="fac-img">
+        <img src="./assets/media/event.png">
+      </div>
+      <h4>Event Planning</h4>
+    </div>
+
+    <div class="fac-box">
+      <div class="fac-img">
+        <img src="./assets/media/dryclean.png">
+      </div>
+      <h4>Drycleaning</h4>
+    </div>
+  </div>
+</section>
 
   <section class="continer">
     <div class="text">
@@ -282,7 +239,7 @@
       </ul>
     </div>
     <div class="footer-bottom">
-      <p>copyright &copy; 2020 EscapeArtists</p>
+      <p>copyright &copy; 2023 EscapeArtists</p>
     </div>
   </footer>
 
