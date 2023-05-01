@@ -389,13 +389,7 @@ header.sticky{
 }
 
 #passengers {
-  width: 110px;
-}
-#from {
-  width: 200px;
-}
-#to {
-  width: 200px;
+  width: 130px;
 }
 
 .search input {
