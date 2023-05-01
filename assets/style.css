@@ -581,6 +581,11 @@ header.sticky{
 .flights .rec-recommendations .rec-box p{
   padding-top: 10px;
 }
+
+.rec-recommendations p {
+  color: #000000;
+}
+
 .flights .reviewer {
   text-align: left;
   padding-left: 10px;
@@ -1509,6 +1514,10 @@ a {
     text-align: center;
     margin-top: -15%;
     margin-left: -20%;
+  }
+
+  .rec-recommendations p {
+    color: #000000;
   }
 
 }
