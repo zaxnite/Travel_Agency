@@ -377,6 +377,7 @@ header.sticky{
 }
 
 .search {
+  height: 12em;
   width: 70%;
   background-color: #ffffffc6;
   padding: 20px;
@@ -419,6 +420,11 @@ header.sticky{
 .search input:focus + label, .search input:valid + label{
   font-size: 0.75em;
   top: -17px;
+}
+
+.search span {
+  color: red;
+  font-size: 15px;
 }
 
 .flight_button {

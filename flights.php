@@ -1,3 +1,5 @@
+<?php require "flight_book.php";?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +25,7 @@
 
     <ul class="navbar">
       <li><a href="index.html">Homepage</a></li>
-      <li><a href="flights.html" class="active">Flights</a></li>
+      <li><a href="flights.php" class="active">Flights</a></li>
       <li><a href="hotels.html">Hotels</a></li>
       <li><a href="about_us.html">About Us</a></li>
       <li><a href="support.html">Support</a></li>
@@ -38,7 +40,7 @@
   </section>
 
   <div class="search">
-    <form action="flight_book.php" method="post">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
       <datalist id="airport">
         <option value="Abu Dhabi, UAE">
         <option value="Sharjah, UAE">
@@ -58,33 +60,39 @@
       </datalist>
 
       <div class="field-holder">
-        <input type="text" class="name" id="name" name="name" required>
+        <input type="text" class="name" id="name" name="username" <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
         <label for="username" class="username">Username </label>
+        <br /><span class="invalid-feedback"><?php echo $username_err;?></span>
       </div>
       
       <div class="field-holder">
-        <input class="from" list="airport" id="from" name="from">
+        <input class="from" list="airport" id="from" name="from" <?php echo (!empty($from_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $from; ?>">
         <label for="airport1" class="airport1">From</label>
+        <br /><span class="invalid-feedback"><?php echo $from_err;?></span>
       </div>
 
       <div class="field-holder">
-        <input class="to" list="airport" id="to" name="to">
+        <input class="to" list="airport" id="to" name="to" <?php echo (!empty($to_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $to; ?>">
         <label for="airport2" class="airport2">To</label>
+        <br /><span class="invalid-feedback"><?php echo $to_err;?></span>
       </div>
 
       <div class="field-holder">
-        <input type="number" class="passengers" id="passengers" name="passengers" min="1">
+        <input type="number" class="passengers" id="passengers" name="passengers" <?php echo (!empty($passengers_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $passengers; ?>">
         <label for="passengers" class="passengers">Passengers</label>
+        <br /><span class="invalid-feedback"><?php echo $passengers_err;?></span>
       </div>
 
       <div class="field-holder">
-        <input type="date" class="departure" id="departure" name="departure">
+        <input type="date" class="departure" id="departure" name="departure" <?php echo (!empty($departure_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $departure; ?>">
         <label for="departure" class="departure">Departure</label>
+        <br /><span class="invalid-feedback"><?php echo $departure_err;?></span>
       </div>
 
       <div class="field-holder">
-        <input type="date" class="return" id="retunr" name="return">
+        <input type="date" class="return" id="return" name="arrival" <?php echo (!empty($arrival_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $arrival; ?>">
         <label for="return" class="return">Return</label>
+        <br /><span class="invalid-feedback"><?php echo $arrival_err;?></span>
       </div>
 
       <button class="flight_button">Submit</button>
