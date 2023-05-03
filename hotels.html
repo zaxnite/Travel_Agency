@@ -32,8 +32,6 @@
   </section>
 
   <form class="hotel-search" id="hotel-search">
-    <form method="post">
-      
 
       <div class="field-holder">
         <input type="text" class="name" id="name" name="name" required>
@@ -63,12 +61,12 @@
       </div>
 
       <div class="field-holder">
-        <input class="name" type="number" id="adults" name="adults" min="1" required>
+        <input class="name" type="number" id="adults" name="adults" min="0" required>
         <label for="hotel-passengers" class="adults">Adults</label>
       </div>
 
       <div class="field-holder">
-        <input type="number" class="name" id="children" name="children" min="1" required>
+        <input type="number" class="name" id="children" name="children" min="0" required>
         <label for="hotel-passengers" class="children">Children</label>
       </div>
 
@@ -244,14 +242,14 @@
     </div>
   </footer>
 
-<script>
+<script src="./assets/script.js">
   function addBooking() {
     var name = $('.field-holder #name').val();
     var city = $('.field-holder #city').val();
     var room_type = $('.field-holder #type').val();
     var check_in = $('.field-holder #ch_in').val();
     var check_out = $('.field-holder #ch_out').val();
-    var adults = $('.field-holder #adult').val();
+    var adults = $('.field-holder #adults').val();
     var children = $('.field-holder #children').val();
     var rooms = $('.field-holder #rooms').val();
 

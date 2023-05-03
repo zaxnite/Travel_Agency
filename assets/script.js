@@ -12,6 +12,26 @@ menu.onclick = () => {
     navbar.classList.toggle('open')
 }
 
+let image1 =document.querySelector('#flights')
+image1.onclick = () => {
+    window.location.href = 'flights.html';
+}
+
+let image2 =document.querySelector('#hotels')
+image2.onclick = () => {
+    window.location.href = 'hotels.html';
+}
+
+let image3 =document.querySelector('#about_us')
+image3.onclick = () => {
+    window.location.href = 'about_us.html';
+}
+
+let image4 =document.querySelector('#support')
+image4.onclick = () => {
+    window.location.href = 'support.html';
+}
+
 let slideIndex = 1;
 showSlides(slideIndex);
 

@@ -10,7 +10,7 @@ $check_in = $_POST['check_in'];
 $check_out = $_POST['check_out']; 
 
 $sql=  "INSERT into `hotel_booking`(`name`, `city`, `room_type`, `check_in`, `check_out`, `adults`, `children`, `rooms`) 
-value (' {$name} ' , ' {$city } ' , ' {$room_type } ' , ' {$check_in } ' , ' {$check_out } ' , ' {$adult } ' , ' {$children } ' , ' {$rooms } ')" ; 
+value (' {$name} ' , ' {$city } ' , ' {$type } ' , ' {$check_in } ' , ' {$check_out } ' , ' {$adults } ' , ' {$children } ' , ' {$rooms } ')" ; 
 
 if(mysqli_query($link , $sql)){
     $response = [
