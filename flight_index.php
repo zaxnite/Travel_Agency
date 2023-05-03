@@ -9,8 +9,14 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
+        body {
+            background-image: url("assets/media/flight_php.jpg");
+            background-position: center;
+            background-size: cover;
+        }
         .wrapper{
-            width: 600px;
+            background-color:rgba(211, 211, 211, 0.9);
+            width: 800px;
             margin: 0 auto;
         }
         table tr td:last-child{
@@ -23,7 +29,7 @@
         });
     </script>
 </head>
-<body>
+<body class="flight_php">
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
@@ -60,9 +66,9 @@
                                         echo "<td>" . $row['country_from'] . "</td>";
                                         echo "<td>" . $row['country_to'] . "</td>";
                                         echo "<td>" . $row['passengers'] . "</td>";
-                                        echo "<td>" . $row['departure'] . "</td>";
-                                        echo "<td>" . $row['arrival'] . "</td>";
-                                        echo "<td style='width:100px;'>";
+                                        echo "<td style='width:8em;'>" . $row['departure'] . "</td>";
+                                        echo "<td style='width:10em;'>" . $row['arrival'] . "</td>";
+                                        echo "<td style='width:20em;'>";
                                             echo '<a href="flight_read.php?id='. $row['id'] .'" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
                                             echo '<a href="flight_update.php?id='. $row['id'] .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
                                             echo '<a href="flight_delete.php?id='. $row['id'] .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';

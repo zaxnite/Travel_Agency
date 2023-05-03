@@ -575,7 +575,7 @@ header.sticky{
   text-decoration: none;
   transition: transform .2s;
 }
-.flights .rec-recommendations .recanim:hover{
+.flights .rec-recommendations .rec-box:hover{
   transform:scale(1.1);
 }
 .flights .rec-recommendations .rec-box p{

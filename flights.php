@@ -78,25 +78,25 @@
       </div>
 
       <div class="field-holder">
-        <input type="number" class="passengers" id="passengers" name="passengers" <?php echo (!empty($passengers_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $passengers; ?>">
+        <input type="number" class="passengers" id="passengers" name="passengers" <?php echo (!empty($passengers_err)) ? 'is-invalid' : ''; ?> value="<?php echo $passengers; ?>">
         <label for="passengers" class="passengers">Passengers</label>
         <br /><span class="invalid-feedback"><?php echo $passengers_err;?></span>
       </div>
 
       <div class="field-holder">
-        <input type="date" class="departure" id="departure" name="departure" <?php echo (!empty($departure_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $departure; ?>">
+        <input type="date" class="departure" id="departure" name="departure" <?php echo (!empty($departure_err)) ? 'is-invalid' : ''; ?> value="<?php echo $departure; ?>">
         <label for="departure" class="departure">Departure</label>
         <br /><span class="invalid-feedback"><?php echo $departure_err;?></span>
       </div>
 
       <div class="field-holder">
-        <input type="date" class="return" id="return" name="arrival" <?php echo (!empty($arrival_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $arrival; ?>">
+        <input type="date" class="return" id="return" name="arrival" <?php echo (!empty($arrival_err)) ? 'is-invalid' : ''; ?> value="<?php echo $arrival; ?>">
         <label for="return" class="return">Return</label>
         <br /><span class="invalid-feedback"><?php echo $arrival_err;?></span>
       </div>
 
-      <button class="flight_button">Submit</button>
-      <!-- <input type="submit" value="Search" id="search"> -->
+      <button type="submit" class="flight_button">Submit</button>
+      <a class="flight_button" href="flight_index.php">Bookings</a>
     </form>
   </div>
 

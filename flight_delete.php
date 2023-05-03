@@ -46,7 +46,13 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     <title>Delete Record</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+        body {
+            background-image: url("assets/media/flight_php.jpg");
+            background-position: center;
+            background-size: cover;
+        }
         .wrapper{
+            background-color:rgba(211, 211, 211, 0.9);
             width: 600px;
             margin: 0 auto;
         }
