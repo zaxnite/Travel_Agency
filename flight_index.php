@@ -36,7 +36,7 @@
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Flight Bookings</h2>
-                        <a href="flights.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add New Booking</a>
+                        <a href="flights.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i>Return back to page</a>
                     </div>
                     <?php
                     // Include config file
