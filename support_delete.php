@@ -2,12 +2,12 @@
 // Process delete operation after confirmation
 if(isset($_POST["id"]) && !empty($_POST["id"])){
     // Include config file
-    require_once "support_config.php";
+    require_once "config.php";
     
     // Prepare a delete statement
-    $sql = "DELETE FROM queries WHERE id = ?";
+    $sql = "DELETE FROM query_entry WHERE id = ?";
     
-    if($stmt = mysqli_prepare($conn, $sql)){
+    if($stmt = mysqli_prepare($link, $sql)){
         // Bind variables to the prepared statement as parameters
         mysqli_stmt_bind_param($stmt, "i", $param_id);
         
@@ -28,13 +28,12 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     mysqli_stmt_close($stmt);
     
     // Close connection
-    mysqli_close($conn);
+    mysqli_close($link);
 } else{
     // Check existence of id parameter
     if(empty(trim($_GET["id"]))){
         // URL doesn't contain id parameter. Redirect to error page
-        header("location: error.php");
-        exit();
+        echo "Oops! Something went wrong. Please try again later.";
     }
 }
 ?>
@@ -46,8 +45,14 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     <title>Delete Record</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+        body {
+            background-image: url("assets/media/flight_php.jpg");
+            background-position: center;
+            background-size: cover;
+        }
         .wrapper{
-            width: 600px;
+            background-color:rgba(211, 211, 211, 0.9);
+            width: 800px;
             margin: 0 auto;
         }
     </style>
@@ -61,7 +66,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="alert alert-danger">
                             <input type="hidden" name="id" value="<?php echo trim($_GET["id"]); ?>"/>
-                            <p>Are you sure you want to delete this employee record?</p>
+                            <p>Are you sure you want to delete this booking record?</p>
                             <p>
                                 <input type="submit" value="Yes" class="btn btn-danger">
                                 <a href="support_index.php" class="btn btn-secondary">No</a>

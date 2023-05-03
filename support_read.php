@@ -2,12 +2,12 @@
 // Check existence of id parameter before processing further
 if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
     // Include config file
-    require_once "support_config.php";
+    require_once "config.php";
     
     // Prepare a select statement
-    $sql = "SELECT * FROM queries WHERE id = ?";
+    $sql = "SELECT * FROM query_entry WHERE id = ?";
     
-    if($stmt = mysqli_prepare($conn, $sql)){
+    if($stmt = mysqli_prepare($link, $sql)){
         // Bind variables to the prepared statement as parameters
         mysqli_stmt_bind_param($stmt, "i", $param_id);
         
@@ -24,14 +24,13 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 
                 // Retrieve individual field value
-                $firstname = $row["FirstName"];
-                $lasstname = $row["LastName"];
-                $email = $row["Email"];
-                $query = $row["Queries"];
+                $firstname = $row["first_name"];
+                $lasstname = $row["last_name"];
+                $email = $row["email"];
+                $query = $row["customer_query"];
             } else{
-                // URL doesn't contain valid id parameter. Redirect to error page
-                header("location: error.php");
-                exit();
+                // URL doesn't contain valid id parameter.
+                echo "Oops! Something went wrong. Please try again later.";
             }
             
         } else{
@@ -43,11 +42,10 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
     mysqli_stmt_close($stmt);
     
     // Close connection
-    mysqli_close($conn);
+    mysqli_close($link);
 } else{
-    // URL doesn't contain id parameter. Redirect to error page
-    header("location: error.php");
-    exit();
+    // URL doesn't contain id parameter.
+    echo "Oops! Something went wrong. Please try again later.";
 }
 ?>
 
@@ -58,8 +56,14 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
     <title>View Record</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+        body {
+            background-image: url("assets/media/flight_php.jpg");
+            background-position: center;
+            background-size: cover;
+        }
         .wrapper{
-            width: 600px;
+            background-color:rgba(211, 211, 211, 0.9);
+            width: 800px;
             margin: 0 auto;
         }
     </style>
@@ -72,19 +76,19 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                     <h1 class="mt-5 mb-3">View Record</h1>
                     <div class="form-group">
                         <label>First Name</label>
-                        <p><b><?php echo $row['FirstName']; ?></b></p>
+                        <p><b><?php echo $row['first_name']; ?></b></p>
                     </div>
                     <div class="form-group">
                         <label>Last Name</label>
-                        <p><b><?php echo $row['LastName']; ?></b></p>
+                        <p><b><?php echo $row['last_name']; ?></b></p>
                     </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <p><b><?php echo $row["Email"]; ?></b></p>
+                        <p><b><?php echo $row["email"]; ?></b></p>
                     </div>
                     <div class="form-group">
                         <label>Query</label>
-                        <p><b><?php echo $row["Queries"]; ?></b></p>
+                        <p><b><?php echo $row["customer_query"]; ?></b></p>
                     </div>
                     <p><a href="support_index.php" class="btn btn-primary">Back</a></p>
                 </div>
