@@ -389,10 +389,6 @@ header.sticky{
   border: solid black 2px;
 }
 
-#passengers {
-  width: 130px;
-}
-
 .search input {
   border:0;
   border-bottom: 3px solid #dfdfdf;

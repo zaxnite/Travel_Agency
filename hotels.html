@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <title>Hotels</title>
 </head>
@@ -30,25 +31,9 @@
     </div>
   </section>
 
-  <form class="hotel-search">
-    <form action="book.php" method="post">
-      <datalist id="hotel-book">
-        <option value="Abu Dhabi, UAE">
-        <option value="Sharjah, UAE">
-        <option value="Dubai, UAE">
-        <option value="Incheon, Korea">
-        <option value="Jeju, Korea">
-        <option value="Frankfurt, Germany">
-        <option value="Berlin, Germany">
-        <option value="Narita, Japan">
-        <option value="Haneda, Japan">
-        <option value="Paris, France">
-        <option value="Bordeaux, France">
-        <option value="Bangkok, Thailand">
-        <option value="Chiang Mai, Thailand">
-        <option value="Barcelona, Spain">
-        <option value="Valencia, Spain">
-      </datalist>
+  <form class="hotel-search" id="hotel-search">
+    <form method="post">
+      
 
       <div class="field-holder">
         <input type="text" class="name" id="name" name="name" required>
@@ -56,27 +41,44 @@
       </div>
       
       <div class="field-holder">
-        <input class="name" list="hotel_book" id="from" name="stay">
-        <label for="hotel_book" class="stay">City</label>
+        <input class="name" list="hotel-book" id="city" name="city" required>
+        <label for="hotel-book" class="stay">City</label>
+        <datalist id="hotel-book">
+          <option value="Abu Dhabi, UAE">
+          <option value="Sharjah, UAE">
+          <option value="Dubai, UAE">
+          <option value="Incheon, Korea">
+          <option value="Jeju, Korea">
+          <option value="Frankfurt, Germany">
+          <option value="Berlin, Germany">
+          <option value="Narita, Japan">
+          <option value="Haneda, Japan">
+          <option value="Paris, France">
+          <option value="Bordeaux, France">
+          <option value="Bangkok, Thailand">
+          <option value="Chiang Mai, Thailand">
+          <option value="Barcelona, Spain">
+          <option value="Valencia, Spain">
+        </datalist>
       </div>
 
       <div class="field-holder">
-        <input class="name" type="number" id="adults" name="adults" min="1">
+        <input class="name" type="number" id="adults" name="adults" min="1" required>
         <label for="hotel-passengers" class="adults">Adults</label>
       </div>
 
       <div class="field-holder">
-        <input type="number" class="name" id="children" name="children" min="1">
+        <input type="number" class="name" id="children" name="children" min="1" required>
         <label for="hotel-passengers" class="children">Children</label>
       </div>
 
       <div class="field-holder">
-        <input type="number" class="name" id="rooms" name="rooms" min="1">
+        <input type="number" class="name" id="rooms" name="rooms" min="1" required>
         <label for="hotel-passengers" class="rooms">Rooms</label>
       </div>
 
       <div class="field-holder"> 
-        <input class="name" list="room_type" id="to" name="type">
+        <input class="name" list="room_type" id="type" name="room_type">
         <label for="room_type" class="type">Room Type</label>
         <datalist id="room_type">
           <option value="Single"></option>
@@ -86,16 +88,16 @@
       </div>
 
       <div class="field-holder">
-        <input class="name" type="date" min="2023-04-07" id="ch_in" name="ch_in">
+        <input class="name" type="date" min="2023-05-07" id="ch_in" name="check_in">
         <label for="ch_in" class="ch_in">Check In</label>
       </div>
 
       <div class="field-holder">
-        <input class="name" type="date" min="2023-04-07" id="ch_out" name="ch_out">
+        <input class="name" type="date" min="2023-05-07" id="ch_out" name="check_out">
         <label for="ch_out" class="ch_out">Check Out</label>
       </div>
 
-      <button class="hotel_button">Submit</button>
+      <input type="submit" class="hotel_button" id="hotel_button" onclick="addBooking()">
     </form> 
 
 <div class="hotel_recommendations">
@@ -242,68 +244,38 @@
     </div>
   </footer>
 
-  <script>
-    const header = document.querySelector("header");
+<script>
+  function addBooking() {
+    var name = $('.field-holder #name').val();
+    var city = $('.field-holder #city').val();
+    var room_type = $('.field-holder #type').val();
+    var check_in = $('.field-holder #ch_in').val();
+    var check_out = $('.field-holder #ch_out').val();
+    var adults = $('.field-holder #adult').val();
+    var children = $('.field-holder #children').val();
+    var rooms = $('.field-holder #rooms').val();
 
-    window.addEventListener ("scroll",function(){
-        header.classList.toggle ("sticky", window.scrollY > 100);
+    $.ajax({
+      type: 'post',
+      data: {
+          name: name,
+          city: city,
+          room_type: room_type,
+          check_in: check_in,
+          check_out: check_out,
+          adults: adults,
+          children: children,
+          rooms: rooms,
+      },
+      url: "hotel_book.php",
+      success: function (data) {
+          var response = JSON.parse(data);
+          $('#hotel-search').modal('hide');
+          alert(response.message);
+      }
     })
-
-    let menu = document.querySelector('#menu-icon')
-    let navbar = document.querySelector('.navbar')
-
-    menu.onclick = () => {
-      menu.classList.toggle('bx-x')
-      navbar.classList.toggle('open')
-    }
-
-    let slideIndex = 1;
-      showSlides(slideIndex);
-      
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-      
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-      
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" activepic", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " activepic";
-      }
-      
-    let image1 =document.querySelector('#flights')
-    image1.onclick = () => {
-      window.location.href = 'flights.html';
-    }
-
-    let image2 =document.querySelector('#hotels')
-    image2.onclick = () => {
-      window.location.href = 'hotels.html';
-    }
-
-    let image3 =document.querySelector('#about_us')
-    image3.onclick = () => {
-      window.location.href = 'about_us.html';
-    }
-
-    let image4 =document.querySelector('#support')
-    image4.onclick = () => {
-      window.location.href = 'support.html';
-    }
-  </script>
+  }
+</script>
   
 
 </body>
