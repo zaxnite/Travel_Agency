@@ -31,7 +31,7 @@
         function bookingList() {
             $.ajax({
                 type: 'get',
-                url: "hotel-list.php",
+                url: "hotel_list.php",
                 success: function (data) {
                     var response = JSON.parse(data);
                     console.log(response);

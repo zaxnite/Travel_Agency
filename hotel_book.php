@@ -13,6 +13,8 @@ $sql=  "INSERT into `hotel_booking`(`name`, `city`, `room_type`, `check_in`, `ch
 value (' {$name} ' , ' {$city } ' , ' {$type } ' , ' {$check_in } ' , ' {$check_out } ' , ' {$adults } ' , ' {$children } ' , ' {$rooms } ')" ; 
 
 if(mysqli_query($link , $sql)){
+    // header("location: hotel_index.php");
+    // exit();
     $response = [
         'status'=>'ok',
         'success'=>true,
@@ -20,6 +22,7 @@ if(mysqli_query($link , $sql)){
     ];
     print_r(json_encode($response));
 }else{
+    // echo "Oops! Something went wrong. Try again later."
     $response = [
         'status'=>'ok',
         'success'=>false,

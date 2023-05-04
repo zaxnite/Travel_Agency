@@ -33,7 +33,6 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
             } else{
                 // URL doesn't contain valid id parameter.
                 echo "Oops! Something went wrong. Please try again later.";
-                exit();
             }
             
         } else{
@@ -49,7 +48,6 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
 } else{
     // URL doesn't contain id parameter.
     echo "Oops! Something went wrong. Please try again later.";
-    exit();
 }
 ?>
 
